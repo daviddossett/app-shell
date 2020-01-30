@@ -2,7 +2,7 @@ import { classNamesFunction } from 'office-ui-fabric-react';
 import { ISuiteHeaderStyleProps, ISuiteHeaderStyles } from './SuiteHeader.types';
 
 
-export const styles = () => {
+export const styles = (props: ISuiteHeaderStyleProps): ISuiteHeaderStyles => {
   return {
     root: {
       backgroundColor: '#001433',

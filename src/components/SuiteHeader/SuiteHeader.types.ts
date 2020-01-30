@@ -1,12 +1,12 @@
 import { IStyle, IStyleFunctionOrObject } from 'office-ui-fabric-react';
 
 export interface ISuiteHeaderProps {
-  styles?: IStyleFunctionOrObject<ISuiteHeaderStyleProps, ISuiteHeaderStyles>;
-  className?: string;
+  styles: IStyleFunctionOrObject<ISuiteHeaderStyleProps, ISuiteHeaderStyles>;
 }
 
 export interface ISuiteHeaderStyleProps {
-  className?: string;
+  // What does this do? Why doesn't it break something even though it is required?
+  className: string;
 }
 
 export interface ISuiteHeaderStyles {
