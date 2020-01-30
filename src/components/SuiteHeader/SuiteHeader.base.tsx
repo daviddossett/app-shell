@@ -1,8 +1,8 @@
-import { classNamesFunction } from 'office-ui-fabric-react';
-import { ISuiteHeaderProps, ISuiteHeaderStyleProps, ISuiteHeaderStyles } from './SuiteHeader.types';
+import { getClassNames } from './SuiteHeader.styles';
+import { ISuiteHeaderProps } from './SuiteHeader.types';
 import React from 'react';
 
-const getClassNames = classNamesFunction<ISuiteHeaderStyleProps, ISuiteHeaderStyles>();
+
 
 export const SuiteHeaderBase: React.FC<ISuiteHeaderProps> = (props) => {
   const { styles } = props;

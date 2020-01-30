@@ -1,3 +1,6 @@
+import { classNamesFunction } from 'office-ui-fabric-react';
+import { ISuiteHeaderStyleProps, ISuiteHeaderStyles } from './SuiteHeader.types';
+
 
 export const styles = () => {
   return {
@@ -9,3 +12,4 @@ export const styles = () => {
   }
 }
 
+export const getClassNames = classNamesFunction<ISuiteHeaderStyleProps, ISuiteHeaderStyles>();
