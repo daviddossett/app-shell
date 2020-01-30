@@ -18,24 +18,29 @@ let sideBarItems = [
     active: false
   },
   {
-    key: 'collapsible-example-item2',
+    key: 'collapsible-example-item3',
     name: 'Reports',
     iconProps: { iconName: 'ViewDashboard' },
     active: false
   },
-];
-
-let sidebarFooterItems = [
   {
-    key: 'collapsible-example-item2',
+    key: 'collapsible-example-item4',
     name: 'Settings',
     iconProps: { iconName: 'Settings' },
     active: false
-  },
+  }
 ];
 
+let sideBarFooterItems = [
+  {
+    key: 'collapsible-example-item1',
+    name: 'Settings',
+    iconProps: { iconName: 'Settings' },
+    active: false
+  }
+];
 
-export const Nav: React.FC<INavProps> = (props) => {
+export const NavBase: React.FC<INavProps> = (props) => {
   const { styles, theme } = props;
   const classNames = getClassNames(styles, { theme });
 
@@ -47,7 +52,7 @@ export const Nav: React.FC<INavProps> = (props) => {
         collapsible={true}
         defaultIsCollapsed={false}
         items={sideBarItems}
-        footerItems={sidebarFooterItems}
+        footerItems={sideBarFooterItems}
       />
     </div>
   );

@@ -5,8 +5,8 @@ export interface ISuiteHeader {
 }
 
 export interface ISuiteHeaderProps {
-  title: string;
   styles?: IStyleFunctionOrObject<ISuiteHeaderStyleProps, ISuiteHeaderStyles>;
+  className?: string;
 }
 
 export interface ISuiteHeaderStyleProps {
@@ -15,5 +15,4 @@ export interface ISuiteHeaderStyleProps {
 
 export interface ISuiteHeaderStyles {
   root: IStyle;
-  title: IStyle;
 }

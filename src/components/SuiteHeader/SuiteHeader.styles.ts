@@ -2,15 +2,10 @@
 export const styles = () => {
   return {
     root: {
+      backgroundColor: '#001433',
       height: '48px',
-      width: '100%',
-      backgroundColor: '#001433'
+      width: '100%'
     },
-    title: {
-      fontSize: '16px',
-      color: '#FFFFFF',
-      margin: '0'
-    }
   }
 }
 
