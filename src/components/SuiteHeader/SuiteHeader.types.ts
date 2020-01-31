@@ -1,7 +1,7 @@
 import { IStyle, IStyleFunctionOrObject } from 'office-ui-fabric-react';
 
 export interface ISuiteHeaderProps {
-  styles: IStyleFunctionOrObject<ISuiteHeaderStyleProps, ISuiteHeaderStyles>;
+  styles?: IStyleFunctionOrObject<ISuiteHeaderStyleProps, ISuiteHeaderStyles>;
 }
 
 export interface ISuiteHeaderStyleProps {

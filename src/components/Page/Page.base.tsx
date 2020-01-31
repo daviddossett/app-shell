@@ -13,12 +13,9 @@ export const PageBase: React.FC<IPageProps> = (props) => {
 
   return (
   <div className={classNames.root}>
-    <SuiteHeader /> 
-    <div className={classNames.area}>
-      <Nav styles={styles} className={classNames.nav} />
+      {/* <SuiteHeader className={classNames.header} />      */}
+      <Nav />
       <div className={classNames.content} />
-    </div>
-
   </div>
   );
 }
