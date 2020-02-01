@@ -13,7 +13,7 @@ export const PageBase: React.FC<IPageProps> = (props) => {
 
   return (
   <div className={classNames.root}>
-      {/* <SuiteHeader className={classNames.header} />      */}
+      <SuiteHeader className={classNames.header}/>
       <Nav />
       <div className={classNames.content} />
   </div>

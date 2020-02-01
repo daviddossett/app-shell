@@ -10,7 +10,6 @@ export type IPageStyleProps = Pick<IPageProps, 'theme' | 'styles' | 'className'>
 
 export interface IPageStyles {
   root: IStyle;
-  area: IStyle;
   header: IStyle;
   nav: IStyle;
   content: IStyle;

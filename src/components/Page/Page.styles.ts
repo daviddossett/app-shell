@@ -1,6 +1,7 @@
 import { IPageStyleProps, IPageStyles } from "./Page.types"
 
 const gridLayout = `
+'header header'
 'nav content'
 `
 
@@ -11,20 +12,17 @@ export const styles = (props: IPageStyleProps): IPageStyles => {
       display: 'grid',
       gridTemplateAreas: gridLayout,
       gridTemplateColumns: 'auto 1fr',
+      gridTemplateRows: 'auto 1fr',
     },
-    area: {      
-      // display: 'grid',
+    header: {
+      gridArea: 'header'
     },
     nav: {
       gridArea: 'nav'
     },
-    header: {
-      height: '48px',
-      backgroundColor: '#001433'
-    },
     content: {
-      padding: '32px',
-      border: '32px solid #E6E6E6'
+      gridArea: 'content',
+      padding: '32px'
     }
   }
 }
