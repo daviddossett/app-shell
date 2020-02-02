@@ -5,9 +5,8 @@ import { ISuiteHeaderIconStyleProps, ISuiteHeaderIconStyles } from './SuiteHeade
 export const getStyles = (props: ISuiteHeaderIconStyleProps): ISuiteHeaderIconStyles => {
   return {
     root: {
-      backgroundColor: '#001433',
       height: '48px',
-      width: '100%'
+      width: '48px'
     },
   }
 }

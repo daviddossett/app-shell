@@ -1,15 +1,15 @@
 import { getClassNames } from './SuiteHeaderIcon.styles';
 import { ISuiteHeaderIconProps } from './SuiteHeaderIcon.types';
 import React from 'react';
-import { FontIcon } from 'office-ui-fabric-react';
+import { IconButton, IIconProps } from 'office-ui-fabric-react';
 
 export const SuiteHeaderIconBase: React.FC<ISuiteHeaderIconProps> = (props) => {
-  const { styles } = props;
+  const { styles, icon } = props;
   const classNames = getClassNames(styles);
-  
+
   return (
-    <div className={`${classNames.root} ${props.className}`}>
-      <FontIcon iconName={'WaffleOffice365'} style={{color: '#FFFFFF'}}/>
+    <div>
+      <IconButton iconProps={icon} />
     </div>
   );
 }

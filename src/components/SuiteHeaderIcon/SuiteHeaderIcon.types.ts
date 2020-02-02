@@ -1,8 +1,9 @@
-import { IStyle, IStyleFunctionOrObject } from 'office-ui-fabric-react';
+import { IStyle, IStyleFunctionOrObject, IIconProps } from 'office-ui-fabric-react';
 
 export interface ISuiteHeaderIconProps {
   styles?: IStyleFunctionOrObject<ISuiteHeaderIconStyleProps, ISuiteHeaderIconStyles>;
-  className: string;
+  classNames?: string;
+  icon: IIconProps;
 }
 
 export interface ISuiteHeaderIconStyleProps {
