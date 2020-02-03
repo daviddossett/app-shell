@@ -13,6 +13,8 @@ export interface ISuiteHeaderStyles {
   root: IStyle;
   waffle: IStyle;
   title: IStyle;
-  actions: IStyle;
+  spacerLeft: IStyle;
   search: IStyle;
+  spacerRight: IStyle;
+  actions: IStyle;
 }

@@ -6,7 +6,8 @@ export const getStyles = (props: ISuiteHeaderTitleStyleProps): ISuiteHeaderTitle
   return {
     root: {
       fontSize: '16px',
-      fontWeight: '600',  
+      fontWeight: '600',
+      textOverflow: 'ellipsis',
       lineHeight: '40px',
       color: '#FFFFFF',
       alignSelf: 'center',

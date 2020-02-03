@@ -4,17 +4,19 @@ import { ISuiteHeaderStyleProps, ISuiteHeaderStyles } from './SuiteHeader.types'
 
 export const getStyles = (props: ISuiteHeaderStyleProps): ISuiteHeaderStyles => {
   const suiteHeaderGrid = `
-    'waffle title . search . actions'
+    'waffle title L search R actions'
   `
+  const suiteHeaderHeight = '48px'
+  const suiteHeaderColor = '#001433'
 
   return {
     root: {
-      backgroundColor: '#001433',
-      height: '48px',
+      backgroundColor: suiteHeaderColor,
+      height: suiteHeaderHeight,
       width: '100%',
       display: 'grid',
       gridTemplateAreas: suiteHeaderGrid,
-      gridTemplateColumns: 'auto auto 1fr auto 1fr auto',
+      gridTemplateColumns: 'auto auto 1fr 500px 1fr auto',
       gridTemplateRows: 'auto',
     },
     waffle: {
@@ -23,8 +25,14 @@ export const getStyles = (props: ISuiteHeaderStyleProps): ISuiteHeaderStyles => 
     title: {
       gridArea: 'title'
     },
+    spacerLeft: {
+      gridArea: 'L'
+    },
     search: {
       gridArea: 'search'
+    },
+    spacerRight: {
+      gridArea: 'R'
     },
     actions: {
       gridArea: 'actions'

@@ -5,8 +5,15 @@ import { ISuiteHeaderSearchStyleProps, ISuiteHeaderSearchStyles } from './SuiteH
 export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSearchStyles => {
   return {
     root: {
-      display: 'flex',
-      alignItems: 'center'
+      alignSelf: 'center',
+      backgroundColor: 'rgba(255,255,255,0.15)',
+      border: 'none',
+      color: '#FFFFFF',
+      selectors: {
+        '::after': {
+          border: 'none',
+        }
+      }
     }
   }
 }

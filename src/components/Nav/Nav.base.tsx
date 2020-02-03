@@ -25,15 +25,12 @@ let sideBarItems = [
   },
   {
     key: 'collapsible-example-item4',
-    name: 'Settings',
-    iconProps: { iconName: 'Settings' },
+    name: 'Data',
+    iconProps: { iconName: 'Database' },
     active: false
-  }
-];
-
-let sideBarFooterItems = [
+  },
   {
-    key: 'collapsible-example-item1',
+    key: 'collapsible-example-item4',
     name: 'Settings',
     iconProps: { iconName: 'Settings' },
     active: false
@@ -52,7 +49,6 @@ export const NavBase: React.FC<INavProps> = (props) => {
         collapsible={true}
         defaultIsCollapsed={false}
         items={sideBarItems}
-        footerItems={sideBarFooterItems}
       />
     </div>
   );
