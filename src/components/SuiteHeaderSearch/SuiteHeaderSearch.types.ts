@@ -10,4 +10,8 @@ export type ISuiteHeaderSearchStyleProps = Pick<ISuiteHeaderSearchProps, 'styles
 
 export interface ISuiteHeaderSearchStyles {
   root: IStyle;
+  icon: IStyle;
+  iconContainer: IStyle;
+  field: IStyle;
+  clearButton: IStyle;
 }

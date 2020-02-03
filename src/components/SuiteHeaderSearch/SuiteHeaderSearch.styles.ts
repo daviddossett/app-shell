@@ -12,9 +12,27 @@ export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSear
       selectors: {
         '::after': {
           border: 'none',
+        },
+        ':hover': {
+          backgroundColor: 'rgba(255,255,255,0.2)'
         }
       }
-    }
+    },
+    iconContainer: {
+      color: '#FFFFFF',
+    },
+    icon: {
+      color: '#FFFFFF'
+    },
+    field: {
+      color: '#FFFFFF',
+      selectors: {
+        '::placeholder': {
+          color: '#FFFFFF'
+        }
+      }
+    },
+    clearButton: {}
   }
 }
 
