@@ -11,8 +11,8 @@ export interface ISuiteHeaderStyleProps {
 
 export interface ISuiteHeaderStyles {
   root: IStyle;
-  leftActions: IStyle;
-  rightActions: IStyle;
+  waffle: IStyle;
   title: IStyle;
+  actions: IStyle;
   search: IStyle;
 }

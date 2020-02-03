@@ -9,10 +9,20 @@ export const getStyles = (props: IAvatarStyleProps): IAvatarStyles => {
       width: '48px',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      selectors: {
+        ':hover': {
+          backgroundColor: '#03245C',
+          cursor: 'pointer'
+        },
+        ':active': {
+          backgroundColor: '#053385',
+          cursor: 'pointer'
+        }
+      }
     },
     avatar: {
-      width: '28px'
+      width: '28px',
     }
   }
 }

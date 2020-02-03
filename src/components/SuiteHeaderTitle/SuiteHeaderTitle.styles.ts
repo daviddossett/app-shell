@@ -1,0 +1,28 @@
+import { classNamesFunction } from 'office-ui-fabric-react';
+import { ISuiteHeaderTitleStyleProps, ISuiteHeaderTitleStyles } from './SuiteHeaderTitle.types';
+
+
+export const getStyles = (props: ISuiteHeaderTitleStyleProps): ISuiteHeaderTitleStyles => {
+  return {
+    root: {
+      fontSize: '16px',
+      fontWeight: '600',  
+      lineHeight: '40px',
+      textOverflow: 'ellipses',
+      color: '#FFFFFF',
+      gridArea: 'title',
+      alignSelf: 'center',
+      padding: '0 8px',
+      textDecoration: 'none',
+      border: 'none',
+      selectors: {
+        ':hover, :focus, :active': {
+          textDecoration: 'none',
+          color: '#FFFFFF'
+        }
+      }
+    }
+  }
+}
+
+export const getClassNames = classNamesFunction<ISuiteHeaderTitleStyleProps, ISuiteHeaderTitleStyles>();
