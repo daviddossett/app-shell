@@ -8,7 +8,17 @@ export const getStyles = (props: ISuiteHeaderIconStyleProps): ISuiteHeaderIconSt
       height: '48px',
       width: '48px',
       borderRadius: 0,
-      color: '#FFFFFF'
+      color: '#FFFFFF',
+      selectors: {
+        ':hover': {
+          backgroundColor: '#03245C',
+          color: '#FFFFFF'
+        },
+        ':active': {
+          backgroundColor: '#053385',
+          color: '#FFFFFF'
+        },
+      }
     },
   }
 }
