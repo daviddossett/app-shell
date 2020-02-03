@@ -5,7 +5,8 @@ import { ISuiteHeaderSearchStyleProps, ISuiteHeaderSearchStyles } from './SuiteH
 export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSearchStyles => {
   return {
     root: {
-      
+      display: 'flex',
+      alignItems: 'center'
     }
   }
 }

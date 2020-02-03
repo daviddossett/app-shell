@@ -4,7 +4,7 @@ import { ISuiteHeaderStyleProps, ISuiteHeaderStyles } from './SuiteHeader.types'
 
 export const getStyles = (props: ISuiteHeaderStyleProps): ISuiteHeaderStyles => {
   const suiteHeaderGrid = `
-    'waffle title . actions'
+    'waffle title . search . actions'
   `
 
   return {
@@ -14,22 +14,20 @@ export const getStyles = (props: ISuiteHeaderStyleProps): ISuiteHeaderStyles => 
       width: '100%',
       display: 'grid',
       gridTemplateAreas: suiteHeaderGrid,
-      gridTemplateColumns: 'auto auto 1fr auto',
+      gridTemplateColumns: 'auto auto 1fr auto 1fr auto',
       gridTemplateRows: 'auto',
     },
     waffle: {
-      gridArea: 'waffle',
-      display: 'flex',
-      alignItems: 'center'
+      gridArea: 'waffle'
     },
     title: {
       gridArea: 'title'
     },
-    actions: {
-      gridArea: 'actions'
-    },
     search: {
       gridArea: 'search'
+    },
+    actions: {
+      gridArea: 'actions'
     }
   }
 }

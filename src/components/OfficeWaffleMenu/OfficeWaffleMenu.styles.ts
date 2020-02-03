@@ -5,7 +5,8 @@ import { IOfficeWaffleMenuStyleProps, IOfficeWaffleMenuStyles } from './OfficeWa
 export const getStyles = (props: IOfficeWaffleMenuStyleProps): IOfficeWaffleMenuStyles => {
   return {
     root: {
-      
+      display: 'flex',
+      alignSelf: 'center'
     }
   }
 }

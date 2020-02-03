@@ -8,6 +8,6 @@ export const SuiteHeaderSearchBase: React.FC<ISuiteHeaderSearchProps> = (props) 
   const classNames = getClassNames(styles);
 
   return (
-    <SearchBox />
+    <SearchBox placeholder={'Search'} className={classNames.root} />
   );
 }
