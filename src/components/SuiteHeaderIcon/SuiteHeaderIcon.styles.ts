@@ -6,7 +6,9 @@ export const getStyles = (props: ISuiteHeaderIconStyleProps): ISuiteHeaderIconSt
   return {
     root: {
       height: '48px',
-      width: '48px'
+      width: '48px',
+      borderRadius: 0,
+      color: '#FFFFFF'
     },
   }
 }

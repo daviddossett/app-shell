@@ -6,9 +6,8 @@ export interface ISuiteHeaderIconProps {
   icon: IIconProps;
 }
 
-export interface ISuiteHeaderIconStyleProps {
-  // className: string;
-}
+export type ISuiteHeaderIconStyleProps = Pick<ISuiteHeaderIconProps, 'styles' | 'classNames' | 'icon'>;
+
 
 export interface ISuiteHeaderIconStyles {
   root: IStyle;

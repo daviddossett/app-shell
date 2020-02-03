@@ -1,7 +1,7 @@
 import { getClassNames } from './SuiteHeaderIcon.styles';
 import { ISuiteHeaderIconProps } from './SuiteHeaderIcon.types';
 import React from 'react';
-import { IconButton, IIconProps } from 'office-ui-fabric-react';
+import { IconButton } from 'office-ui-fabric-react';
 
 export const SuiteHeaderIconBase: React.FC<ISuiteHeaderIconProps> = (props) => {
   const { styles, icon } = props;
@@ -9,7 +9,7 @@ export const SuiteHeaderIconBase: React.FC<ISuiteHeaderIconProps> = (props) => {
 
   return (
     <div>
-      <IconButton iconProps={icon} />
+      <IconButton iconProps={icon} className={classNames.root}/>
     </div>
   );
 }
