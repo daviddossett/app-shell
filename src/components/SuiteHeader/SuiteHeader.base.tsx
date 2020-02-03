@@ -3,6 +3,7 @@ import { ISuiteHeaderProps } from './SuiteHeader.types';
 import React from 'react';
 import { SuiteHeaderIcon } from '../SuiteHeaderIcon/SuiteHeaderIcon';
 import { SearchBox } from 'office-ui-fabric-react';
+import { Avatar } from '../Avatar/Avatar';
 
 export const SuiteHeaderBase: React.FC<ISuiteHeaderProps> = (props) => {
   const { styles } = props;
@@ -17,9 +18,10 @@ export const SuiteHeaderBase: React.FC<ISuiteHeaderProps> = (props) => {
       <SearchBox placeholder={'Search'} className={classNames.search} />
       <div className={classNames.rightActions}>
         <SuiteHeaderIcon icon={{iconName: 'Ringer'}} />
-        <SuiteHeaderIcon icon={{iconName: 'Help'}} />
+        <SuiteHeaderIcon icon={{iconName: 'Megaphone'}} />
         <SuiteHeaderIcon icon={{iconName: 'Settings'}} />
-        <SuiteHeaderIcon icon={{iconName: 'Contact'}} />
+        <SuiteHeaderIcon icon={{iconName: 'Help'}} />
+        <Avatar />
       </div>
     </div>
   );
