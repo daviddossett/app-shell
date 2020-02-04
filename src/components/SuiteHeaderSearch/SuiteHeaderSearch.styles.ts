@@ -1,9 +1,10 @@
-import { classNamesFunction } from 'office-ui-fabric-react';
+import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
 import { ISuiteHeaderSearchStyleProps, ISuiteHeaderSearchStyles } from './SuiteHeaderSearch.types';
 
 
 export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSearchStyles => {
-  const primaryTextColor = '#FFFFFF';
+
+  const theme = getTheme();
   const searchBackgroundRest = 'rgba(255,255,255,0.15)';
   const searchBackgroundHover = 'rgba(255,255,255,0.20)';
 
@@ -12,7 +13,7 @@ export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSear
     root: {
       backgroundColor: searchBackgroundRest,
       border: 'none',
-      color: primaryTextColor,
+      color: theme.palette.white,
       flex: '0 1 30%',
       selectors: {
         '::after': {
@@ -24,16 +25,16 @@ export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSear
       }
     },
     iconContainer: {
-      color: primaryTextColor,
+      color: theme.palette.white,
     },
     icon: {
-      color: primaryTextColor
+      color: theme.palette.white
     },
     field: {
-      color: primaryTextColor,
+      color: theme.palette.white,
       selectors: {
         '::placeholder': {
-          color: primaryTextColor
+          color: theme.palette.white
         }
       }
     },
