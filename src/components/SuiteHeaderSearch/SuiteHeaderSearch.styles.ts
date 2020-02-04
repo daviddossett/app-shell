@@ -3,36 +3,43 @@ import { ISuiteHeaderSearchStyleProps, ISuiteHeaderSearchStyles } from './SuiteH
 
 
 export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSearchStyles => {
+  const primaryTextColor = '#FFFFFF';
+  const searchBackgroundRest = 'rgba(255,255,255,0.15)';
+  const searchBackgroundHover = 'rgba(255,255,255,0.20)';
+
+
   return {
     root: {
-      alignSelf: 'center',
-      backgroundColor: 'rgba(255,255,255,0.15)',
+      backgroundColor: searchBackgroundRest,
       border: 'none',
-      color: '#FFFFFF',
+      color: primaryTextColor,
+      flex: '0 1 30%',
       selectors: {
         '::after': {
           border: 'none',
         },
         ':hover': {
-          backgroundColor: 'rgba(255,255,255,0.2)'
+          backgroundColor: searchBackgroundHover
         }
       }
     },
     iconContainer: {
-      color: '#FFFFFF',
+      color: primaryTextColor,
     },
     icon: {
-      color: '#FFFFFF'
+      color: primaryTextColor
     },
     field: {
-      color: '#FFFFFF',
+      color: primaryTextColor,
       selectors: {
         '::placeholder': {
-          color: '#FFFFFF'
+          color: primaryTextColor
         }
       }
     },
-    clearButton: {}
+    clearButton: {
+      display: 'none' // Remove once I can restyle the nested icon button 
+    }
   }
 }
 

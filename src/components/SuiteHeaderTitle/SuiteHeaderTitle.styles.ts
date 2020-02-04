@@ -14,6 +14,7 @@ export const getStyles = (props: ISuiteHeaderTitleStyleProps): ISuiteHeaderTitle
       padding: '0 8px',
       textDecoration: 'none',
       border: 'none',
+      whiteSpace: 'nowrap',
       selectors: {
         ':hover, :focus, :active': {
           textDecoration: 'none',

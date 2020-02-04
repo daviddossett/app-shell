@@ -12,11 +12,11 @@ export const SuiteHeaderBase: React.FC<ISuiteHeaderProps> = (props) => {
   
   return (
     <div className={`${classNames.root} ${props.className}`}>
-      <OfficeWaffleMenu className={classNames.waffle} />
-      <SuiteHeaderTitle className={classNames.title} />
-      <div className={classNames.spacerLeft} />
+      <div className={classNames.waffleWithTitle}>
+        <OfficeWaffleMenu />
+        <SuiteHeaderTitle />
+      </div>
       <SuiteHeaderSearch className={classNames.search} />
-      <div className={classNames.spacerRight} />
       <SuiteHeaderActions className={classNames.actions} />
     </div>
   );

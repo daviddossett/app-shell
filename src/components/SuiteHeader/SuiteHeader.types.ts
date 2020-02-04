@@ -2,7 +2,7 @@ import { IStyle, IStyleFunctionOrObject } from 'office-ui-fabric-react';
 
 export interface ISuiteHeaderProps {
   styles?: IStyleFunctionOrObject<ISuiteHeaderStyleProps, ISuiteHeaderStyles>;
-  className: string;
+  className?: string;
 }
 
 export interface ISuiteHeaderStyleProps {
@@ -11,10 +11,7 @@ export interface ISuiteHeaderStyleProps {
 
 export interface ISuiteHeaderStyles {
   root: IStyle;
-  waffle: IStyle;
-  title: IStyle;
-  spacerLeft: IStyle;
+  waffleWithTitle: IStyle;
   search: IStyle;
-  spacerRight: IStyle;
   actions: IStyle;
 }

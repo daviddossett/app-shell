@@ -1,11 +1,8 @@
 import { classNamesFunction } from 'office-ui-fabric-react';
 import { ISuiteHeaderStyleProps, ISuiteHeaderStyles } from './SuiteHeader.types';
 
-
 export const getStyles = (props: ISuiteHeaderStyleProps): ISuiteHeaderStyles => {
-  const suiteHeaderGrid = `
-    'waffle title L search R actions'
-  `
+
   const suiteHeaderHeight = '48px'
   const suiteHeaderColor = '#001433'
 
@@ -14,29 +11,16 @@ export const getStyles = (props: ISuiteHeaderStyleProps): ISuiteHeaderStyles => 
       backgroundColor: suiteHeaderColor,
       height: suiteHeaderHeight,
       width: '100%',
-      display: 'grid',
-      gridTemplateAreas: suiteHeaderGrid,
-      gridTemplateColumns: 'auto auto 1fr 500px 1fr auto',
-      gridTemplateRows: 'auto',
+      display: 'flex',
+      flexWrap: 'nowrap',
+      justifyContent: 'space-between',
+      alignItems: 'center'
     },
-    waffle: {
-      gridArea: 'waffle'
+    waffleWithTitle: {
+      display: 'inline-flex'
     },
-    title: {
-      gridArea: 'title'
-    },
-    spacerLeft: {
-      gridArea: 'L'
-    },
-    search: {
-      gridArea: 'search'
-    },
-    spacerRight: {
-      gridArea: 'R'
-    },
-    actions: {
-      gridArea: 'actions'
-    }
+    search: {},
+    actions: {}
   }
 }
 
