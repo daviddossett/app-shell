@@ -1,25 +1,29 @@
-import { classNamesFunction } from 'office-ui-fabric-react';
+import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
 import { ISuiteHeaderIconStyleProps, ISuiteHeaderIconStyles } from './SuiteHeaderIcon.types';
+import { suiteHeaderPalette } from '../../constants/theme';
 
 
 export const getStyles = (props: ISuiteHeaderIconStyleProps): ISuiteHeaderIconStyles => {
+
+  const theme = getTheme();
+  
   return {
     root: {
       height: '48px',
       width: '48px',
       borderRadius: 0,
-      color: '#FFFFFF',
+      color: theme.palette.white,
       selectors: {
         ':hover': {
-          backgroundColor: '#03245C',
-          color: '#FFFFFF'
+          backgroundColor: suiteHeaderPalette.hover,
+          color: theme.palette.white
         },
         ':active': {
-          backgroundColor: '#053385',
-          color: '#FFFFFF'
-        },
+          backgroundColor: suiteHeaderPalette.pressed,
+          color: theme.palette.white
+        }
       }
-    },
+    }
   }
 }
 

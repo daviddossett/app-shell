@@ -1,4 +1,5 @@
 import { IPageStyleProps, IPageStyles } from "./Page.types"
+import { getTheme } from "office-ui-fabric-react";
 
 const gridLayout = `
 'header header'
@@ -6,6 +7,9 @@ const gridLayout = `
 `
 
 export const styles = (props: IPageStyleProps): IPageStyles => {
+
+  const theme = getTheme();
+
   return {
     root: {
       height: '100%',
@@ -22,7 +26,8 @@ export const styles = (props: IPageStyleProps): IPageStyles => {
     },
     content: {
       gridArea: 'content',
-      padding: '32px'
+      padding: '32px',
+      backgroundColor: theme.semanticColors.bodyBackground
     }
   }
 }

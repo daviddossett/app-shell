@@ -1,14 +1,14 @@
 import { classNamesFunction } from 'office-ui-fabric-react';
 import { ISuiteHeaderStyleProps, ISuiteHeaderStyles } from './SuiteHeader.types';
+import { suiteHeaderPalette } from '../../constants/theme';
 
 export const getStyles = (props: ISuiteHeaderStyleProps): ISuiteHeaderStyles => {
-
+  
   const suiteHeaderHeight = '48px'
-  const suiteHeaderColor = '#001433'
 
   return {
     root: {
-      backgroundColor: suiteHeaderColor,
+      backgroundColor: suiteHeaderPalette.primary,
       height: suiteHeaderHeight,
       width: '100%',
       display: 'flex',

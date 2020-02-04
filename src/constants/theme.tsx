@@ -22,3 +22,9 @@ export const palette = {
   black: '#000000',
   white: '#ffffff',
 }
+
+export const suiteHeaderPalette = {
+  primary: '#001433',
+  hover: '#03245c',
+  pressed: '#053385'
+}
