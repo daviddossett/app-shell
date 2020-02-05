@@ -1,5 +1,6 @@
 import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
 import { IHomeStyleProps, IHomeStyles } from './Home.types';
+import { AnimationStyles } from 'office-ui-fabric-react'
 
 
 export const getStyles = (props: IHomeStyleProps): IHomeStyles => {
@@ -18,6 +19,7 @@ export const getStyles = (props: IHomeStyleProps): IHomeStyles => {
       background: theme.palette.white,
       boxShadow: 'rgba(0, 0, 0, 0.133) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.11) 0px 0.3px 0.9px 0px;',
       borderRadius: '4px',
+      ...AnimationStyles.slideUpIn10
     },
     fakeContentArea: {
       height: 'inherit',

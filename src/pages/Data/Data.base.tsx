@@ -9,7 +9,7 @@ export const DataBase: React.FC<IDataProps> = (props) => {
   
   return (
     <div className={classNames.root}>
-      <PageHeader title={'Data'}/>
+      <PageHeader title={'Data'} />
   </div>
   );
 }
