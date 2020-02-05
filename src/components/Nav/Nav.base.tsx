@@ -1,45 +1,68 @@
-import React from 'react';
-import { Sidebar } from '@business-app/fabric/lib';
+import React, { useState } from 'react';
+import { Sidebar, ISidebarItemProps } from '@business-app/fabric/lib';
 import { INavProps } from './Nav.types';
 import { getClassNames } from './Nav.styles';
 import { getTheme } from 'office-ui-fabric-react';
 
-let sideBarItems = [
-  {
-    key: 'collapsible-example-item1',
-    name: 'Home',
-    iconProps: { iconName: 'Home' },
-    active: true,
-  },
-  {
-    key: 'collapsible-example-item2',
-    name: 'Queries',
-    iconProps: { iconName: 'LineChart' },
-    active: false
-  },
-  {
-    key: 'collapsible-example-item3',
-    name: 'Reports',
-    iconProps: { iconName: 'ViewDashboard' },
-    active: false
-  },
-  {
-    key: 'collapsible-example-item4',
-    name: 'Data',
-    iconProps: { iconName: 'Database' },
-    active: false
-  },
-  {
-    key: 'collapsible-example-item4',
-    name: 'Settings',
-    iconProps: { iconName: 'Settings' },
-    active: false
-  }
-];
-
 export const NavBase: React.FC<INavProps> = (props) => {
   const { styles, theme } = props;
   const classNames = getClassNames(styles, { theme });
+
+  const handleClick = (ev: any, item: any) => {
+    const newItems = items.map(currentItem => {
+      if (currentItem.key === item.key) {
+        return {
+          ...currentItem,
+          active: true,
+        }
+      }
+      return {
+        ...currentItem,
+        active: false
+      };
+    });
+    setItems(newItems);
+  }
+
+  let initialItems: Array<ISidebarItemProps> = [
+    {
+      key: 'home',
+      name: 'Home',
+      iconProps: { iconName: 'Home' },
+      active: true,
+      onClick: handleClick
+    },
+    {
+      key: 'queries',
+      name: 'Queries',
+      iconProps: { iconName: 'LineChart' },
+      active: false,
+      onClick: handleClick
+    },
+    {
+      key: 'reports',
+      name: 'Reports',
+      iconProps: { iconName: 'ViewDashboard' },
+      active: false,
+      onClick: handleClick
+    },
+    {
+      key: 'data',
+      name: 'Data',
+      iconProps: { iconName: 'Database' },
+      active: false,
+      onClick: handleClick
+    },
+    {
+      key: 'settings',
+      name: 'Settings',
+      iconProps: { iconName: 'Settings' },
+      active: false,
+      onClick: handleClick
+    }
+  ];
+  
+  const [items, setItems] = useState(initialItems)
 
   return (
     <div className={classNames.root}>
@@ -48,7 +71,8 @@ export const NavBase: React.FC<INavProps> = (props) => {
         id={'sidebar-collapsed'}
         collapsible={true}
         defaultIsCollapsed={false}
-        items={sideBarItems}
+        collapseButtonAriaLabel={'Navigation menu'}
+        items={items}
       />
     </div>
   );

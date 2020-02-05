@@ -1,5 +1,5 @@
 import { IPageStyleProps, IPageStyles } from "./Page.types"
-import { getTheme } from "office-ui-fabric-react";
+import { getTheme, classNamesFunction } from "office-ui-fabric-react";
 
 const gridLayout = `
 'header header'
@@ -31,3 +31,5 @@ export const styles = (props: IPageStyleProps): IPageStyles => {
     }
   }
 }
+
+export const getClassNames = classNamesFunction<IPageStyleProps, IPageStyles>();
