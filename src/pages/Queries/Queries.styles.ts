@@ -7,7 +7,10 @@ export const getStyles = (props: IQueriesStyleProps): IQueriesStyles => {
   const theme = getTheme();
 
   return {
-    root: {}
+    root: {
+      height: '100%',
+      width: '100%'
+    }
   }
 }
 

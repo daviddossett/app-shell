@@ -10,4 +10,6 @@ export type IHomeStyleProps = Pick<IHomeProps, 'styles' | 'className'>;
 
 export interface IHomeStyles {
   root: IStyle;
+  fakeCard: IStyle;
+  fakeContentArea: IStyle;
 }
