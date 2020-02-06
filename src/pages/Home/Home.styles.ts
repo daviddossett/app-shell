@@ -13,7 +13,7 @@ export const getStyles = (props: IHomeStyleProps): IHomeStyles => {
       width: '100%'
     },
     fakeCard: {
-      margin: '16px 0',
+      margin: '24px 0',
       width: 'inherit',
       height: '400px',
       background: theme.palette.white,

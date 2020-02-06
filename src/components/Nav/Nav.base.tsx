@@ -4,6 +4,7 @@ import { INavProps } from './Nav.types';
 import { getClassNames } from './Nav.styles';
 import { getTheme } from 'office-ui-fabric-react';
 
+
 export const NavBase: React.FC<INavProps> = (props) => {
   const { styles, theme } = props;
   const classNames = getClassNames(styles, { theme });
@@ -14,6 +15,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
         return {
           ...currentItem,
           active: true,
+          href: item.href
         }
       }
       return {
@@ -44,7 +46,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
       name: 'Reports',
       iconProps: { iconName: 'ViewDashboard' },
       active: false,
-      onClick: handleClick
+      onClick: handleClick,
     },
     {
       key: 'data',
@@ -68,7 +70,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
     <div className={classNames.root}>
       <Sidebar 
         theme={getTheme()}
-        id={'sidebar-collapsed'}
+        id={'Navigation sidebar'}
         collapsible={true}
         defaultIsCollapsed={false}
         collapseButtonAriaLabel={'Navigation menu'}

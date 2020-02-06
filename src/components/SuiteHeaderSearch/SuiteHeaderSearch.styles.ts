@@ -14,7 +14,7 @@ export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSear
       backgroundColor: searchBackgroundRest,
       border: 'none',
       color: theme.palette.white,
-      flex: '0 1 30%',
+      flex: '0 1 40%',
       selectors: {
         '::after': {
           border: 'none',
