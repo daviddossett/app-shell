@@ -6,7 +6,6 @@ export interface INavListItemProps extends NavLinkProps {
   className?: string;
   to: string;
   text: string;
-  icon?: string;
 }
 
 export type INavListItemStyleProps = Pick<INavListItemProps, 'styles' | 'className' | 'text' | 'icon'>;

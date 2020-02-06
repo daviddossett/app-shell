@@ -5,11 +5,11 @@ import { NavLink } from 'react-router-dom';
 import { Icon } from 'office-ui-fabric-react';
 
 export const NavListItemBase: React.FC<INavListItemProps> = (props) => {
-  const { styles, to, icon, text } = props;
+  const { styles, to, text } = props;
   const classNames = getClassNames(styles);
 
   return (
-    <NavLink to={to} className={classNames.root}>
+    <NavLink to={to}>
       <span>{text}</span>
     </NavLink>
   );

@@ -1,12 +1,17 @@
 import { getClassNames } from './NavList.styles';
 import { INavListProps } from './NavList.types';
-import React from 'react';
+import React, { Fragment } from 'react';
+import { NavListItem } from '../NavListItem/NavListItem';
 
 export const NavListBase: React.FC<INavListProps> = (props) => {
-  const { styles } = props;
+  const { styles, links } = props;
   const classNames = getClassNames(styles);
 
   return (
-    <div />
+    <Fragment>
+      {links.map(link => (
+        <NavListItem to={link.to} text={link.text} />
+      ))}
+    </Fragment>
   );
 }
