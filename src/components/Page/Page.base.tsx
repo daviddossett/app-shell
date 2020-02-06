@@ -19,13 +19,6 @@ export const PageBase: React.FC<IPageProps> = (props) => {
         <SuiteHeader className={classNames.header}/>
         <Nav />
         <main className={classNames.content}>
-        <div>
-          <Link to='/'>Home</Link>
-          <Link to='/queries'>Queries</Link>
-          <Link to='/reports'>Reports</Link>
-          <Link to='/data'>Data</Link>
-          <Link to='/settings'>Settings</Link>
-        </div>
           <Switch>
             <Route exact path='/' component={Home} />
             <Redirect strict from="/home/" to="/" exact />
@@ -38,6 +31,7 @@ export const PageBase: React.FC<IPageProps> = (props) => {
             <Redirect strict from="/data/" to="/data" exact />
             <Route exact path='/settings' component={Settings} />
             <Redirect strict from="/settings/" to="/settings" exact />
+            {/* <Route component={Error404} /> */}
           </Switch>
         </main>
     </div>

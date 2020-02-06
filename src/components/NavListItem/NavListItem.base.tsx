@@ -2,7 +2,6 @@ import { getClassNames } from './NavListItem.styles';
 import { INavListItemProps } from './NavListItem.types';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Icon } from 'office-ui-fabric-react';
 
 export const NavListItemBase: React.FC<INavListItemProps> = (props) => {
   const { styles, to, text } = props;
