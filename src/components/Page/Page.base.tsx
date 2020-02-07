@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IPageProps } from './Page.types';
 import { getClassNames } from './Page.styles';
 import { SuiteHeader } from '../SuiteHeader/SuiteHeader';
 import { Nav } from '../Nav/Nav';
-import { Switch, Route, Redirect, Link } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { Home } from '../../pages/Home/Home';
 import { Queries } from '../../pages/Queries/Queries';
 import { Reports } from '../../pages/Reports/Reports';
 import { Settings } from '../../pages/Settings/Settings';
 import { Data } from '../../pages/Data/Data';
+
 
 export const PageBase: React.FC<IPageProps> = (props) => {
   const { styles, theme } = props;
@@ -31,7 +32,6 @@ export const PageBase: React.FC<IPageProps> = (props) => {
             <Redirect strict from="/data/" to="/data" exact />
             <Route exact path='/settings' component={Settings} />
             <Redirect strict from="/settings/" to="/settings" exact />
-            {/* <Route component={Error404} /> */}
           </Switch>
         </main>
     </div>

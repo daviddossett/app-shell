@@ -3,19 +3,23 @@ import { Sidebar, ISidebarItemProps } from '@business-app/fabric/lib';
 import { INavProps } from './Nav.types';
 import { getClassNames } from './Nav.styles';
 import { getTheme } from 'office-ui-fabric-react';
-
+import { useHistory } from 'react-router-dom';
 
 export const NavBase: React.FC<INavProps> = (props) => {
   const { styles, theme } = props;
   const classNames = getClassNames(styles, { theme });
+  const history = useHistory();
+
+  const handleNavigation = (path: string) => {
+    history.push(path);
+  }
 
   const handleClick = (ev: any, item: any) => {
     const newItems = items.map(currentItem => {
       if (currentItem.key === item.key) {
         return {
           ...currentItem,
-          active: true,
-          href: item.href
+          active: true
         }
       }
       return {
@@ -24,9 +28,10 @@ export const NavBase: React.FC<INavProps> = (props) => {
       };
     });
     setItems(newItems);
+    handleNavigation(`/${item.key}`)
   }
 
-  let initialItems: Array<ISidebarItemProps> = [
+  const navListItems: ISidebarItemProps[] = [
     {
       key: 'home',
       name: 'Home',
@@ -46,7 +51,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
       name: 'Reports',
       iconProps: { iconName: 'ViewDashboard' },
       active: false,
-      onClick: handleClick,
+      onClick: handleClick
     },
     {
       key: 'data',
@@ -63,8 +68,8 @@ export const NavBase: React.FC<INavProps> = (props) => {
       onClick: handleClick
     }
   ];
-  
-  const [items, setItems] = useState(initialItems)
+
+  const [items, setItems] = useState(navListItems); 
 
   return (
     <div className={classNames.root}>

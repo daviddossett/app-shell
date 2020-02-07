@@ -1,4 +1,4 @@
-import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
+import { classNamesFunction, getTheme, FontSizes, FontWeights } from 'office-ui-fabric-react';
 import { IHomeStyleProps, IHomeStyles } from './Home.types';
 import { AnimationStyles } from 'office-ui-fabric-react'
 
@@ -11,6 +11,12 @@ export const getStyles = (props: IHomeStyleProps): IHomeStyles => {
     root: {
       height: '100%',
       width: '100%'
+    },
+    header: {
+      fontSize: FontSizes.xLarge,
+      color: theme.semanticColors.bodyText,
+      fontWeight: FontWeights.semibold,
+      margin: '0'
     },
     fakeCard: {
       margin: '24px 0',

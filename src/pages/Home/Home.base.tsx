@@ -9,7 +9,7 @@ export const HomeBase: React.FC<IHomeProps> = (props) => {
   
   return (
     <div className={classNames.root}>
-      <PageHeader title={'Home'}/>
+      <h1 className={classNames.header}>Home</h1>
       <div className={classNames.fakeCard}>
         <div className={classNames.fakeContentArea}>Content area</div>
       </div>
