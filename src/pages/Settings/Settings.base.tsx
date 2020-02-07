@@ -9,7 +9,7 @@ export const SettingsBase: React.FC<ISettingsProps> = (props) => {
   
   return (
     <div className={classNames.root}>
-      <PageHeader title={'Settings'}/>
+      <h1 className={classNames.header}>Settings</h1>
   </div>
   );
 }

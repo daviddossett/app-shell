@@ -9,7 +9,7 @@ export const ReportsBase: React.FC<IReportsProps> = (props) => {
   
   return (
     <div className={classNames.root}>
-      <PageHeader title={'Reports'}/>
+      <h1 className={classNames.header}>Reports</h1>
   </div>
   );
 }

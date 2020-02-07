@@ -10,4 +10,5 @@ export type IDataStyleProps = Pick<IDataProps, 'styles' | 'className'>;
 
 export interface IDataStyles {
   root: IStyle;
+  header: IStyle;
 }

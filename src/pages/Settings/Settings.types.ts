@@ -10,4 +10,5 @@ export type ISettingsStyleProps = Pick<ISettingsProps, 'styles' | 'className'>;
 
 export interface ISettingsStyles {
   root: IStyle;
+  header: IStyle;
 }

@@ -1,5 +1,6 @@
-import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
+import { classNamesFunction, getTheme, FontSizes, FontWeights } from 'office-ui-fabric-react';
 import { IQueriesStyleProps, IQueriesStyles } from './Queries.types';
+import { AnimationStyles } from 'office-ui-fabric-react';
 
 
 export const getStyles = (props: IQueriesStyleProps): IQueriesStyles => {
@@ -10,7 +11,13 @@ export const getStyles = (props: IQueriesStyleProps): IQueriesStyles => {
     root: {
       height: '100%',
       width: '100%'
-    }
+    },
+    header: {
+      fontSize: FontSizes.xLarge,
+      color: theme.semanticColors.bodyText,
+      fontWeight: FontWeights.semibold,
+      margin: '0'
+    },
   }
 }
 

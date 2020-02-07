@@ -9,7 +9,7 @@ export const QueriesBase: React.FC<IQueriesProps> = (props) => {
   
   return (
     <div className={classNames.root}>
-      <PageHeader title={'Queries'}/>
+      <h1 className={classNames.header}>Queries</h1>
   </div>
   );
 }
