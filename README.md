@@ -1,5 +1,5 @@
 ## About
 
-Prototype to explore navigation options using Office UI Fabric and BAG's Business Apps Fabric wrapper
+Prototype to explore navigation patterns using Office UI Fabric and the Business Apps Fabric wrapper
 
 
