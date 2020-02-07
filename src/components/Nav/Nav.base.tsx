@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { getTheme } from 'office-ui-fabric-react';
+import { useHistory } from 'react-router-dom';
 import { Sidebar, ISidebarItemProps } from '@business-app/fabric/lib';
 import { INavProps } from './Nav.types';
 import { getClassNames } from './Nav.styles';
-import { getTheme } from 'office-ui-fabric-react';
-import { useHistory } from 'react-router-dom';
 
 export const NavBase: React.FC<INavProps> = (props) => {
   const { styles, theme } = props;

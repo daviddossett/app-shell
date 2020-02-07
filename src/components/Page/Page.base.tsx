@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IPageProps } from './Page.types';
 import { getClassNames } from './Page.styles';
 import { SuiteHeader } from '../SuiteHeader/SuiteHeader';
