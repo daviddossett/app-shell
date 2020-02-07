@@ -10,7 +10,6 @@ import { Reports } from '../../pages/Reports/Reports';
 import { Settings } from '../../pages/Settings/Settings';
 import { Data } from '../../pages/Data/Data';
 
-
 export const PageBase: React.FC<IPageProps> = (props) => {
   const { styles, theme } = props;
   const classNames = getClassNames(styles, { theme })

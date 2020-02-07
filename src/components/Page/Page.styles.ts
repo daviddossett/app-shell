@@ -1,10 +1,11 @@
 import { IPageStyleProps, IPageStyles } from "./Page.types"
-import { classNamesFunction } from "office-ui-fabric-react";
+import { classNamesFunction, getTheme } from "office-ui-fabric-react";
 
 const gridLayout = `
 'header header'
 'nav content'
 `
+const theme = getTheme();
 
 export const styles = (props: IPageStyleProps): IPageStyles => {
   return {
@@ -14,6 +15,7 @@ export const styles = (props: IPageStyleProps): IPageStyles => {
       gridTemplateAreas: gridLayout,
       gridTemplateColumns: 'auto 1fr',
       gridTemplateRows: 'auto 1fr',
+      background: theme.palette.neutralLighterAlt
     },
     header: {
       gridArea: 'header'
@@ -23,7 +25,6 @@ export const styles = (props: IPageStyleProps): IPageStyles => {
     },
     content: {
       gridArea: 'content',
-      padding: '32px'
     }
   }
 }
