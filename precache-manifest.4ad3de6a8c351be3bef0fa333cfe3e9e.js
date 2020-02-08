@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8a13c4018d4bb0aea98e6d6596187e71",
+    "revision": "8c961cf0d122b3dddb53df418ed2e7c1",
     "url": "/mistople/app-shell/index.html"
   },
   {
-    "revision": "c47151816497d041506b",
+    "revision": "9a42a6caac12d51b91d4",
     "url": "/mistople/app-shell/static/css/main.c4343487.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mistople/app-shell/static/js/2.fda18ebf.chunk.js.LICENSE"
   },
   {
-    "revision": "c47151816497d041506b",
-    "url": "/mistople/app-shell/static/js/main.8673fc33.chunk.js"
+    "revision": "9a42a6caac12d51b91d4",
+    "url": "/mistople/app-shell/static/js/main.05e4e776.chunk.js"
   },
   {
     "revision": "877f6dae43be97c904b2",
