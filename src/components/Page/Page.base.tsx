@@ -23,6 +23,7 @@ export const PageBase: React.FC<IPageProps> = (props) => {
             <Route exact path='/' component={Home} />
             <Redirect strict from="/home/" to="/" exact />
             <Redirect strict from="/home" to="/" exact />
+            <Redirect strict from="/app-shell" to="/" exact />
             <Route exact path='/queries' component={Queries} />
             <Redirect strict from="/queries/" to="/queries" exact />
             <Route exact path='/reports' component={Reports} />
