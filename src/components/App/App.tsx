@@ -10,7 +10,7 @@ loadTheme({palette});
 
 const App: React.FC = () => {
   return (
-    <HashRouter basename="/">
+    <HashRouter basename='/'>
       <Page />
     </HashRouter>
   );
