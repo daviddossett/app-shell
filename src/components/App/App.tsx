@@ -10,7 +10,7 @@ loadTheme({palette});
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename ="/app-shell">>
       <Page />
     </Router>
   );
