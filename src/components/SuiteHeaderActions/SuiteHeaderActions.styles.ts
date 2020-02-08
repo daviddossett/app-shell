@@ -3,6 +3,13 @@ import { ISuiteHeaderActionsStyleProps, ISuiteHeaderActionsStyles } from './Suit
 
 
 export const getStyles = (props: ISuiteHeaderActionsStyleProps): ISuiteHeaderActionsStyles => {
+
+  const hideIcons = {
+    [`@media (max-width: 640px)`]: {
+      // display: 'none'
+    },
+  };
+
   return {
     root: {
       display: 'flex',

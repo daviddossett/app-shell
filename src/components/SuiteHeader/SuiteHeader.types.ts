@@ -13,6 +13,4 @@ export interface ISuiteHeaderStyleProps {
 export interface ISuiteHeaderStyles {
   root: IStyle;
   waffleWithTitle: IStyle;
-  search: IStyle;
-  actions: IStyle;
 }

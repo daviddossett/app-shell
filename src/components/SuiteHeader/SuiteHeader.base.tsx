@@ -16,8 +16,8 @@ export const SuiteHeaderBase: React.FC<ISuiteHeaderProps> = (props) => {
         <OfficeWaffleMenu />
         <SuiteHeaderTitle />
       </div>
-      <SuiteHeaderSearch className={classNames.search} />
-      <SuiteHeaderActions className={classNames.actions} />
+      <SuiteHeaderSearch />
+      <SuiteHeaderActions />
     </div>
   );
 }

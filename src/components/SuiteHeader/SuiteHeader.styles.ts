@@ -18,9 +18,7 @@ export const getStyles = (props: ISuiteHeaderStyleProps): ISuiteHeaderStyles => 
     },
     waffleWithTitle: {
       display: 'inline-flex'
-    },
-    search: {},
-    actions: {}
+    }
   }
 }
 
