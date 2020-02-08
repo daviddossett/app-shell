@@ -10,11 +10,18 @@ export const SuiteHeaderActionsBase: React.FC<ISuiteHeaderActionsProps> = (props
   
   return (
     <div className={classNames.root}>
+      <div className={classNames.fullMenu}>
         <SuiteHeaderIcon icon={{iconName: 'Ringer'}} />
         <SuiteHeaderIcon icon={{iconName: 'Megaphone'}} />
         <SuiteHeaderIcon icon={{iconName: 'Settings'}} />
         <SuiteHeaderIcon icon={{iconName: 'Help'}} />
-        <Avatar />
+      </div>
+      <div className={classNames.smallMenu}>
+        <SuiteHeaderIcon icon={{iconName: 'Search'}} />
+        <SuiteHeaderIcon icon={{iconName: 'More'}} />
+      </div>
+      <Avatar />
     </div>
+    
   );
 }

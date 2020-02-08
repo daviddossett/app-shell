@@ -11,4 +11,6 @@ export interface ISuiteHeaderActionsStyleProps {
 
 export interface ISuiteHeaderActionsStyles {
   root: IStyle;
+  smallMenu: IStyle;
+  fullMenu: IStyle;
 }

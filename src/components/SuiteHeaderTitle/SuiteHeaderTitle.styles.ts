@@ -1,4 +1,4 @@
-import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
+import { classNamesFunction, getTheme, AnimationStyles } from 'office-ui-fabric-react';
 import { ISuiteHeaderTitleStyleProps, ISuiteHeaderTitleStyles } from './SuiteHeaderTitle.types';
 
 
@@ -6,8 +6,20 @@ export const getStyles = (props: ISuiteHeaderTitleStyleProps): ISuiteHeaderTitle
 
   const theme = getTheme();
 
-  return {
-    root: {
+  const showFullTitle: any = {
+    [`@media (min-width: 640px)`]: {
+      display: 'flex',
+      alignItems: 'center'
+    },
+  };
+
+  const hideShortTitle: any = {
+    [`@media (min-width: 640px)`]: {
+      display: 'none'
+    },
+  };
+
+  const titleStyles: any = {
       fontSize: '16px',
       fontWeight: '600',
       textOverflow: 'ellipsis',
@@ -22,7 +34,25 @@ export const getStyles = (props: ISuiteHeaderTitleStyleProps): ISuiteHeaderTitle
         ':hover, :focus, :active': {
           textDecoration: 'none',
           color: '#FFFFFF'
-        }
+        },
+      }
+    }
+
+  return {
+    root: {
+      alignSelf: 'center'
+    },
+    short: {
+      ...titleStyles,
+      selectors: {
+        ...hideShortTitle
+      }
+    },
+    long: {
+      display: 'none',
+      ...titleStyles,
+      selectors: {
+        ...showFullTitle
       }
     }
   }

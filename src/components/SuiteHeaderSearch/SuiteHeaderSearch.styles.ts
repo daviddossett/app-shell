@@ -8,12 +8,19 @@ export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSear
   const searchBackgroundRest = 'rgba(255,255,255,0.15)';
   const searchBackgroundHover = 'rgba(255,255,255,0.20)';
 
+  const showSearch: any = {
+    [`@media (min-width: 900px)`]: {
+      display: 'flex',
+      alignItems: 'center'
+    },
+  };
 
   return {
     root: {
       backgroundColor: searchBackgroundRest,
       border: 'none',
       color: theme.palette.white,
+      display: 'none',
       flex: '0 1 40%',
       selectors: {
         '::after': {
@@ -21,7 +28,8 @@ export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSear
         },
         ':hover': {
           backgroundColor: searchBackgroundHover
-        }
+        },
+        ...showSearch
       }
     },
     iconContainer: {

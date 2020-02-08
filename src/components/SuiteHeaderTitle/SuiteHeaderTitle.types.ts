@@ -11,4 +11,6 @@ export interface ISuiteHeaderTitleStyleProps {
 
 export interface ISuiteHeaderTitleStyles {
   root: IStyle;
+  short: IStyle;
+  long: IStyle;
 }

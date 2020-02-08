@@ -10,9 +10,7 @@ export const getStyles = (props: ISuiteHeaderStyleProps): ISuiteHeaderStyles => 
     root: {
       backgroundColor: suiteHeaderPalette.primary,
       height: suiteHeaderHeight,
-      width: '100%',
       display: 'flex',
-      flexWrap: 'nowrap',
       justifyContent: 'space-between',
       alignItems: 'center'
     },

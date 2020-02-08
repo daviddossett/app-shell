@@ -7,6 +7,9 @@ export const SuiteHeaderTitleBase: React.FC<ISuiteHeaderTitleProps> = (props) =>
   const classNames = getClassNames(styles);
   
   return (
-    <a href='/' className={classNames.root}>Dynamics 365 Product Insights</a>
+    <div className={classNames.root}>
+      <a href='/' className={classNames.long}>Dynamics 365 Product Insights</a>
+      <a href='/' className={classNames.short}>Product Insights</a>
+    </div>
   );
 }
