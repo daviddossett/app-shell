@@ -11,11 +11,10 @@ export const getStyles = (props: IQueriesStyleProps): IQueriesStyles => {
       height: '100%',
       width: '100%'
     },
-    header: {
-      fontSize: FontSizes.xLarge,
-      color: theme.semanticColors.bodyText,
-      fontWeight: FontWeights.semibold,
-      margin: '0'
+    content: {
+      height: 'inherit',
+      width: 'inherit',
+      padding: '24px 32px 32px 32px'
     }
   }
 }

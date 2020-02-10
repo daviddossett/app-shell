@@ -2,6 +2,7 @@ import { getClassNames } from './Queries.styles';
 import { IQueriesProps } from './Queries.types';
 import React from 'react';
 import { CommandBar } from 'office-ui-fabric-react';
+import { PageHeader } from '../../components/PageHeader/PageHeader';
 
 const items = [
   {
@@ -110,7 +111,9 @@ export const QueriesBase: React.FC<IQueriesProps> = (props) => {
         farItems={farItems}
         ariaLabel={'Use left and right arrow keys to navigate between commands'}
       />
-      <h1 className={classNames.header}>Queries</h1>
+    <div className={classNames.content}>
+      <PageHeader text={'Queries'}/>
+    </div>
   </div>
   );
 }

@@ -10,5 +10,5 @@ export type IQueriesStyleProps = Pick<IQueriesProps, 'styles' | 'className'>;
 
 export interface IQueriesStyles {
   root: IStyle;
-  header: IStyle;
+  content: IStyle;
 }
