@@ -16,6 +16,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
 
   const handleClick = (ev: any, item: any) => {
     const newItems = items.map(currentItem => {
+
       if (currentItem.key === item.key) {
         return {
           ...currentItem,
@@ -27,6 +28,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
         active: false
       };
     });
+    
     setItems(newItems);
     handleNavigation(`/${item.key}`)
   }
