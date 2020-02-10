@@ -14,13 +14,21 @@ export const getStyles = (props: ISuiteHeaderTitleStyleProps): ISuiteHeaderTitle
     },
   };
 
+  
   const hideShortTitle: any = {
     [`@media (min-width: ${breakpoint.lg})`]: {
       display: 'none'
     },
   };
 
+  const showShortTitle: any = {
+    [`@media (min-width: 400px)`]: {
+      display: 'flex'
+    },
+  };
+
   const titleStyles: any = {
+      display: 'none',
       fontSize: '16px',
       fontWeight: '600',
       textOverflow: 'ellipsis',
@@ -47,6 +55,7 @@ export const getStyles = (props: ISuiteHeaderTitleStyleProps): ISuiteHeaderTitle
     short: {
       ...titleStyles,
       selectors: {
+        ...showShortTitle,
         ...hideShortTitle
       }
     },

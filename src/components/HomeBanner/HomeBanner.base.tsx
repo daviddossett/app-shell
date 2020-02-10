@@ -4,6 +4,7 @@ import React from 'react';
 import { Avatar } from '../Avatar/Avatar';
 import productIcon from '../../images/product-icon.svg';
 import { DefaultButton, Link } from 'office-ui-fabric-react';
+import { Card } from '../Card/Card';
 
 export const HomeBannerBase: React.FC<IHomeBannerProps> = (props) => {
   const { styles } = props;
@@ -18,10 +19,12 @@ export const HomeBannerBase: React.FC<IHomeBannerProps> = (props) => {
         <DefaultButton text={'Dismiss'} className={classNames.dismissButton} />
         <Link text={'Read the docs'} className={classNames.link}/>
       </div>
-      <div className={projectDetails}>
-        <h2>Venmo</h2>
+      <div className={classNames.projectDetails}>
+        <h2 className={classNames.projectName}>Venmo</h2>
         <span>No description yet</span>
-      </div>>
+        <Avatar />
+        <span>1 member</span>
+      </div>
     </div>
   );
 }

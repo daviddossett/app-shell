@@ -17,4 +17,5 @@ export interface IHomeBannerStyles {
   dismissButton: IStyle;
   link: IStyle;
   projectDetails: IStyle;
+  projectName: IStyle;
 }
