@@ -1,6 +1,5 @@
 import { classNamesFunction, getTheme, FontSizes, FontWeights } from 'office-ui-fabric-react';
 import { IQueriesStyleProps, IQueriesStyles } from './Queries.types';
-import { AnimationStyles } from 'office-ui-fabric-react';
 
 
 export const getStyles = (props: IQueriesStyleProps): IQueriesStyles => {
@@ -17,7 +16,7 @@ export const getStyles = (props: IQueriesStyleProps): IQueriesStyles => {
       color: theme.semanticColors.bodyText,
       fontWeight: FontWeights.semibold,
       margin: '0'
-    },
+    }
   }
 }
 
