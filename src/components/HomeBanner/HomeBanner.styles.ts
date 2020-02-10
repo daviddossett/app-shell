@@ -20,37 +20,56 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
   //   },
   // };
 
-  const gridLayout = `
-  'icon'
-  'title'
-  'description'
-  'projectName members'
-  '
+  const defaultGridLayout = `
+  'icon icon icon'
+  'title title title'
+  'description description description'
+  'actions actions actions'
+  'projectDetails projectDetails projectMembers'
   `
   
   return {
     root: {
       display: 'grid',
+      gridTemplateAreas: defaultGridLayout,
+      gridTemplateColumns: 'auto auto auto',
+      gridTemplateRows: 'auto',
       padding: '32px 16px',
       maxWidth: '100%',
       background: homePageBanner,
       color: theme.palette.white
     },
-    newProjectContent: {},
     icon: {
-      height: '96px',
+      gridArea: 'icon',
+      height: '64px',
+      marginBottom: '24px'
     },
     heading: {
+      gridArea: 'title',
       fontSize: FontSizes.xLargePlus,
-      fontWeight: FontWeights.semibold
+      fontWeight: FontWeights.semibold,
+      margin: '0'
     },
-    description: {},
-    dismissButton: {},
-    link: {},
-    projectDetails: {},
-    projectName: {
-      fontSize: FontSizes.xLarge,
-      fontWeight: FontWeights.semibold
+    description: {
+      gridArea: 'description',
+      marginBottom: '24px'
+    },
+    actions: {
+      gridArea: 'actions'
+    },
+    dismissButton: {
+      gridArea: 'dismiss',
+      marginBottom: '24px',
+      alignSelf: 'center',
+      margin: '0',
+      border: 'none',
+      color: theme.palette.themePrimary
+    },
+    link: {
+      gridArea: 'link',
+      color: 'white',
+      marginLeft: '16px',
+      alignSelf: 'center'
     }
   }
 }
