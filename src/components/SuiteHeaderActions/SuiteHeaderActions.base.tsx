@@ -22,6 +22,5 @@ export const SuiteHeaderActionsBase: React.FC<ISuiteHeaderActionsProps> = (props
       </div>
       <Avatar />
     </div>
-    
   );
 }
