@@ -11,4 +11,5 @@ export type IQueriesStyleProps = Pick<IQueriesProps, 'styles' | 'className'>;
 export interface IQueriesStyles {
   root: IStyle;
   content: IStyle;
+  commandBar: IStyle;
 }

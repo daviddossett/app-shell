@@ -110,6 +110,7 @@ export const QueriesBase: React.FC<IQueriesProps> = (props) => {
         items={items}
         farItems={farItems}
         ariaLabel={'Use left and right arrow keys to navigate between commands'}
+        className={classNames.commandBar}
       />
     <div className={classNames.content}>
       <PageHeader text={'Queries'}/>

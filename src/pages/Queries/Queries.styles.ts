@@ -13,6 +13,9 @@ export const getStyles = (props: IQueriesStyleProps): IQueriesStyles => {
     },
     content: {
       padding: '32px 32px 32px 32px'
+    },
+    commandBar: {
+      borderBottom: `1px solid ${theme.palette.neutralLight}`
     }
   }
 }
