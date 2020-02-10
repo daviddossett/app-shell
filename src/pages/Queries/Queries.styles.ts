@@ -12,9 +12,7 @@ export const getStyles = (props: IQueriesStyleProps): IQueriesStyles => {
       width: '100%'
     },
     content: {
-      height: 'inherit',
-      width: 'inherit',
-      padding: '24px 32px 32px 32px'
+      padding: '32px 32px 32px 32px'
     }
   }
 }
