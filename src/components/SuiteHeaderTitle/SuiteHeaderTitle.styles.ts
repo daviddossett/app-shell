@@ -1,5 +1,6 @@
-import { classNamesFunction, getTheme, AnimationStyles } from 'office-ui-fabric-react';
+import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
 import { ISuiteHeaderTitleStyleProps, ISuiteHeaderTitleStyles } from './SuiteHeaderTitle.types';
+import { breakpoint } from '../../constants/breakpoints';
 
 
 export const getStyles = (props: ISuiteHeaderTitleStyleProps): ISuiteHeaderTitleStyles => {
@@ -7,14 +8,14 @@ export const getStyles = (props: ISuiteHeaderTitleStyleProps): ISuiteHeaderTitle
   const theme = getTheme();
 
   const showFullTitle: any = {
-    [`@media (min-width: 640px)`]: {
+    [`@media (min-width: ${breakpoint.lg})`]: {
       display: 'flex',
       alignItems: 'center'
     },
   };
 
   const hideShortTitle: any = {
-    [`@media (min-width: 640px)`]: {
+    [`@media (min-width: ${breakpoint.lg})`]: {
       display: 'none'
     },
   };
@@ -27,6 +28,7 @@ export const getStyles = (props: ISuiteHeaderTitleStyleProps): ISuiteHeaderTitle
       color: theme.palette.white,
       alignSelf: 'center',
       padding: '0 8px',
+      marginRight: '8px',
       textDecoration: 'none',
       border: 'none',
       whiteSpace: 'nowrap',

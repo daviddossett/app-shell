@@ -1,18 +1,19 @@
 import { classNamesFunction } from 'office-ui-fabric-react';
 import { ISuiteHeaderActionsStyleProps, ISuiteHeaderActionsStyles } from './SuiteHeaderActions.types';
+import { breakpoint } from '../../constants/breakpoints';
 
 
 export const getStyles = (props: ISuiteHeaderActionsStyleProps): ISuiteHeaderActionsStyles => {
 
   const showFullMenu: any = {
-    [`@media (min-width: 900px)`]: {
+    [`@media (min-width: ${breakpoint.md})`]: {
       display: 'flex',
       alignItems: 'center'
     },
   };
 
   const hideSmallMenu: any = {
-    [`@media (min-width: 900px)`]: {
+    [`@media (min-width: ${breakpoint.md})`]: {
       display: 'none'
     },
   };

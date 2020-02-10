@@ -1,5 +1,6 @@
 import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
 import { ISuiteHeaderSearchStyleProps, ISuiteHeaderSearchStyles } from './SuiteHeaderSearch.types';
+import { breakpoint } from '../../constants/breakpoints';
 
 
 export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSearchStyles => {
@@ -9,7 +10,7 @@ export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSear
   const searchBackgroundHover = 'rgba(255,255,255,0.20)';
 
   const showSearch: any = {
-    [`@media (min-width: 900px)`]: {
+    [`@media (min-width: ${breakpoint.md})`]: {
       display: 'flex',
       alignItems: 'center'
     },
