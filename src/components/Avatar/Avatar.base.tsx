@@ -2,7 +2,7 @@ import { getClassNames } from './Avatar.styles';
 import { IAvatarProps } from './Avatar.types';
 import React from 'react';
 import { Persona, PersonaSize, IPersonaSharedProps, PersonaPresence } from 'office-ui-fabric-react';
-import personaImage  from '../../images/elvia-atkins.png'
+import personaImage  from '../../images/persona.png'
 
 export const AvatarBase: React.FC<IAvatarProps> = (props) => {
   const { styles } = props;

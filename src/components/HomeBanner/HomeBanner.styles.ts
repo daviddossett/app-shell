@@ -22,11 +22,17 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
   return {
     root: {
       display: 'grid',
-      alignItems: 'center',
       height: '50vh',
       width: '100%',
       background: homePageBanner,
-    }
+    },
+    newProjectContent: {},
+    icon: {},
+    heading: {},
+    description: {},
+    dismissButton: {},
+    link: {},
+    projectDetails: {}
   }
 }
 
