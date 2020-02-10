@@ -22,7 +22,7 @@ export const getStyles = (props: ISuiteHeaderTitleStyleProps): ISuiteHeaderTitle
   };
 
   const showShortTitle: any = {
-    [`@media (min-width: 400px)`]: {
+    [`@media (min-width: 375px)`]: {
       display: 'flex'
     },
   };

@@ -19,6 +19,14 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
   //     display: 'none'
   //   },
   // };
+
+  const gridLayout = `
+  'icon'
+  'title'
+  'description'
+  'projectName members'
+  '
+  `
   
   return {
     root: {
@@ -30,7 +38,7 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
     },
     newProjectContent: {},
     icon: {
-      height: '64px',
+      height: '96px',
     },
     heading: {
       fontSize: FontSizes.xLargePlus,
