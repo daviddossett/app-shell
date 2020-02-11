@@ -20,20 +20,20 @@ const items = [
       items: [
         {
           key: 'new',
-          name: 'New query',
-          iconProps: { iconName: 'Add' },
+          name: 'Last year',
+          iconProps: { iconName: 'Calendar' },
           ariaLabel: 'New'
         },
         {
           key: 'new',
-          name: 'New query',
-          iconProps: { iconName: 'Add' },
+          name: 'Last month',
+          iconProps: { iconName: 'Calendar' },
           ariaLabel: 'New'
         },
         {
           key: 'new',
-          name: 'New query',
-          iconProps: { iconName: 'Add' },
+          name: 'Last week',
+          iconProps: { iconName: 'Calendar' },
           ariaLabel: 'New'
         },
       ]
@@ -47,20 +47,20 @@ const items = [
       items: [
         {
           key: 'new',
-          name: 'New query',
-          iconProps: { iconName: 'Add' },
+          name: 'Weekly',
+          iconProps: { iconName: 'Clock' },
           ariaLabel: 'New'
         },
         {
           key: 'new',
-          name: 'New query',
-          iconProps: { iconName: 'Add' },
+          name: 'Monthly',
+          iconProps: { iconName: 'Clock' },
           ariaLabel: 'New'
         },
         {
           key: 'new',
-          name: 'New query',
-          iconProps: { iconName: 'Add' },
+          name: 'Yearly',
+          iconProps: { iconName: 'Clock' },
           ariaLabel: 'New'
         },
       ]
