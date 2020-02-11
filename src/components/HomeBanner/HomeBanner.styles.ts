@@ -56,7 +56,9 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
       opacity: '0.85'
     },
     actions: {
-      gridArea: 'actions'
+      gridArea: 'actions',
+      display: 'flex',
+      alignItems: 'center'
     },
     dismissButton: {
       gridArea: 'dismiss',
@@ -75,7 +77,7 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
       gridArea: 'card',
       padding: '16px',
       boxShadow: '0 1.6px 3.6px 0 rgba(0,0,0,.132), 0 0.3px 0.9px 0 rgba(0,0,0,.108)',
-      borderRadius: '2px',
+      borderRadius: '4px',
       backgroundColor: theme.palette.white,
       height: '400px'
     },
