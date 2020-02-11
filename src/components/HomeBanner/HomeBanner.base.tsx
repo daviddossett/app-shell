@@ -1,10 +1,8 @@
 import { getClassNames } from './HomeBanner.styles';
 import { IHomeBannerProps } from './HomeBanner.types';
 import React from 'react';
-import { Avatar } from '../Avatar/Avatar';
 import productIcon from '../../images/product-icon.svg';
-import { DefaultButton, Link } from 'office-ui-fabric-react';
-import { Card } from '../Card/Card';
+import { DefaultButton } from 'office-ui-fabric-react';
 
 export const HomeBannerBase: React.FC<IHomeBannerProps> = (props) => {
   const { styles } = props;
@@ -12,18 +10,23 @@ export const HomeBannerBase: React.FC<IHomeBannerProps> = (props) => {
   
   return (
     <div className={classNames.root}>
-      <img src={productIcon} alt={'Product Insights icon'} className={classNames.icon} />
-      <h1 className={classNames.heading}>Welcome to Product Insights, Amanda</h1>
-      <p className={classNames.description}>Collaborate with your team on real-time data and intelligent insights about how people experience your product</p>
-      <div className={classNames.actions}>
-        <DefaultButton text={'Dismiss'} className={classNames.dismissButton} />
-        <a href={'/queries'} className={classNames.link}>Read the docs</a>
-      </div>
-      <div className={classNames.card}>
-        <div className={classNames.contentArea}>
-          <span className={classNames.text}>Content area</span>
+      <div className={classNames.banner} />
+      <div className={classNames.wrapper}>
+          <img src={productIcon} alt={'Product Insights icon'} className={classNames.icon} />
+          <h1 className={classNames.heading}>Welcome to Product Insights, Amanda</h1>
+          <p className={classNames.description}>Collaborate with your team on real-time data and intelligent insights about how customers experience your product</p>
+          <div className={classNames.actions}>
+            <DefaultButton text={'Dismiss'} className={classNames.dismissButton} />
+            <a href={'/queries'} className={classNames.link}>Read the docs</a>
+          </div>
         </div>
-      </div>
+        <div className={classNames.cardWrapper}>
+          <div className={classNames.card}>
+            <div className={classNames.contentArea}>
+              <span className={classNames.text}>Content area</span>
+            </div>
+          </div>
+        </div>
     </div>
   );
 }

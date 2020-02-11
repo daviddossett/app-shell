@@ -20,66 +20,66 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
   //   },
   // };
 
-  const defaultGridLayout = `
-  'icon icon icon'
-  'title title title'
-  'description description description'
-  'actions actions actions'
-  'card card card'
-  `
-  
   return {
     root: {
       display: 'grid',
-      gridTemplateAreas: defaultGridLayout,
-      gridTemplateColumns: 'auto auto auto',
-      gridTemplateRows: 'auto',
-      gridRowGap: '32px',
-      padding: '32px 16px',
-      maxWidth: '100%',
+      gridTemplateColumns: '1fr 1fr 1fr',
+      gridTemplateRows: 'auto 100px 100px',
+      color: theme.palette.white,
+    },
+    banner: {
+      gridColumn: '1 / span 3',
+      gridRow: '1 / span 3',
       background: homePageBanner,
-      color: theme.palette.white
+    },
+    wrapper: {
+      padding: '32px 16px',
+      gridColumn: '1 / span 3',
+      gridRow: '1 / span 1'
     },
     icon: {
-      gridArea: 'icon',
-      height: '64px'
+      height: '64px',
+      marginBottom: '32px'
     },
     heading: {
-      gridArea: 'title',
       fontSize: FontSizes.xLargePlus,
       fontWeight: FontWeights.semibold,
-      margin: '0'
+      margin: '0 0 24px 0',
     },
     description: {
-      gridArea: 'description',
-      margin: '0',
+      margin: '0 0 24px 0',
       opacity: '0.85'
     },
     actions: {
-      gridArea: 'actions',
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      // marginBottom: '32px'
     },
     dismissButton: {
-      gridArea: 'dismiss',
       alignSelf: 'center',
       margin: '0',
       border: 'none',
       color: theme.palette.themePrimary
     },
     link: {
-      gridArea: 'link',
       color: 'white',
       marginLeft: '16px',
       alignSelf: 'center'
     },
+    cardWrapper: {
+      padding: '16px',
+      gridColumn: '1 / span 3',
+      gridRow: '2 / span 1'
+    },
     card: {
-      gridArea: 'card',
       padding: '16px',
       boxShadow: '0 1.6px 3.6px 0 rgba(0,0,0,.132), 0 0.3px 0.9px 0 rgba(0,0,0,.108)',
       borderRadius: '4px',
       backgroundColor: theme.palette.white,
-      height: '400px'
+      height: '400px',
+      gridColumn: '1 / span 3',
+      gridRow: '2 / span 1'
+
     },
     contentArea: {
       display: 'flex',

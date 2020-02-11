@@ -10,12 +10,15 @@ export type IHomeBannerStyleProps = Pick<IHomeBannerProps, 'styles' | 'className
 
 export interface IHomeBannerStyles {
   root: IStyle;
+  banner: IStyle;
+  wrapper: IStyle;
   icon: IStyle;
   heading: IStyle;
   description: IStyle;
   actions: IStyle;
   dismissButton: IStyle;
   link: IStyle;
+  cardWrapper: IStyle;
   card: IStyle;
   contentArea: IStyle;
   text: IStyle;
