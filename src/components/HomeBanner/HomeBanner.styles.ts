@@ -7,52 +7,156 @@ import { homePageBanner } from '../../constants/theme';
 export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
 
   const theme = getTheme();
-  // const showFullMenu: any = {
-  //   [`@media (min-width: ${breakpoint.md})`]: {
-  //     display: 'flex',
-  //     alignItems: 'center'
-  //   },
-  // };
 
-  // const hideSmallMenu: any = {
-  //   [`@media (min-width: ${breakpoint.md})`]: {
-  //     display: 'none'
-  //   },
-  // };
+  const smIcon: any = {
+    [`@media (min-width: ${breakpoint.sm})`]: {
+      height: '96px'
+    },
+  };
+
+  const mdRoot: any = {
+    [`@media (min-width: ${breakpoint.md})`]: {
+      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr',
+      gridTemplateRows: '64px auto',
+      gridColumnGap: '16px',
+    },
+  };
+
+  const mdBanner: any = {
+    [`@media (min-width: ${breakpoint.md})`]: {
+      gridColumn: '1 / span 12',
+      gridRow: '1 / span 8'
+    },
+  };
+
+  const mdIcon: any = {
+    [`@media (min-width: ${breakpoint.md})`]: {
+      height: '96px',
+      gridColumn: '2 / span 1',
+      gridRow: '2 / span 3',
+      margin: '0'
+    },
+  };
+
+  const mdInfoText: any = {
+    [`@media (min-width: ${breakpoint.md})`]: {
+      gridColumn: '3 / span 9',
+      gridRow: '2 / span 3'
+    },
+  };
+
+  const mdActions: any = {
+    [`@media (min-width: ${breakpoint.md})`]: {
+      gridColumn: '3 / span 9',
+      gridRow: '5 / span 1',
+      marginBottom: '64px'
+    },
+  };
+
+  const mdCard: any = {
+    [`@media (min-width: ${breakpoint.md})`]: {
+      gridColumn: '1 / span 12',
+      gridRow: '8 / span 2',
+      padding: '0 32px 96px 32px',
+    },
+  };
+
+  const lgIcon: any = {
+    [`@media (min-width: ${breakpoint.lg})`]: {
+      height: '128px',
+      gridColumn: '3 / span 1',
+      gridRow: '2 / span 3',
+      margin: '0'
+    },
+  };
+
+  const lgInfoText: any = {
+    [`@media (min-width: ${breakpoint.lg})`]: {
+      gridColumn: '4 / span 6',
+      gridRow: '2 / span 3'
+    },
+  };
+
+  const lgActions: any = {
+    [`@media (min-width: ${breakpoint.lg})`]: {
+      gridColumn: '4 / span 6',
+      gridRow: '5 / span 1'
+    },
+  };
+
+  const lgCard: any = {
+    [`@media (min-width: ${breakpoint.lg})`]: {
+      gridColumn: '2 / span 10',
+      gridRow: '8 / span 2',
+      padding: '0'
+    },
+  };
+
+  
 
   return {
     root: {
       display: 'grid',
       gridTemplateColumns: '1fr 1fr 1fr',
-      gridTemplateRows: 'auto 100px auto',
-      color: theme.palette.white
+      gridTemplateRows: 'auto',
+      color: theme.palette.white,
+      selectors: {
+        ...mdRoot
+      }
     },
     banner: {
       gridColumn: '1 / span 3',
-      gridRow: '1 / span 2',
+      gridRow: '1 / span 6',
       background: homePageBanner,
-    },
-    wrapper: {
-      padding: '32px 16px',
-      gridColumn: '1 / span 3',
-      gridRow: '1 / span 1'
+      selectors: {
+        ...mdBanner
+      }
     },
     icon: {
       height: '64px',
-      marginBottom: '32px'
+      gridColumn: '1 / span 3',
+      gridRow: '1 / span 1',
+      margin: '32px 0',
+      padding: '0 16px',
+      ...AnimationStyles.slideUpIn10,
+      selectors: {
+        ...smIcon,
+        ...mdIcon,
+        ...lgIcon
+      }
+    },
+    infoText: {
+      gridColumn: '1 / span 3',
+      gridRow: '2 / span 1',
+      ...AnimationStyles.slideUpIn10,
+      selectors: {
+        ...mdInfoText,
+        ...lgInfoText
+      }
     },
     heading: {
       fontSize: FontSizes.xLargePlus,
       fontWeight: FontWeights.semibold,
       margin: '0 0 24px 0',
+      padding: '0 16px',
     },
     description: {
       margin: '0 0 24px 0',
-      opacity: '0.85'
+      opacity: '0.85',
+      padding: '0 16px',
     },
     actions: {
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      padding: '0 16px',
+      marginBottom: '32px',
+      gridColumn: '1 / span 3',
+      gridRow: '4 / span 1',
+      ...AnimationStyles.slideUpIn10,
+      selectors: {
+        ...mdActions,
+        ...lgActions
+      }
     },
     dismissButton: {
       alignSelf: 'center',
@@ -68,7 +172,12 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
     cardWrapper: {
       padding: '0 16px 96px 16px',
       gridColumn: '1 / span 3',
-      gridRow: '2 / span 2'
+      gridRow: '6 / span 2',
+      ...AnimationStyles.slideUpIn10,
+      selectors: {
+        ...mdCard,
+        ...lgCard
+      }
     },
     card: {
       padding: '16px',

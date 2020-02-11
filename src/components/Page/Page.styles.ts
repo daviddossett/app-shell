@@ -12,6 +12,7 @@ export const styles = (props: IPageStyleProps): IPageStyles => {
     root: {
       height: '100%',
       display: 'grid',
+      overflow: 'hidden',
       gridTemplateAreas: gridLayout,
       gridTemplateColumns: 'auto 1fr',
       gridTemplateRows: 'auto 1fr',
@@ -25,6 +26,7 @@ export const styles = (props: IPageStyleProps): IPageStyles => {
     },
     content: {
       gridArea: 'content',
+      overflow: 'auto'
     }
   }
 }

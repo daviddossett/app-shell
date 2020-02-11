@@ -11,8 +11,8 @@ export type IHomeBannerStyleProps = Pick<IHomeBannerProps, 'styles' | 'className
 export interface IHomeBannerStyles {
   root: IStyle;
   banner: IStyle;
-  wrapper: IStyle;
   icon: IStyle;
+  infoText: IStyle;
   heading: IStyle;
   description: IStyle;
   actions: IStyle;

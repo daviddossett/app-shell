@@ -11,14 +11,14 @@ export const HomeBannerBase: React.FC<IHomeBannerProps> = (props) => {
   return (
     <div className={classNames.root}>
       <div className={classNames.banner} />
-      <div className={classNames.wrapper}>
-          <img src={productIcon} alt={'Product Insights icon'} className={classNames.icon} />
-          <h1 className={classNames.heading}>Welcome to Product Insights, Amanda</h1>
-          <p className={classNames.description}>Collaborate with your team on real-time data and intelligent insights about how customers experience your product</p>
-          <div className={classNames.actions}>
-            <DefaultButton text={'Dismiss'} className={classNames.dismissButton} />
-            <a href={'/queries'} className={classNames.link}>Read the docs</a>
+        <img src={productIcon} alt={'Product Insights icon'} className={classNames.icon} />
+        <div className={classNames.infoText}>
+            <h1 className={classNames.heading}>Welcome to Product Insights, Amanda</h1>
+            <p className={classNames.description}>Collaborate with your team on real-time data and intelligent insights about how customers experience your product</p>
           </div>
+        <div className={classNames.actions}>
+          <DefaultButton text={'Dismiss'} className={classNames.dismissButton} />
+          <a href={'/queries'} className={classNames.link}>Read the docs</a>
         </div>
         <div className={classNames.cardWrapper}>
           <div className={classNames.card}>
