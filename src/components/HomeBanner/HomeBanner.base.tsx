@@ -18,7 +18,7 @@ export const HomeBannerBase: React.FC<IHomeBannerProps> = (props) => {
           </div>
         <div className={classNames.actions}>
           <DefaultButton text={'Watch video'} className={classNames.dismissButton} />
-          <a href={'/queries'} className={classNames.link}>Read the docs</a>
+          <a href={'/home'} className={classNames.link}>Read the docs</a>
         </div>
         <div className={classNames.cardWrapper}>
           <div className={classNames.card}>
