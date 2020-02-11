@@ -1,6 +1,5 @@
 import { classNamesFunction, getTheme, FontSizes, FontWeights } from 'office-ui-fabric-react';
 import { IReportsStyleProps, IReportsStyles } from './Reports.types';
-import { AnimationStyles } from 'office-ui-fabric-react';
 
 
 export const getStyles = (props: IReportsStyleProps): IReportsStyles => {
@@ -10,13 +9,7 @@ export const getStyles = (props: IReportsStyleProps): IReportsStyles => {
   return {
     root: {
       padding: '32px'
-    },
-    header: {
-      fontSize: FontSizes.xLarge,
-      color: theme.semanticColors.bodyText,
-      fontWeight: FontWeights.semibold,
-      margin: '0'
-    },
+    }
   }
 }
 

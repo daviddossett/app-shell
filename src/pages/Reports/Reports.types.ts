@@ -10,5 +10,4 @@ export type IReportsStyleProps = Pick<IReportsProps, 'styles' | 'className'>;
 
 export interface IReportsStyles {
   root: IStyle;
-  header: IStyle;
 }
