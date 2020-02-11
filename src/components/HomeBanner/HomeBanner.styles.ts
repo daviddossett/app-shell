@@ -72,14 +72,14 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
 
   const lgInfoText: any = {
     [`@media (min-width: ${breakpoint.lg})`]: {
-      gridColumn: '4 / span 6',
+      gridColumn: '4 / span 7',
       gridRow: '2 / span 3'
     },
   };
 
   const lgActions: any = {
     [`@media (min-width: ${breakpoint.lg})`]: {
-      gridColumn: '4 / span 6',
+      gridColumn: '4 / span 7',
       gridRow: '5 / span 1'
     },
   };
@@ -87,6 +87,60 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
   const lgCard: any = {
     [`@media (min-width: ${breakpoint.lg})`]: {
       gridColumn: '2 / span 10',
+      gridRow: '8 / span 2',
+      padding: '0'
+    },
+  };
+
+  const xlIcon: any = {
+    [`@media (min-width: ${breakpoint.xl})`]: {
+      height: '128px',
+      gridColumn: '3 / span 1',
+      gridRow: '2 / span 3',
+      margin: '0'
+    },
+  };
+
+  const xlInfoText: any = {
+    [`@media (min-width: ${breakpoint.xl})`]: {
+      gridColumn: '4 / span 6',
+      gridRow: '2 / span 3'
+    },
+  };
+
+  const xlActions: any = {
+    [`@media (min-width: ${breakpoint.xl})`]: {
+      gridColumn: '4 / span 6',
+      gridRow: '5 / span 1'
+    },
+  };
+
+  const xxlIcon: any = {
+    [`@media (min-width: ${breakpoint.xxl})`]: {
+      height: '128px',
+      gridColumn: '4 / span 1',
+      gridRow: '2 / span 3',
+      margin: '0'
+    },
+  };
+
+  const xxlInfoText: any = {
+    [`@media (min-width: ${breakpoint.xxl})`]: {
+      gridColumn: '5 / span 4',
+      gridRow: '2 / span 3'
+    },
+  };
+
+  const xxlActions: any = {
+    [`@media (min-width: ${breakpoint.xxl})`]: {
+      gridColumn: '5 / span 4',
+      gridRow: '5 / span 1'
+    },
+  };
+
+  const xxlCard: any = {
+    [`@media (min-width: ${breakpoint.xxl})`]: {
+      gridColumn: '3 / span 8',
       gridRow: '8 / span 2',
       padding: '0'
     },
@@ -122,7 +176,9 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
       selectors: {
         ...smIcon,
         ...mdIcon,
-        ...lgIcon
+        ...lgIcon,
+        ...xlIcon,
+        ...xxlIcon
       }
     },
     infoText: {
@@ -131,7 +187,9 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
       ...AnimationStyles.slideUpIn10,
       selectors: {
         ...mdInfoText,
-        ...lgInfoText
+        ...lgInfoText,
+        ...xlInfoText,
+        ...xxlInfoText
       }
     },
     heading: {
@@ -155,7 +213,9 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
       ...AnimationStyles.slideUpIn10,
       selectors: {
         ...mdActions,
-        ...lgActions
+        ...lgActions,
+        ...xlActions,
+        ...xxlActions
       }
     },
     dismissButton: {
@@ -176,7 +236,8 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
       ...AnimationStyles.slideUpIn10,
       selectors: {
         ...mdCard,
-        ...lgCard
+        ...lgCard,
+        ...xxlCard
       }
     },
     card: {
