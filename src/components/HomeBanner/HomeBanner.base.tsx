@@ -17,7 +17,7 @@ export const HomeBannerBase: React.FC<IHomeBannerProps> = (props) => {
             <p className={classNames.description}>Collaborate with your team on real-time data and intelligent insights about how customers experience your product</p>
           </div>
         <div className={classNames.actions}>
-          <DefaultButton text={'Dismiss'} className={classNames.dismissButton} />
+          <DefaultButton text={'Watch video'} className={classNames.dismissButton} />
           <a href={'/queries'} className={classNames.link}>Read the docs</a>
         </div>
         <div className={classNames.cardWrapper}>
