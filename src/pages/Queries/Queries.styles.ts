@@ -16,6 +16,10 @@ export const getStyles = (props: IQueriesStyleProps): IQueriesStyles => {
     },
     commandBar: {
       borderBottom: `1px solid ${theme.palette.neutralLight}`
+    },
+    card: {
+      marginTop: '24px',
+      width: '100%',
     }
   }
 }

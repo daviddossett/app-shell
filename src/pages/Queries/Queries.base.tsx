@@ -3,6 +3,7 @@ import { IQueriesProps } from './Queries.types';
 import React from 'react';
 import { CommandBar } from 'office-ui-fabric-react';
 import { PageHeader } from '../../components/PageHeader/PageHeader';
+import { Card } from '../../components/Card/Card';
 
 const items = [
   {
@@ -114,6 +115,9 @@ export const QueriesBase: React.FC<IQueriesProps> = (props) => {
       />
     <div className={classNames.content}>
       <PageHeader text={'Queries'}/>
+      <div className={classNames.card}>
+        <Card text={'Content area'}/>
+      </div>
     </div>
   </div>
   );

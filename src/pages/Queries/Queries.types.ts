@@ -12,4 +12,5 @@ export interface IQueriesStyles {
   root: IStyle;
   content: IStyle;
   commandBar: IStyle;
+  card: IStyle;
 }
