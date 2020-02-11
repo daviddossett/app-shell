@@ -19,6 +19,11 @@ export const HomeBannerBase: React.FC<IHomeBannerProps> = (props) => {
         <DefaultButton text={'Dismiss'} className={classNames.dismissButton} />
         <a href={'/queries'} className={classNames.link}>Read the docs</a>
       </div>
+      <div className={classNames.card}>
+        <div className={classNames.contentArea}>
+          <span className={classNames.text}>Content area</span>
+        </div>
+      </div>
     </div>
   );
 }

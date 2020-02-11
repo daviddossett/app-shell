@@ -25,7 +25,7 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
   'title title title'
   'description description description'
   'actions actions actions'
-  'projectDetails projectDetails projectMembers'
+  'card card card'
   `
   
   return {
@@ -34,6 +34,7 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
       gridTemplateAreas: defaultGridLayout,
       gridTemplateColumns: 'auto auto auto',
       gridTemplateRows: 'auto',
+      gridRowGap: '32px',
       padding: '32px 16px',
       maxWidth: '100%',
       background: homePageBanner,
@@ -41,8 +42,7 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
     },
     icon: {
       gridArea: 'icon',
-      height: '64px',
-      marginBottom: '24px'
+      height: '64px'
     },
     heading: {
       gridArea: 'title',
@@ -52,14 +52,14 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
     },
     description: {
       gridArea: 'description',
-      marginBottom: '24px'
+      margin: '0',
+      opacity: '0.85'
     },
     actions: {
       gridArea: 'actions'
     },
     dismissButton: {
       gridArea: 'dismiss',
-      marginBottom: '24px',
       alignSelf: 'center',
       margin: '0',
       border: 'none',
@@ -70,6 +70,26 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
       color: 'white',
       marginLeft: '16px',
       alignSelf: 'center'
+    },
+    card: {
+      gridArea: 'card',
+      padding: '16px',
+      boxShadow: '0 1.6px 3.6px 0 rgba(0,0,0,.132), 0 0.3px 0.9px 0 rgba(0,0,0,.108)',
+      borderRadius: '2px',
+      backgroundColor: theme.palette.white,
+      height: '400px'
+    },
+    contentArea: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: 'rgba(252, 37, 118, 0.12)',
+      width: '100%',
+      height: '100%'
+    },
+    text: {
+      textAlign: 'center',
+      color: '#FC2576' // Todo: Make this a constant for reuse
     }
   }
 }

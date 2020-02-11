@@ -1,25 +1,26 @@
-import { classNamesFunction } from 'office-ui-fabric-react';
+import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
 import { ICardStyleProps, ICardStyles } from './Card.types';
 
 export const getStyles = (props: ICardStyleProps): ICardStyles => {
-
-  // const showFullMenu: any = {
-  //   [`@media (min-width: ${breakpoint.md})`]: {
-  //     display: 'flex',
-  //     alignItems: 'center'
-  //   },
-  // };
-
-  // const hideSmallMenu: any = {
-  //   [`@media (min-width: ${breakpoint.md})`]: {
-  //     display: 'none'
-  //   },
-  // };
+  const theme = getTheme();
   
   return {
     root: {
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      padding: '16px',
+      boxShadow: '0 1.6px 3.6px 0 rgba(0,0,0,.132), 0 0.3px 0.9px 0 rgba(0,0,0,.108)',
+      borderRadius: '2px',
+      backgroundColor: theme.palette.white
+    },
+    contentArea: {
+      backgroundColor: 'rgba(252, 37, 118, 0.12)',
+      width: '100%',
+      height: '100%'
+    },
+    contentAreaText: {
+      textAlign: 'center',
+      color: '#FC2576' // Todo: Make this a constant for reuse
     }
   }
 }

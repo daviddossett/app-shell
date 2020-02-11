@@ -16,4 +16,7 @@ export interface IHomeBannerStyles {
   actions: IStyle;
   dismissButton: IStyle;
   link: IStyle;
+  card: IStyle;
+  contentArea: IStyle;
+  text: IStyle;
 }
