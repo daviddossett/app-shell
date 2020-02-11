@@ -1,6 +1,7 @@
+import React from 'react';
 import { getClassNames } from './Data.styles';
 import { IDataProps } from './Data.types';
-import React from 'react';
+import { PageHeader } from '../../components/PageHeader/PageHeader';
 
 export const DataBase: React.FC<IDataProps> = (props) => {
   const { styles } = props;
@@ -8,7 +9,7 @@ export const DataBase: React.FC<IDataProps> = (props) => {
   
   return (
     <div className={classNames.root}>
-      <h1 className={classNames.header}>Data</h1>
+      <PageHeader text={'Data'}/>
   </div>
   );
 }

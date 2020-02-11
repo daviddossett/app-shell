@@ -8,7 +8,9 @@ export const getStyles = (props: IReportsStyleProps): IReportsStyles => {
   const theme = getTheme();
 
   return {
-    root: {},
+    root: {
+      padding: '32px'
+    },
     header: {
       fontSize: FontSizes.xLarge,
       color: theme.semanticColors.bodyText,

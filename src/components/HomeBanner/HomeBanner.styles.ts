@@ -172,7 +172,7 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
       gridRow: '1 / span 1',
       margin: '32px 0',
       padding: '0 16px',
-      ...AnimationStyles.slideUpIn10,
+      // ...AnimationStyles.slideUpIn10,
       selectors: {
         ...smIcon,
         ...mdIcon,
@@ -184,7 +184,7 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
     infoText: {
       gridColumn: '1 / span 3',
       gridRow: '2 / span 1',
-      ...AnimationStyles.slideUpIn10,
+      // ...AnimationStyles.slideUpIn10,
       selectors: {
         ...mdInfoText,
         ...lgInfoText,
@@ -210,7 +210,7 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
       marginBottom: '32px',
       gridColumn: '1 / span 3',
       gridRow: '4 / span 1',
-      ...AnimationStyles.slideUpIn10,
+      // ...AnimationStyles.slideUpIn10,
       selectors: {
         ...mdActions,
         ...lgActions,
@@ -233,7 +233,7 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
       padding: '0 16px 96px 16px',
       gridColumn: '1 / span 3',
       gridRow: '6 / span 2',
-      ...AnimationStyles.slideUpIn10,
+      // ...AnimationStyles.slideUpIn10,
       selectors: {
         ...mdCard,
         ...lgCard,

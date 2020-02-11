@@ -1,7 +1,7 @@
 import { getClassNames } from './Settings.styles';
 import { ISettingsProps } from './Settings.types';
 import React from 'react';
-import { PageHeader } from '@business-app/fabric';
+import { PageHeader } from '../../components/PageHeader/PageHeader';
 
 export const SettingsBase: React.FC<ISettingsProps> = (props) => {
   const { styles } = props;
@@ -9,7 +9,7 @@ export const SettingsBase: React.FC<ISettingsProps> = (props) => {
   
   return (
     <div className={classNames.root}>
-      <h1 className={classNames.header}>Settings</h1>
+      <PageHeader text={'Settings'}/>
   </div>
   );
 }

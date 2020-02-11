@@ -54,26 +54,26 @@ export const NavBase: React.FC<INavProps> = (props) => {
       iconProps: { iconName: 'ViewDashboard' },
       active: false,
       onClick: handleClick,
-      items: [
-        {
-          key: 'key-metrics',
-          name: 'Key metrics',
-          active: false,
-          onClick: handleClick
-        },
-        {
-          key: 'active-users',
-          name: 'Active users',
-          active: false,
-          onClick: handleClick
-        },
-        {
-          key: 'page-timings',
-          name: 'Page timings',
-          active: false,
-          onClick: handleClick
-        }
-      ]
+      // items: [
+      //   {
+      //     key: 'key-metrics',
+      //     name: 'Key metrics',
+      //     active: false,
+      //     onClick: handleClick
+      //   },
+      //   {
+      //     key: 'active-users',
+      //     name: 'Active users',
+      //     active: false,
+      //     onClick: handleClick
+      //   },
+      //   {
+      //     key: 'page-timings',
+      //     name: 'Page timings',
+      //     active: false,
+      //     onClick: handleClick
+      //   }
+      // ]
     },
     {
       key: 'data',
@@ -81,32 +81,32 @@ export const NavBase: React.FC<INavProps> = (props) => {
       iconProps: { iconName: 'Database' },
       active: false,
       onClick: handleClick,
-      items: [
-        {
-          key: 'events',
-          name: 'Events',
-          active: false,
-          onClick: handleClick
-        },
-        {
-          key: 'metrics',
-          name: 'Metrics',
-          active: false,
-          onClick: handleClick
-        },
-        {
-          key: 'segments',
-          name: 'Segments',
-          active: false,
-          onClick: handleClick
-        },
-        {
-          key: 'enrichment',
-          name: 'Enrichment',
-          active: false,
-          onClick: handleClick
-        },
-      ]
+      // items: [
+      //   {
+      //     key: 'events',
+      //     name: 'Events',
+      //     active: false,
+      //     onClick: handleClick
+      //   },
+      //   {
+      //     key: 'metrics',
+      //     name: 'Metrics',
+      //     active: false,
+      //     onClick: handleClick
+      //   },
+      //   {
+      //     key: 'segments',
+      //     name: 'Segments',
+      //     active: false,
+      //     onClick: handleClick
+      //   },
+      //   {
+      //     key: 'enrichment',
+      //     name: 'Enrichment',
+      //     active: false,
+      //     onClick: handleClick
+      //   },
+      // ]
     },
     {
       key: 'settings',
@@ -114,26 +114,26 @@ export const NavBase: React.FC<INavProps> = (props) => {
       iconProps: { iconName: 'Settings' },
       active: false,
       onClick: handleClick,
-      items: [
-        {
-          key: 'basics',
-          name: 'Basics',
-          active: false,
-          onClick: handleClick
-        },
-        {
-          key: 'billing',
-          name: 'Billing',
-          active: false,
-          onClick: handleClick
-        },
-        {
-          key: 'members',
-          name: 'Members',
-          active: false,
-          onClick: handleClick
-        },
-      ]
+      // items: [
+      //   {
+      //     key: 'basics',
+      //     name: 'Basics',
+      //     active: false,
+      //     onClick: handleClick
+      //   },
+      //   {
+      //     key: 'billing',
+      //     name: 'Billing',
+      //     active: false,
+      //     onClick: handleClick
+      //   },
+      //   {
+      //     key: 'members',
+      //     name: 'Members',
+      //     active: false,
+      //     onClick: handleClick
+      //   },
+      // ]
     }
   ];
 
