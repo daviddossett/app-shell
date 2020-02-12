@@ -7,8 +7,16 @@ export const getStyles = (props: IReportsStyleProps): IReportsStyles => {
   const theme = getTheme();
 
   return {
-    root: {
+    root: {},
+    contentArea: {
       padding: '32px'
+    },
+    commandBar: {
+      borderBottom: `1px solid ${theme.palette.neutralLight}`
+    },
+    chartGrid: {
+      display: 'grid',
+      gridRowGap: '24px'
     }
   }
 }
