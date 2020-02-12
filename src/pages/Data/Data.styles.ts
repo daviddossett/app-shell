@@ -1,6 +1,5 @@
 import { classNamesFunction, getTheme, FontSizes, FontWeights } from 'office-ui-fabric-react';
 import { IDataStyleProps, IDataStyles } from './Data.types';
-import { AnimationStyles } from 'office-ui-fabric-react';
 
 
 

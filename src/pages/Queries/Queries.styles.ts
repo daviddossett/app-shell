@@ -1,4 +1,4 @@
-import { classNamesFunction, getTheme, FontSizes, FontWeights } from 'office-ui-fabric-react';
+import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
 import { IQueriesStyleProps, IQueriesStyles } from './Queries.types';
 
 

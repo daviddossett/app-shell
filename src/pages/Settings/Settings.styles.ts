@@ -1,6 +1,5 @@
 import { classNamesFunction, getTheme, FontSizes, FontWeights } from 'office-ui-fabric-react';
 import { ISettingsStyleProps, ISettingsStyles } from './Settings.types';
-import { AnimationStyles } from 'office-ui-fabric-react';
 
 
 export const getStyles = (props: ISettingsStyleProps): ISettingsStyles => {

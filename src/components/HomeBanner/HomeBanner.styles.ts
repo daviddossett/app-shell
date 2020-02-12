@@ -1,4 +1,4 @@
-import { classNamesFunction, getTheme, FontSizes, FontWeights, AnimationStyles } from 'office-ui-fabric-react';
+import { classNamesFunction, getTheme, FontSizes, FontWeights } from 'office-ui-fabric-react';
 import { IHomeBannerStyleProps, IHomeBannerStyles } from './HomeBanner.types';
 import { breakpoint } from '../../constants/breakpoints';
 import { homePageBanner } from '../../constants/theme';

@@ -1,4 +1,4 @@
-import { classNamesFunction, getTheme, FontSizes, FontWeights } from 'office-ui-fabric-react';
+import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
 import { IReportsStyleProps, IReportsStyles } from './Reports.types';
 
 
@@ -9,10 +9,10 @@ export const getStyles = (props: IReportsStyleProps): IReportsStyles => {
   return {
     root: {},
     contentArea: {
-      padding: '32px'
+      padding: '32px',
     },
     commandBar: {
-      borderBottom: `1px solid ${theme.palette.neutralLight}`
+      borderBottom: `1px solid ${theme.palette.neutralLight}`,
     },
     chartGrid: {
       display: 'grid',
