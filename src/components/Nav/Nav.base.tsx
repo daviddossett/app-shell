@@ -10,29 +10,30 @@ export const NavBase: React.FC<INavProps> = (props) => {
   const classNames = getClassNames(styles, { theme });
   const history = useHistory();
 
-  const handleNavigation = (path: string) => {
+  const navigateToPath = (path: string) => {
     history.push(path);
   }
 
+  const matchNavListStateToPath = () => {
+
+  }
+
   const handleClick = (ev: any, item: any) => {
-    const setActive = (listItem: any) => {
+    const setItemToActive = (listItem: any) => {
       return {
         ...listItem,
         active: listItem.key === item.key,
       }
     } 
-    const newItemsv2 = listItems.map(listItem => {
-      const newListItem = setActive(listItem);
+    const newListItems = listItems.map(listItem => {
+      const newListItem = setItemToActive(listItem);
       if (newListItem.items?.length) {
-        newListItem.items = newListItem.items.map(setActive)
-        // newListItem.items = newListItem.items.map(newItemsv2)
+        newListItem.items = newListItem.items.map(setItemToActive)
       }
       return newListItem;
     });
-    console.log(newItemsv2) 
- 
-    setListItems(newItemsv2);
-    handleNavigation(`/${item.key}`)
+    setListItems(newListItems);
+    navigateToPath(`/${item.key}`)
   }
 
   const navListItems: ISidebarItemProps[] = [
