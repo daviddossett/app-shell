@@ -13,11 +13,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
   const navigateToPath = (path: string) => {
     history.push(path);
   }
-
-  const matchNavListStateToPath = () => {
-
-  }
-
+  
   const handleClick = (ev: any, item: any) => {
     const setItemToActive = (listItem: any) => {
       return {
