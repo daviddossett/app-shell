@@ -15,20 +15,23 @@ export const NavBase: React.FC<INavProps> = (props) => {
   }
 
   const handleClick = (ev: any, item: any) => {
-    const newItems = items.map(currentItem => {
-
-      if (currentItem.key === item.key) {
-        return {
-          ...currentItem,
-          active: true
-        }
-      }
+    const setActive = (listItem: any) => {
       return {
-        ...currentItem,
-        active: false
-      };
+        ...listItem,
+        active: listItem.key === item.key,
+      }
+    } 
+    const newItemsv2 = listItems.map(listItem => {
+      const newListItem = setActive(listItem);
+      if (newListItem.items?.length) {
+        newListItem.items = newListItem.items.map(setActive)
+        // newListItem.items = newListItem.items.map(newItemsv2)
+      }
+      return newListItem;
     });
-    setItems(newItems);
+    console.log(newItemsv2) 
+ 
+    setListItems(newItemsv2);
     handleNavigation(`/${item.key}`)
   }
 
@@ -64,6 +67,12 @@ export const NavBase: React.FC<INavProps> = (props) => {
         {
           key: 'signals',
           name: 'Signals',
+          active: false,
+          onClick: handleClick
+        },
+        {
+          key: 'sources',
+          name: 'Sources',
           active: false,
           onClick: handleClick
         },
@@ -110,7 +119,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
     }
   ];
 
-  const [items, setItems] = useState(navListItems); 
+  const [listItems, setListItems] = useState(navListItems); 
 
   return (
     <div className={classNames.root}>
@@ -120,7 +129,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
         collapsible={true}
         defaultIsCollapsed={false}
         collapseButtonAriaLabel={'Navigation menu'}
-        items={items}
+        items={listItems}
       />
     </div>
   );
