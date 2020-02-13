@@ -62,8 +62,8 @@ export const NavBase: React.FC<INavProps> = (props) => {
       onClick: handleClick,
       items: [
         {
-          key: 'events',
-          name: 'Events',
+          key: 'signals',
+          name: 'Signals',
           active: false,
           onClick: handleClick
         },
@@ -78,13 +78,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
           name: 'Segments',
           active: false,
           onClick: handleClick
-        },
-        {
-          key: 'enrichment',
-          name: 'Enrichment',
-          active: false,
-          onClick: handleClick
-        },
+        }
       ]
     },
     {
