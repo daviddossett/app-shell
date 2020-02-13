@@ -14,10 +14,6 @@ export const NavBase: React.FC<INavProps> = (props) => {
     history.push(path);
   }
 
-  const matchNavListStateToPath = () => {
-
-  }
-
   const handleClick = (ev: any, item: any) => {
     const setItemToActive = (listItem: any) => {
       return {
