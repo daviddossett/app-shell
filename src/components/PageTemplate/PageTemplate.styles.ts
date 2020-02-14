@@ -4,8 +4,12 @@ import { IPageTemplateStyleProps, IPageTemplateStyles } from './PageTemplate.typ
 
 export const getStyles = (props: IPageTemplateStyleProps): IPageTemplateStyles => {
   return {
-    root: {
-      padding: '32px'
+    root: {},
+    commandBar: {},
+    contentArea: {
+      padding: '32px',
+      backgroundColor: 'rgba(252, 37, 118, 0.12)',
+      width: '100%',
     }
   }
 }

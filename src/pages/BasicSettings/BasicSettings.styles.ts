@@ -1,8 +1,8 @@
 import { classNamesFunction, getTheme, FontSizes, FontWeights } from 'office-ui-fabric-react';
-import { ISettingsStyleProps, ISettingsStyles } from './Settings.types';
+import { IBasicSettingsStyleProps, IBasicSettingsStyles } from './BasicSettings.types';
 
 
-export const getStyles = (props: ISettingsStyleProps): ISettingsStyles => {
+export const getStyles = (props: IBasicSettingsStyleProps): IBasicSettingsStyles => {
 
   const theme = getTheme();
 
@@ -19,4 +19,4 @@ export const getStyles = (props: ISettingsStyleProps): ISettingsStyles => {
   }
 }
 
-export const getClassNames = classNamesFunction<ISettingsStyleProps, ISettingsStyles>();
+export const getClassNames = classNamesFunction<IBasicSettingsStyleProps, IBasicSettingsStyles>();

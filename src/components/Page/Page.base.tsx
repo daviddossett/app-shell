@@ -7,7 +7,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { Home } from '../../pages/Home/Home';
 import { Queries } from '../../pages/Queries/Queries';
 import { Reports } from '../../pages/Reports/Reports';
-import { Settings } from '../../pages/Settings/Settings';
+import { BasicSettings } from '../../pages/BasicSettings/BasicSettings';
 import { Data } from '../../pages/Data/Data';
 
 export const PageBase: React.FC<IPageProps> = (props) => {
@@ -29,8 +29,12 @@ export const PageBase: React.FC<IPageProps> = (props) => {
           <Redirect strict from="/reports/" to="/reports" exact />
           <Route exact path='/data' component={Data} />
           <Redirect strict from="/data/" to="/data" exact />
-          <Route exact path='/settings' component={Settings} />
+          <Route exact path='/settings/basics' component={BasicSettings} />
           <Redirect strict from="/settings/" to="/settings" exact />
+          <Route exact path='/settings/billing' component={BasicSettings} />
+          <Redirect strict from="/billing/" to="/settings" exact />
+          <Route exact path='/settings/members' component={BasicSettings} />
+          <Redirect strict from="/members/" to="/settings" exact />
         </Switch>
       </main>
     </div>

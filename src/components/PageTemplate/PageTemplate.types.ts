@@ -6,6 +6,7 @@ export interface IPageTemplateProps {
   pageTitle: string;
   commands: ICommandBarItemProps[];
   farCommands: ICommandBarItemProps[];
+  commandBarIsVisible: boolean;
 }
 
 export type IPageTemplateStyleProps = Pick<IPageTemplateProps, 'styles' | 'className'>;
@@ -13,5 +14,6 @@ export type IPageTemplateStyleProps = Pick<IPageTemplateProps, 'styles' | 'class
 
 export interface IPageTemplateStyles {
   root: IStyle;
+  contentArea: IStyle;
   commandBar: IStyle;
 }
