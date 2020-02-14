@@ -11,8 +11,9 @@ export const getStyles = (props: IPageHeaderStyleProps): IPageHeaderStyles => {
       color: theme.semanticColors.bodyText,
       fontSize: FontSizes.xLarge,
       fontWeight: FontWeights.semibold,
-      margin: '0 0 24px 0',
-      padding: '0'
+      width: '100%',
+      margin: '0',
+      padding: '32px'
     }
   }
 }

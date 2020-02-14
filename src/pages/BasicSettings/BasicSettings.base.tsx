@@ -1,7 +1,7 @@
-import { getClassNames } from './BasicSettings.styles';
-import { IBasicSettingsProps } from './BasicSettings.types';
 import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
+import { IBasicSettingsProps } from './BasicSettings.types';
+import { Card } from '../../components/Card/Card';
 
 const commands = [
   {
@@ -99,17 +99,16 @@ const farCommands = [
   }
 ];
 
-export const BasicSettingsBase: React.FC<IBasicSettingsProps> = (props) => {
-  const { styles } = props;
-  const classNames = getClassNames(styles);
-  
+export const BasicSettingsBase: React.FC<IBasicSettingsProps> = () => {  
   return (
     <>
       <PageTemplate
         pageTitle={'Basics'}
         commands={commands}
         farCommands={farCommands}
-      />
+        commandBarIsVisible={false}>
+        <Card text={'Placeholder content'} />
+      </PageTemplate>
     </>
   );
 }

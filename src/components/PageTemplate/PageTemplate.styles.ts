@@ -1,15 +1,20 @@
-import { classNamesFunction} from 'office-ui-fabric-react';
+import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
 import { IPageTemplateStyleProps, IPageTemplateStyles } from './PageTemplate.types';
 
 
 export const getStyles = (props: IPageTemplateStyleProps): IPageTemplateStyles => {
+  const theme = getTheme();
+
   return {
     root: {},
-    commandBar: {},
+    commandBar: {
+      borderBottom: `1px solid ${theme.palette.neutralLight}`
+    },
+    commandBarHidden: {
+      display: 'none'
+    },
     contentArea: {
-      padding: '32px',
-      backgroundColor: 'rgba(252, 37, 118, 0.12)',
-      width: '100%',
+      padding: '0 32px 128px'
     }
   }
 }
