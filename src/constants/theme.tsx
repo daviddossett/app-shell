@@ -29,4 +29,6 @@ export const suiteHeaderPalette = {
   pressed: '#053385'
 }
 
+export const contentPlaceholder = 'rgba(252, 37, 118, 0.12)'
+
 export const homePageBanner = 'linear-gradient(128.18deg, rgba(0, 69, 120, 0.25) 0%, rgba(199, 224, 244, 0.25) 100%), linear-gradient(180deg, #00188F 0%, #0078D4 100%)';

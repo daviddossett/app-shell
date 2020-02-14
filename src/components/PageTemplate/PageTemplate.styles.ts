@@ -1,6 +1,18 @@
 import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
 import { IPageTemplateStyleProps, IPageTemplateStyles } from './PageTemplate.types';
+import { breakpoint } from '../../constants/breakpoints';
 
+const mdPadding: any = {
+  [`@media (min-width: ${breakpoint.md})`]: {
+    padding: '0 24px 64px'
+  },
+};
+
+const lgPadding: any = {
+  [`@media (min-width: ${breakpoint.lg})`]: {
+    padding: '0 32px 128px'
+  },
+};
 
 export const getStyles = (props: IPageTemplateStyleProps): IPageTemplateStyles => {
   const theme = getTheme();
@@ -14,7 +26,11 @@ export const getStyles = (props: IPageTemplateStyleProps): IPageTemplateStyles =
       display: 'none'
     },
     contentArea: {
-      padding: '0 32px 128px'
+      padding: '0',
+      selectors: {
+        ...mdPadding,
+        ...lgPadding
+      }
     }
   }
 }

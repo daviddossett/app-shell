@@ -99,15 +99,16 @@ const farCommands = [
   }
 ];
 
+const settingsSections = ['Project info', 'Manage', 'Delete']
+const cards = settingsSections.map(section => {
+  return <Card text={section} />
+})
+
 export const BasicSettingsBase: React.FC<IBasicSettingsProps> = () => {  
   return (
     <>
-      <PageTemplate
-        pageTitle={'Basics'}
-        commands={commands}
-        farCommands={farCommands}
-        commandBarIsVisible={false}>
-        <Card text={'Placeholder content'} />
+      <PageTemplate pageTitle={'Basics'} commands={commands} farCommands={farCommands} commandBarIsVisible={false}>
+        {cards}
       </PageTemplate>
     </>
   );
