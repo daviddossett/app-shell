@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { getTheme } from 'office-ui-fabric-react';
 import { useHistory } from 'react-router-dom';
 import { Sidebar, ISidebarItemProps } from '@business-app/fabric/lib';
 import { INavProps } from './Nav.types';
+import { getTheme } from 'office-ui-fabric-react';
 import { getClassNames } from './Nav.styles';
 
 export const NavBase: React.FC<INavProps> = (props) => {
@@ -13,12 +13,12 @@ export const NavBase: React.FC<INavProps> = (props) => {
   const navigateToPath = (path: string) => {
     history.push(path);
   }
-  
+
   const handleClick = (ev: any, item: any) => {
     const setItemToActive = (listItem: any) => {
       return {
         ...listItem,
-        active: listItem.key === item.key,
+        active: listItem.key === item.key
       }
     } 
     const newListItems = listItems.map(listItem => {
