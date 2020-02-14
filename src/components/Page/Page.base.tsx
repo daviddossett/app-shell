@@ -8,7 +8,6 @@ import { Home } from '../../pages/Home/Home';
 import { Queries } from '../../pages/Queries/Queries';
 import { Reports } from '../../pages/Reports/Reports';
 import { BasicSettings } from '../../pages/BasicSettings/BasicSettings';
-import { Data } from '../../pages/Data/Data';
 import { Billing } from '../../pages/Billing/Billing';
 import { ProjectMembers } from '../../pages/ProjectMembers/ProjectMembers';
 import { Signals } from '../../pages/Signals/Signals';
