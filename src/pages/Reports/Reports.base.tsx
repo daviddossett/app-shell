@@ -1,15 +1,11 @@
-import { getClassNames } from './Reports.styles';
-import { IReportsProps } from './Reports.types';
 import React from 'react';
-import { PageHeader } from '../../components/PageHeader/PageHeader';
+import { IReportsProps } from './Reports.types';
+import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { Card } from '../../components/Card/Card';
-import { CommandBar } from 'office-ui-fabric-react';
 
-export const ReportsBase: React.FC<IReportsProps> = (props) => {
-  const { styles } = props;
-  const classNames = getClassNames(styles);
-
-  const items = [
+export const ReportsBase: React.FC<IReportsProps> = () => {
+  
+  const commands = [
     {
       key: 'time-range',
       name: 'Last week',
@@ -66,7 +62,7 @@ export const ReportsBase: React.FC<IReportsProps> = (props) => {
     },
   ];
   
-  const farItems = [
+  const farCommands = [
     {
       key: 'favorite',
       name: 'Favorite',
@@ -98,23 +94,17 @@ export const ReportsBase: React.FC<IReportsProps> = (props) => {
       onClick: () => console.log('Opened full screen')
     }
   ];
+
+  const membersSections = ['Chart 1', 'Chart 2', 'Chart 3']
+  const cards = membersSections.map(section => {
+   return <Card text={section} />
+  })
   
   return (
-    <div className={classNames.root}>
-      <CommandBar 
-        items={items}
-        farItems={farItems}
-        ariaLabel={'Use left and right arrow keys to navigate between commands'}
-        className={classNames.commandBar}
-      />
-      <div className={classNames.contentArea}>
-        <PageHeader text={'Reports'} />
-        <div className={classNames.chartGrid}>
-          <Card text={'Content area'} />
-          <Card text={'Content area'} />
-          <Card text={'Content area'} />
-        </div>
-      </div>
-  </div>
+    <>
+      <PageTemplate pageTitle={'Reports'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
+        {cards}
+      </PageTemplate>
+    </>
   );
 }

@@ -1,11 +1,9 @@
-import { getClassNames } from './Queries.styles';
-import { IQueriesProps } from './Queries.types';
 import React from 'react';
-import { CommandBar } from 'office-ui-fabric-react';
-import { PageHeader } from '../../components/PageHeader/PageHeader';
+import { IQueriesProps } from './Queries.types';
+import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { Card } from '../../components/Card/Card';
 
-const items = [
+const commands = [
   {
     key: 'new',
     name: 'New query',
@@ -65,10 +63,10 @@ const items = [
         },
       ]
     }
-  },
+  }
 ];
 
-const farItems = [
+const farCommands = [
   {
     key: 'favorite',
     name: 'Favorite',
@@ -101,24 +99,17 @@ const farItems = [
   }
 ];
 
-export const QueriesBase: React.FC<IQueriesProps> = (props) => {
-  const { styles } = props;
-  const classNames = getClassNames(styles);
-  
+const membersSections = ['Placeholder content']
+const cards = membersSections.map(section => {
+  return <Card text={section} />
+})
+
+export const QueriesBase: React.FC<IQueriesProps> = () => {
   return (
-    <div className={classNames.root}>
-      <CommandBar 
-        items={items}
-        farItems={farItems}
-        ariaLabel={'Use left and right arrow keys to navigate between commands'}
-        className={classNames.commandBar}
-      />
-    <div className={classNames.content}>
-      <PageHeader text={'Queries'}/>
-      <div className={classNames.card}>
-        <Card text={'Content area'}/>
-      </div>
-    </div>
-  </div>
+    <>
+      <PageTemplate pageTitle={'Queries'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
+        {cards}
+      </PageTemplate>
+    </>
   );
 }
