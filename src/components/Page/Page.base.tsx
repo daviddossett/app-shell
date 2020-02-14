@@ -9,6 +9,8 @@ import { Queries } from '../../pages/Queries/Queries';
 import { Reports } from '../../pages/Reports/Reports';
 import { BasicSettings } from '../../pages/BasicSettings/BasicSettings';
 import { Data } from '../../pages/Data/Data';
+import { Billing } from '../../pages/Billing/Billing';
+import { ProjectMembers } from '../../pages/ProjectMembers/ProjectMembers';
 
 export const PageBase: React.FC<IPageProps> = (props) => {
   const { styles, theme } = props;
@@ -31,9 +33,9 @@ export const PageBase: React.FC<IPageProps> = (props) => {
           <Redirect strict from="/data/" to="/data" exact />
           <Route exact path='/settings/basics' component={BasicSettings} />
           <Redirect strict from="/settings/" to="/settings" exact />
-          <Route exact path='/settings/billing' component={BasicSettings} />
+          <Route exact path='/settings/billing' component={Billing} />
           <Redirect strict from="/billing/" to="/settings" exact />
-          <Route exact path='/settings/members' component={BasicSettings} />
+          <Route exact path='/settings/members' component={ProjectMembers} />
           <Redirect strict from="/members/" to="/settings" exact />
         </Switch>
       </main>

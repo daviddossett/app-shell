@@ -10,5 +10,4 @@ export type IBasicSettingsStyleProps = Pick<IBasicSettingsProps, 'styles' | 'cla
 
 export interface IBasicSettingsStyles {
   root: IStyle;
-  header: IStyle;
 }
