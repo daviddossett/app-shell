@@ -11,6 +11,10 @@ import { BasicSettings } from '../../pages/BasicSettings/BasicSettings';
 import { Data } from '../../pages/Data/Data';
 import { Billing } from '../../pages/Billing/Billing';
 import { ProjectMembers } from '../../pages/ProjectMembers/ProjectMembers';
+import { Signals } from '../../pages/Signals/Signals';
+import { Sources } from '../../pages/Sources/Sources';
+import { Metrics } from '../../pages/Metrics/Metrics';
+import { Segments } from '../../pages/Segments/Segments';
 
 export const PageBase: React.FC<IPageProps> = (props) => {
   const { styles, theme } = props;
@@ -29,8 +33,22 @@ export const PageBase: React.FC<IPageProps> = (props) => {
           <Redirect strict from="/queries/" to="/queries" exact />
           <Route exact path='/reports' component={Reports} />
           <Redirect strict from="/reports/" to="/reports" exact />
-          <Route exact path='/data' component={Data} />
-          <Redirect strict from="/data/" to="/data" exact />
+
+          <Route exact path='/data/signals' component={Signals} />
+          <Redirect strict from="/data" to="/data/signals" exact />
+          <Redirect strict from="/data/" to="/data/signals" exact />
+
+          <Route exact path='/data/sources' component={Sources} />
+          <Redirect strict from="/data/sources/" to="/data/sources" exact />
+
+          <Route exact path='/data/metrics' component={Metrics} />
+          <Redirect strict from="/data/metrics/" to="/data/metrics" exact />
+
+          <Route exact path='/data/segments' component={Segments} />
+          <Redirect strict from="/data/segments/" to="/data/segments" exact />
+
+
+
           <Route exact path='/settings/basics' component={BasicSettings} />
           <Redirect strict from="/settings/" to="/settings" exact />
           <Route exact path='/settings/billing' component={Billing} />
