@@ -10,7 +10,6 @@ loadTheme({palette});
 
 const App: React.FC = () => {
   return (
-    // Todo: remove basename once removed from GitHub Pages
     <Router basename={process.env.PUBLIC_URL}> 
       <Page />
     </Router>
