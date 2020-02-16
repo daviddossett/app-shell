@@ -7,7 +7,7 @@ export interface INavProps {
   theme?: ITheme;
 }
 
-export type INavStyleProps = Pick<INavProps, 'theme'>;
+export type INavStyleProps = Pick<INavProps, 'className' | 'styles' | 'theme'>;
 
 export interface INavStyles {
   root: IStyle;

@@ -1,11 +1,12 @@
-import { IStyle, IStyleFunctionOrObject } from 'office-ui-fabric-react';
+import { IStyle, IStyleFunctionOrObject, ITheme } from 'office-ui-fabric-react';
 
 export interface ISuiteHeaderSearchProps {
   styles?: IStyleFunctionOrObject<ISuiteHeaderSearchStyleProps, ISuiteHeaderSearchStyles>;
   className?: string;
+  theme?: ITheme;
 }
 
-export type ISuiteHeaderSearchStyleProps = Pick<ISuiteHeaderSearchProps, 'styles' | 'className'>;
+export type ISuiteHeaderSearchStyleProps = Pick<ISuiteHeaderSearchProps, 'styles' | 'className' | 'theme'>;
 
 
 export interface ISuiteHeaderSearchStyles {

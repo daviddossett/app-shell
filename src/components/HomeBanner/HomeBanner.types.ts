@@ -1,12 +1,12 @@
-import { IStyle, IStyleFunctionOrObject } from 'office-ui-fabric-react';
+import { IStyle, IStyleFunctionOrObject, ITheme } from 'office-ui-fabric-react';
 
 export interface IHomeBannerProps {
   styles?: IStyleFunctionOrObject<IHomeBannerStyleProps, IHomeBannerStyles>;
   className?: string;
+  theme?: ITheme;
 }
 
-export type IHomeBannerStyleProps = Pick<IHomeBannerProps, 'styles' | 'className'>;
-
+export type IHomeBannerStyleProps = Pick<IHomeBannerProps, 'styles' | 'className' | 'theme'>;
 
 export interface IHomeBannerStyles {
   root: IStyle;

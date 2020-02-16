@@ -1,12 +1,13 @@
-import { IStyle, IStyleFunctionOrObject } from 'office-ui-fabric-react';
+import { IStyle, IStyleFunctionOrObject, ITheme } from 'office-ui-fabric-react';
 
 export interface ICardProps {
+  text: string;
   styles?: IStyleFunctionOrObject<ICardStyleProps, ICardStyles>;
   className?: string;
-  text: string;
+  theme?: ITheme;
 }
 
-export type ICardStyleProps = Pick<ICardProps, 'styles' | 'className'>;
+export type ICardStyleProps = Pick<ICardProps, 'styles' | 'className' | 'theme'>;
 
 
 export interface ICardStyles {

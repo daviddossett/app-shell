@@ -1,13 +1,12 @@
-import { IStyle, IStyleFunctionOrObject } from 'office-ui-fabric-react';
+import { IStyle, IStyleFunctionOrObject, ITheme } from 'office-ui-fabric-react';
 
 export interface IAvatarProps {
   styles?: IStyleFunctionOrObject<IAvatarStyleProps, IAvatarStyles>;
   className?: string;
+  theme?: ITheme;
 }
 
-export interface IAvatarStyleProps {
-  // className: string;
-}
+export type IAvatarStyleProps = Pick<IAvatarProps, 'styles' | 'className' | 'theme'>
 
 export interface IAvatarStyles {
   root: IStyle;

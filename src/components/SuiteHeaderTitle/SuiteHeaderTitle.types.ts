@@ -1,13 +1,12 @@
-import { IStyle, IStyleFunctionOrObject } from 'office-ui-fabric-react';
+import { IStyle, IStyleFunctionOrObject, ITheme } from 'office-ui-fabric-react';
 
 export interface ISuiteHeaderTitleProps {
   styles?: IStyleFunctionOrObject<ISuiteHeaderTitleStyleProps, ISuiteHeaderTitleStyles>;
   className?: string;
+  theme?: ITheme;
 }
 
-export interface ISuiteHeaderTitleStyleProps {
-  // className: string;
-}
+export type ISuiteHeaderTitleStyleProps = Pick<ISuiteHeaderTitleProps, 'styles' | 'className' | 'theme'>;
 
 export interface ISuiteHeaderTitleStyles {
   root: IStyle;

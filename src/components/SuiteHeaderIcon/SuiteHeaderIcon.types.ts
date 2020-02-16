@@ -1,12 +1,13 @@
-import { IStyle, IStyleFunctionOrObject, IIconProps } from 'office-ui-fabric-react';
+import { IStyle, IStyleFunctionOrObject, IIconProps, ITheme } from 'office-ui-fabric-react';
 
 export interface ISuiteHeaderIconProps {
+  icon: IIconProps;
   styles?: IStyleFunctionOrObject<ISuiteHeaderIconStyleProps, ISuiteHeaderIconStyles>;
   className?: string;
-  icon: IIconProps;
+  theme?: ITheme;
 }
 
-export type ISuiteHeaderIconStyleProps = Pick<ISuiteHeaderIconProps, 'styles' | 'className' | 'icon'>;
+export type ISuiteHeaderIconStyleProps = Pick<ISuiteHeaderIconProps, 'styles' | 'className' | 'theme' | 'icon'>;
 
 
 export interface ISuiteHeaderIconStyles {

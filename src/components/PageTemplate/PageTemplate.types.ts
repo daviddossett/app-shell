@@ -1,5 +1,5 @@
-import { IStyle, IStyleFunctionOrObject, ICommandBarItemProps } from 'office-ui-fabric-react';
-import { ReactElement, ReactFragment } from 'react';
+import { IStyle, IStyleFunctionOrObject, ICommandBarItemProps, ITheme } from 'office-ui-fabric-react';
+import { ReactFragment } from 'react';
 
 export interface IPageTemplateProps {
   pageTitle: string;
@@ -9,9 +9,10 @@ export interface IPageTemplateProps {
   children?: ReactFragment;
   styles?: IStyleFunctionOrObject<IPageTemplateStyleProps, IPageTemplateStyles>;
   className?: string;
+  theme?: ITheme;
 }
 
-export type IPageTemplateStyleProps = Pick<IPageTemplateProps, 'styles' | 'className'>;
+export type IPageTemplateStyleProps = Pick<IPageTemplateProps, 'styles' | 'className' | 'theme'>;
 
 export interface IPageTemplateStyles {
   root: IStyle;

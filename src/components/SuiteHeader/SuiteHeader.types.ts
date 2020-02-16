@@ -6,9 +6,7 @@ export interface ISuiteHeaderProps {
   theme?: ITheme;
 }
 
-export interface ISuiteHeaderStyleProps {
-  // className: string;
-}
+export type ISuiteHeaderStyleProps = Pick<ISuiteHeaderProps, 'styles' | 'className' | 'theme'>;
 
 export interface ISuiteHeaderStyles {
   root: IStyle;

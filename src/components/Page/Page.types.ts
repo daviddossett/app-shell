@@ -1,12 +1,12 @@
 import { ITheme, IStyleFunctionOrObject, IStyle } from "office-ui-fabric-react";
 
 export interface IPageProps  {
-  theme?: ITheme;
   styles?: IStyleFunctionOrObject<IPageStyleProps, IPageStyles>
   className?: string;
+  theme?: ITheme;
 }
 
-export type IPageStyleProps = Pick<IPageProps, 'theme' | 'styles' | 'className'>;
+export type IPageStyleProps = Pick<IPageProps, 'styles' | 'className' | 'theme'>;
 
 export interface IPageStyles {
   root: IStyle;
