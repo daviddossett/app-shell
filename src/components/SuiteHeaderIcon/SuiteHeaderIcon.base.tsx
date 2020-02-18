@@ -9,7 +9,7 @@ export const SuiteHeaderIconBase: React.FC<ISuiteHeaderIconProps> = (props) => {
 
   return (
     <div>
-      <IconButton iconProps={icon} className={classNames.root}/>
+      <IconButton iconProps={icon} className={classNames.root} />
     </div>
   );
 }

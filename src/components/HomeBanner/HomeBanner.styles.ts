@@ -154,6 +154,7 @@ export const getStyles = (props: IHomeBannerStyleProps): IHomeBannerStyles => {
       gridTemplateColumns: '1fr 1fr 1fr',
       gridTemplateRows: 'auto',
       color: theme.palette.white,
+      background: theme.palette.neutralLighterAlt,
       selectors: {
         ...mdRoot
       }

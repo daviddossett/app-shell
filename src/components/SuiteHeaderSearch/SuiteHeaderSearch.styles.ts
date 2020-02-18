@@ -37,13 +37,13 @@ export const getStyles = (props: ISuiteHeaderSearchStyleProps): ISuiteHeaderSear
       color: theme.palette.white,
     },
     icon: {
-      color: theme.palette.white
+      color: theme.palette.white,
     },
     field: {
       color: theme.palette.white,
       selectors: {
         '::placeholder': {
-          color: theme.palette.white
+          color: theme.palette.white,
         }
       }
     },

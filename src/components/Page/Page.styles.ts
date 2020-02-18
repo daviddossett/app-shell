@@ -26,7 +26,8 @@ export const styles = (props: IPageStyleProps): IPageStyles => {
     },
     content: {
       gridArea: 'content',
-      overflow: 'auto'
+      overflowX: 'hidden',
+      overflowY: 'auto'
     }
   }
 }
