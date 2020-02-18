@@ -29,31 +29,14 @@ export const PageBase: React.FC<IPageProps> = (props) => {
           <Redirect strict from="/home/" to="/" exact />
           <Redirect strict from="/home" to="/" exact />
           <Route exact path='/queries' component={Queries} />
-          <Redirect strict from="/queries/" to="/queries" exact />
           <Route exact path='/reports' component={Reports} />
-          <Redirect strict from="/reports/" to="/reports" exact />
-
           <Route exact path='/data/signals' component={Signals} />
-          <Redirect strict from="/data" to="/data/signals" exact />
-          <Redirect strict from="/data/" to="/data/signals" exact />
-
           <Route exact path='/data/sources' component={Sources} />
-          <Redirect strict from="/data/sources/" to="/data/sources" exact />
-
           <Route exact path='/data/metrics' component={Metrics} />
-          <Redirect strict from="/data/metrics/" to="/data/metrics" exact />
-
           <Route exact path='/data/segments' component={Segments} />
-          <Redirect strict from="/data/segments/" to="/data/segments" exact />
-
-
-
           <Route exact path='/settings/basics' component={BasicSettings} />
-          <Redirect strict from="/settings/" to="/settings" exact />
           <Route exact path='/settings/billing' component={Billing} />
-          <Redirect strict from="/billing/" to="/settings" exact />
           <Route exact path='/settings/members' component={ProjectMembers} />
-          <Redirect strict from="/members/" to="/settings" exact />
         </Switch>
       </main>
     </div>
