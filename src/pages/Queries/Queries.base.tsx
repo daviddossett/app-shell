@@ -107,7 +107,11 @@ const cards = membersSections.map(section => {
 export const QueriesBase: React.FC<IQueriesProps> = () => {
   return (
     <>
-      <PageTemplate pageTitle={'Queries'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
+      <PageTemplate 
+        pageTitle={'Queries'} 
+        commands={commands} 
+        farCommands={farCommands}
+        commandBarIsVisible={true}>
         {cards}
       </PageTemplate>
     </>

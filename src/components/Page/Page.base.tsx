@@ -19,6 +19,7 @@ import { ProjectMembers } from '../../pages/ProjectMembers/ProjectMembers';
 export const PageBase: React.FC<IPageProps> = (props) => {
   const { styles, theme } = props;
   const classNames = getClassNames(styles, { theme });
+
   const [navAsOverlay, setNavAsOverlay] = useState(false)
 
   function toggleNav() {
@@ -27,7 +28,7 @@ export const PageBase: React.FC<IPageProps> = (props) => {
 
   return (
     <div className={classNames.root}>
-      <SuiteHeader className={classNames.header} />
+      <SuiteHeader className={classNames.header} toggleNav={toggleNav} />
       <Nav isNavOverlay={navAsOverlay} toggleNav={toggleNav} />
       <main className={classNames.content}>
         <Switch>

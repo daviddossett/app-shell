@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { getClassNames } from './PageTemplate.styles';
 import { IPageTemplateProps } from './PageTemplate.types';
 import { PageHeader } from '../PageHeader/PageHeader';

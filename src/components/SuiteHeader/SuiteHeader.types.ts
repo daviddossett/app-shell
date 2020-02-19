@@ -4,6 +4,7 @@ export interface ISuiteHeaderProps {
   styles?: IStyleFunctionOrObject<ISuiteHeaderStyleProps, ISuiteHeaderStyles>;
   className?: string;
   theme?: ITheme;
+  toggleNav: () => void;
 }
 
 export type ISuiteHeaderStyleProps = Pick<ISuiteHeaderProps, 'styles' | 'className' | 'theme'>;

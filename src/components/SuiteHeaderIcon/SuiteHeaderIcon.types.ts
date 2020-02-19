@@ -5,6 +5,7 @@ export interface ISuiteHeaderIconProps {
   styles?: IStyleFunctionOrObject<ISuiteHeaderIconStyleProps, ISuiteHeaderIconStyles>;
   className?: string;
   theme?: ITheme;
+  toggleNav?: () => void;
 }
 
 export type ISuiteHeaderIconStyleProps = Pick<ISuiteHeaderIconProps, 'styles' | 'className' | 'theme' | 'icon'>;

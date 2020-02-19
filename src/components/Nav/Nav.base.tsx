@@ -125,7 +125,6 @@ export const NavBase: React.FC<INavProps> = (props) => {
           <Sidebar 
             items={listItems}
             theme={getTheme()}
-            id={'Navigation sidebar'}
             collapsible={false}
           />
         </Overlay>
@@ -133,9 +132,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
       <Sidebar 
         items={listItems}
         theme={getTheme()}
-        id={'Navigation sidebar'}
         collapsible={true}
-        collapseButtonAriaLabel={'Navigation menu'}
         className={classNames.sidebarInLayout}  
       />
     </>
