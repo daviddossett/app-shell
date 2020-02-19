@@ -19,15 +19,15 @@ and limitations under the License.
   http://jedwatson.github.io/classnames
 */
 
+/*!
+ * Copyright (C) Microsoft Corporation. All rights reserved.
+ */
+
 /*
 object-assign
 (c) Sindre Sorhus
 @license MIT
 */
-
-/*!
- * Copyright (C) Microsoft Corporation. All rights reserved.
- */
 
 /** @license React v16.12.0
  * react.production.min.js
