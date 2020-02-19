@@ -20,12 +20,14 @@ export const styles = (props: INavStyleProps): INavStyles => {
   return {
     sidebarWithOverlay: {
       display: 'none',
+      fontFamily: 'Segoe UI Web (West European)',
       selectors: {
         ...showOverlay
       }
     },
     sidebarInLayout: {
       display: 'none',
+      fontFamily: 'Segoe UI Web (West European)',
       selectors: {
         ...showNav
       }
