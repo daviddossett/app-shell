@@ -8,7 +8,6 @@ export const PageTemplateBase: React.FC<IPageTemplateProps> = (props) => {
   const { styles, pageTitle, commands, farCommands, commandBarIsVisible, children } = props;
   const classNames = getClassNames(styles);
 
-  
   return (
     <div className={classNames.root}>
       <CommandBar

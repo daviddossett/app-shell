@@ -6,6 +6,7 @@ export interface ISuiteHeaderIconProps {
   className?: string;
   theme?: ITheme;
   isDark: boolean;
+  toggleNav?: () => void;
 }
 
 export type ISuiteHeaderIconStyleProps = Pick<ISuiteHeaderIconProps, 'styles' | 'className' | 'theme' | 'icon' | 'isDark'>;

@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Sidebar, ISidebarItemProps } from '@business-app/fabric/lib';
 import { INavProps } from './Nav.types';
-import { getTheme } from 'office-ui-fabric-react';
+import { getTheme, Overlay } from 'office-ui-fabric-react';
 import { getClassNames } from './Nav.styles';
 
 export const NavBase: React.FC<INavProps> = (props) => {
-  const { styles, theme } = props;
-  const classNames = getClassNames(styles, { theme });
+  const { styles, isNavOverlay, toggleNav } = props;
+  const classNames = getClassNames(styles);
   const history = useHistory();
 
   const navigateToPath = (path: string) => {
@@ -116,18 +116,28 @@ export const NavBase: React.FC<INavProps> = (props) => {
     }
   ];
 
-  const [listItems, setListItems] = useState(navListItems); 
+  const [listItems, setListItems] = useState(navListItems);
 
   return (
-    <div className={classNames.root}>
+    <>
+      {(isNavOverlay && 
+        <Overlay isDarkThemed={true} className={classNames.sidebarWithOverlay} onClick={toggleNav}>
+          <Sidebar 
+            items={listItems}
+            theme={getTheme()}
+            id={'Navigation sidebar'}
+            collapsible={false}
+          />
+        </Overlay>
+      )}
       <Sidebar 
+        items={listItems}
         theme={getTheme()}
         id={'Navigation sidebar'}
         collapsible={true}
-        defaultIsCollapsed={false}
         collapseButtonAriaLabel={'Navigation menu'}
-        items={listItems}
+        className={classNames.sidebarInLayout}  
       />
-    </div>
+    </>
   );
 }

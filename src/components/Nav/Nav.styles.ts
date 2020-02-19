@@ -6,12 +6,25 @@ export const styles = (props: INavStyleProps): INavStyles => {
 
   const showNav: any = {
     [`@media (min-width: ${breakpoint.lg})`]: {
-      display: 'block'
+      display: 'block',
+    },
+  };
+
+  const showOverlay: any = {
+    [`@media (max-width: ${breakpoint.lg})`]: {
+      display: 'block',
+      zIndex: 1
     },
   };
 
   return {
-    root: {
+    sidebarWithOverlay: {
+      display: 'none',
+      selectors: {
+        ...showOverlay
+      }
+    },
+    sidebarInLayout: {
       display: 'none',
       selectors: {
         ...showNav

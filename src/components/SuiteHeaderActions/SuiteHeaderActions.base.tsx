@@ -5,7 +5,7 @@ import { SuiteHeaderIcon } from '../SuiteHeaderIcon/SuiteHeaderIcon';
 import { Avatar } from '../Avatar/Avatar';
 
 export const SuiteHeaderActionsBase: React.FC<ISuiteHeaderActionsProps> = (props) => {
-  const { styles } = props;
+  const { styles, toggleNav } = props;
   const classNames = getClassNames(styles);
   
   return (
@@ -18,7 +18,7 @@ export const SuiteHeaderActionsBase: React.FC<ISuiteHeaderActionsProps> = (props
       </div>
       <div className={classNames.smallMenu}>
         <SuiteHeaderIcon icon={{iconName: 'Search'}} isDark={true} />
-        <SuiteHeaderIcon icon={{iconName: 'More'}} isDark={true} />
+        <SuiteHeaderIcon icon={{iconName: 'More'}} isDark={true} toggleNav={toggleNav} />
       </div>
       <Avatar />
     </div>
