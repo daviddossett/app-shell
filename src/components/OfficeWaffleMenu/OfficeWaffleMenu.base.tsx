@@ -4,6 +4,6 @@ import { SuiteHeaderIcon } from '../SuiteHeaderIcon/SuiteHeaderIcon';
 
 export const OfficeWaffleMenuBase: React.FC<IOfficeWaffleMenuProps> = () => {
   return (
-    <SuiteHeaderIcon icon={{iconName: 'WaffleOffice365'}} isDark={true} />
+    <SuiteHeaderIcon icon={{iconName: 'WaffleOffice365'}} />
   );
 }

@@ -5,11 +5,9 @@ export interface ISuiteHeaderIconProps {
   styles?: IStyleFunctionOrObject<ISuiteHeaderIconStyleProps, ISuiteHeaderIconStyles>;
   className?: string;
   theme?: ITheme;
-  isDark: boolean;
-  toggleNav?: () => void;
 }
 
-export type ISuiteHeaderIconStyleProps = Pick<ISuiteHeaderIconProps, 'styles' | 'className' | 'theme' | 'icon' | 'isDark'>;
+export type ISuiteHeaderIconStyleProps = Pick<ISuiteHeaderIconProps, 'styles' | 'className' | 'theme' | 'icon'>;
 
 
 export interface ISuiteHeaderIconStyles {

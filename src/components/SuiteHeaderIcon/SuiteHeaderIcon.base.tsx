@@ -4,12 +4,12 @@ import React from 'react';
 import { IconButton } from 'office-ui-fabric-react';
 
 export const SuiteHeaderIconBase: React.FC<ISuiteHeaderIconProps> = (props) => {
-  const { styles, icon, toggleNav } = props;
+  const { styles, icon } = props;
   const classNames = getClassNames(styles);
 
   return (
     <div>
-      <IconButton iconProps={icon} className={classNames.root} onClick={toggleNav} />
+      <IconButton iconProps={icon} className={classNames.root} />
     </div>
   );
 }

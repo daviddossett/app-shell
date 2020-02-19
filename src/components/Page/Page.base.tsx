@@ -27,7 +27,7 @@ export const PageBase: React.FC<IPageProps> = (props) => {
 
   return (
     <div className={classNames.root}>
-      <SuiteHeader className={classNames.header} toggleNav={toggleNav} />
+      <SuiteHeader className={classNames.header} />
       <Nav isNavOverlay={navAsOverlay} toggleNav={toggleNav} />
       <main className={classNames.content}>
         <Switch>

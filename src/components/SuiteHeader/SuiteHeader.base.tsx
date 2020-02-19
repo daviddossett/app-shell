@@ -7,7 +7,7 @@ import { SuiteHeaderActions } from '../SuiteHeaderActions/SuiteHeaderActions';
 import { SuiteHeaderSearch } from '../SuiteHeaderSearch/SuiteHeaderSearch';
 
 export const SuiteHeaderBase: React.FC<ISuiteHeaderProps> = (props) => {
-  const { styles, toggleNav } = props;
+  const { styles } = props;
   const classNames = getClassNames(styles);
   
   return (
@@ -17,7 +17,7 @@ export const SuiteHeaderBase: React.FC<ISuiteHeaderProps> = (props) => {
         <SuiteHeaderTitle />
       </div>
       <SuiteHeaderSearch />
-      <SuiteHeaderActions toggleNav={toggleNav} />
+      <SuiteHeaderActions />
     </div>
   );
 }
