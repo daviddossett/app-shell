@@ -97,7 +97,7 @@ export const ReportsBase: React.FC<IReportsProps> = () => {
 
   const membersSections = ['Chart 1', 'Chart 2', 'Chart 3']
   const cards = membersSections.map(section => {
-   return <Card text={section} />
+   return <Card text={section} key={section} />
   })
   
   return (

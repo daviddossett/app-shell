@@ -15,22 +15,21 @@ import { BasicSettings } from '../../pages/BasicSettings/BasicSettings';
 import { Billing } from '../../pages/Billing/Billing';
 import { ProjectMembers } from '../../pages/ProjectMembers/ProjectMembers';
 
-
 export const PageBase: React.FC<IPageProps> = (props) => {
   const { styles, theme } = props;
   const classNames = getClassNames(styles, { theme });
 
-  const [navAsOverlay, setNavAsOverlay] = useState(false)
+  const [isNavOverlay, setNavAsOverlay] = useState(false)
 
   function toggleNav() {
-    setNavAsOverlay(!navAsOverlay)
+    setNavAsOverlay(!isNavOverlay)
     console.log('Switched the state')
   }
 
   return (
     <div className={classNames.root}>
       <SuiteHeader className={classNames.header} toggleNav={toggleNav} />
-      <Nav isNavOverlay={navAsOverlay} toggleNav={toggleNav} />
+      <Nav isNavOverlay={isNavOverlay} toggleNav={toggleNav} />
       <main className={classNames.content}>
         <Switch>
           <Route exact path='/' component={Home} />

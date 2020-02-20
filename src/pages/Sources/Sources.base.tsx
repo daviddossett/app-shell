@@ -47,7 +47,7 @@ const farCommands = [
 
 const settingsSections = ['Sources list']
 const cards = settingsSections.map(section => {
-  return <Card text={section} />
+  return <Card text={section} key={section} />
 })
 
 export const SourcesBase: React.FC<ISourcesProps> = () => {  

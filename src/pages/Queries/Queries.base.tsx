@@ -101,7 +101,7 @@ const farCommands = [
 
 const membersSections = ['Placeholder content']
 const cards = membersSections.map(section => {
-  return <Card text={section} key={1} />
+  return <Card text={section} key={section} />
 })
 
 export const QueriesBase: React.FC<IQueriesProps> = () => {

@@ -29,7 +29,6 @@ export const NavBase: React.FC<INavProps> = (props) => {
       return newListItem;
     });
     setListItems(newListItems);
-    toggleNav();
     navigateToPath(`/${item.key}`);
   }
 
