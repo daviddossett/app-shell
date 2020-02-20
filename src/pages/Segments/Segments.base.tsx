@@ -47,7 +47,7 @@ const farCommands = [
 
 const settingsSections = ['Segments content']
 const cards = settingsSections.map(section => {
-  return <Card text={section} />
+  return <Card text={section} key={section} />
 })
 
 export const SegmentsBase: React.FC<ISegmentsProps> = () => {  

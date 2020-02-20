@@ -74,7 +74,7 @@ const farCommands = [
 
 const billingSections = ['Project billing summary', 'Costs over time', 'Plan details']
 const cards = billingSections.map(section => {
-  return <Card text={section} />
+  return <Card text={section} key={section} />
 })
 
 export const BillingBase: React.FC<IBillingProps> = () => {  

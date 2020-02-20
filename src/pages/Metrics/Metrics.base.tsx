@@ -47,7 +47,7 @@ const farCommands = [
 
 const settingsSections = ['Metrics content']
 const cards = settingsSections.map(section => {
-  return <Card text={section} />
+  return <Card text={section} key={section} />
 })
 
 export const MetricsBase: React.FC<IMetricsProps> = () => {  

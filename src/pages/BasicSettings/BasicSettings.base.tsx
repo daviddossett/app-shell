@@ -101,7 +101,7 @@ const farCommands = [
 
 const settingsSections = ['Project info', 'Manage', 'Delete']
 const cards = settingsSections.map(section => {
-  return <Card text={section} />
+  return <Card text={section} key={section} />
 })
 
 export const BasicSettingsBase: React.FC<IBasicSettingsProps> = () => {  

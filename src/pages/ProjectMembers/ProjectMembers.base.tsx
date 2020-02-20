@@ -47,7 +47,7 @@ const farCommands = [
 
 const membersSections = ['Members list']
 const cards = membersSections.map(section => {
-  return <Card text={section} />
+  return <Card text={section} key={section} />
 })
 
 export const ProjectMembersBase: React.FC<IProjectMembersProps> = () => {  

@@ -29,6 +29,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
       return newListItem;
     });
     setListItems(newListItems);
+    console.log('Ass')
     navigateToPath(`/${item.key}`);
   }
 
@@ -120,7 +121,7 @@ export const NavBase: React.FC<INavProps> = (props) => {
 
   return (
     <>
-      {(isNavOverlay&& 
+      {(isNavOverlay && 
         <>
           <Layer>
             <Sidebar items={listItems} theme={getTheme()} collapsible={false} className={classNames.overlaySidebar} />
