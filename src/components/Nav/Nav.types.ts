@@ -11,6 +11,6 @@ export interface INavProps {
 export type INavStyleProps = Pick<INavProps, 'className' | 'styles' | 'theme'>;
 
 export interface INavStyles {
-  sidebarWithOverlay: IStyle;
-  sidebarInLayout: IStyle;
+  overlaySidebar: IStyle;
+  overlay: IStyle;
 }

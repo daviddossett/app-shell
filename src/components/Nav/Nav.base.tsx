@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Sidebar, ISidebarItemProps } from '@business-app/fabric/lib';
 import { INavProps } from './Nav.types';
-import { getTheme, Overlay } from 'office-ui-fabric-react';
+import { getTheme, Overlay, Layer } from 'office-ui-fabric-react';
 import { getClassNames } from './Nav.styles';
 
 export const NavBase: React.FC<INavProps> = (props) => {
@@ -29,7 +29,8 @@ export const NavBase: React.FC<INavProps> = (props) => {
       return newListItem;
     });
     setListItems(newListItems);
-    navigateToPath(`/${item.key}`)
+    toggleNav();
+    navigateToPath(`/${item.key}`);
   }
 
   const navListItems: ISidebarItemProps[] = [
@@ -120,21 +121,15 @@ export const NavBase: React.FC<INavProps> = (props) => {
 
   return (
     <>
-      {(isNavOverlay && 
-        <Overlay isDarkThemed={true} className={classNames.sidebarWithOverlay} onClick={toggleNav}>
-          <Sidebar 
-            items={listItems}
-            theme={getTheme()}
-            collapsible={false}
-          />
-        </Overlay>
+      {(isNavOverlay&& 
+        <>
+          <Layer>
+            <Sidebar items={listItems} theme={getTheme()} collapsible={false} className={classNames.overlaySidebar} />
+            <Overlay onClick={toggleNav} isDarkThemed={true} className={classNames.overlay} />
+          </Layer>
+        </>
       )}
-      <Sidebar 
-        items={listItems}
-        theme={getTheme()}
-        collapsible={true}
-        className={classNames.sidebarInLayout}  
-      />
+      <Sidebar items={listItems} theme={getTheme()} collapsible={true} />
     </>
   );
 }

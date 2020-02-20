@@ -24,6 +24,7 @@ export const PageBase: React.FC<IPageProps> = (props) => {
 
   function toggleNav() {
     setNavAsOverlay(!navAsOverlay)
+    console.log('Switched the state')
   }
 
   return (

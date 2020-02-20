@@ -4,32 +4,32 @@ import { breakpoint } from "../../constants/breakpoints";
 
 export const styles = (props: INavStyleProps): INavStyles => {
 
-  const showNav: any = {
+  const hideNavAndOverlay: any = {
     [`@media (min-width: ${breakpoint.lg})`]: {
-      display: 'block',
+      display: 'none',
     },
   };
 
-  const showOverlay: any = {
-    [`@media (max-width: ${breakpoint.lg})`]: {
-      display: 'block',
-      zIndex: 1
+  const useWideNav: any = {
+    [`@media (max-width: ${breakpoint.sm})`]: {
+      width: '80vw',
     },
   };
 
   return {
-    sidebarWithOverlay: {
-      display: 'none',
-      fontFamily: 'Segoe UI Web (West European)',
+    overlaySidebar: {
+      display: 'flex',
+      height: '100vh',
+      zIndex: 1000000,
       selectors: {
-        ...showOverlay
-      }
+        ...hideNavAndOverlay,
+        ...useWideNav
+      },
     },
-    sidebarInLayout: {
-      display: 'none',
-      fontFamily: 'Segoe UI Web (West European)',
+    overlay: {
+      cursor: 'pointer',
       selectors: {
-        ...showNav
+        ...hideNavAndOverlay
       }
     }
   }

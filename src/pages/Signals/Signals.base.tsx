@@ -47,7 +47,7 @@ const farCommands = [
 
 const settingsSections = ['Signals list']
 const cards = settingsSections.map(section => {
-  return <Card text={section} />
+  return <Card text={section} key={1} />
 })
 
 export const SignalsBase: React.FC<ISignalsProps> = () => {  
