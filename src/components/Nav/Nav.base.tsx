@@ -29,8 +29,10 @@ export const NavBase: React.FC<INavProps> = (props) => {
       return newListItem;
     });
     setListItems(newListItems);
-    console.log('Ass')
     navigateToPath(`/${item.key}`);
+    if (isNavOverlay === true) {
+      toggleNav();
+    }
   }
 
   const navListItems: ISidebarItemProps[] = [
