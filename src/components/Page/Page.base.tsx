@@ -5,8 +5,6 @@ import { getClassNames } from './Page.styles';
 import { SuiteHeader } from '../SuiteHeader/SuiteHeader';
 import { Nav } from '../Nav/Nav';
 import { Home } from '../../pages/Home/Home';
-import { Queries } from '../../pages/Queries/Queries';
-import { Reports } from '../../pages/Reports/Reports';
 import { Signals } from '../../pages/Signals/Signals';
 import { Sources } from '../../pages/Sources/Sources';
 import { Metrics } from '../../pages/Metrics/Metrics';
@@ -34,8 +32,6 @@ export const PageBase: React.FC<IPageProps> = (props) => {
           <Route exact path='/' component={Home} />
           <Redirect strict from="/home/" to="/" exact />
           <Redirect strict from="/home" to="/" exact />
-          <Route exact path='/queries' component={Queries} />
-          <Route exact path='/reports' component={Reports} />
           <Route exact path='/data/signals' component={Signals} />
           <Route exact path='/data/sources' component={Sources} />
           <Route exact path='/data/metrics' component={Metrics} />

@@ -46,17 +46,49 @@ export const NavBase: React.FC<INavProps> = (props) => {
     {
       key: 'reports',
       name: 'Reports',
-      iconProps: { iconName: 'ViewAll' },
+      iconProps: { iconName: 'PreviewLink' },
       active: false,
-      onClick: handleClick
+      onClick: handleClick,
+      items: [
+        {
+          key: 'reports/key-metrics',
+          name: 'Key metrics',
+          active: false,
+          onClick: handleClick
+        },
+        {
+          key: 'reports/content',
+          name: 'Content',
+          active: false,
+          onClick: handleClick
+        },
+        {
+          key: 'reports/traffic-sources',
+          name: 'Traffic sources',
+          active: false,
+          onClick: handleClick
+        },
+        {
+          key: 'reports/visitor-profile',
+          name: 'Visitor profile',
+          active: false,
+          onClick: handleClick
+        },
+        {
+          key: 'reports/paths',
+          name: 'Paths',
+          active: false,
+          onClick: handleClick
+        },
+        {
+          key: 'reports/custom',
+          name: 'Custom',
+          active: false,
+          onClick: handleClick
+        },
+      ]
     },
-    {
-      key: 'workspace',
-      name: 'Workspace',
-      iconProps: { iconName: 'Toolbox' },
-      active: false,
-      onClick: handleClick
-    },
+
     {
       key: 'data',
       name: 'Data',
