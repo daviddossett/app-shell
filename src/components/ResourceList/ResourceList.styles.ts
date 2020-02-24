@@ -6,7 +6,7 @@ export const getStyles = (props: IResourceListStyleProps): IResourceListStyles =
     root: {
       ...AnimationStyles.slideUpIn10,
       borderRadius: '4px',
-      boxShadow: '0px 2px 4px #d9d9d9'
+      boxShadow: '0px 2px 4px rgba(0,0,0,0.2)'
     },
     fileIconHeaderIcon: {
       padding: 0,
