@@ -1,8 +1,6 @@
 import { IStyle, IStyleFunctionOrObject, ITheme } from 'office-ui-fabric-react';
-import { IDocument } from './Document.types';
-
 export interface IResourceListProps {
-  items?: IDocument[];
+  documentNames: string[];
   styles?: IStyleFunctionOrObject<IResourceListStyleProps, IResourceListStyles>;
   className?: string;
   theme?: ITheme;

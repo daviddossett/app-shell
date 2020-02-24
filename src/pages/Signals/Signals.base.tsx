@@ -45,11 +45,13 @@ const farCommands = [
   }
 ];
 
+const signalNames = ['Signal foo', 'Signal bar', 'Signal baz'];
+
 export const SignalsBase: React.FC<ISignalsProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Signals'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-          <ResourceList />
+          <ResourceList documentNames={signalNames} />
       </PageTemplate>
     </>
   );

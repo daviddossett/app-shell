@@ -45,11 +45,13 @@ const farCommands = [
   }
 ];
 
+const sourcesNames = ['Sources foo', 'Sources bar', 'Sources baz'];
+
 export const SourcesBase: React.FC<ISourcesProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Sources'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-        <ResourceList />
+        <ResourceList documentNames={sourcesNames} />
       </PageTemplate>
     </>
   );

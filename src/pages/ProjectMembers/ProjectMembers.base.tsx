@@ -45,11 +45,13 @@ const farCommands = [
   }
 ];
 
+const memberNames = ['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan'];
+
 export const ProjectMembersBase: React.FC<IProjectMembersProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Members'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-        <ResourceList />
+        <ResourceList documentNames={memberNames}/>
       </PageTemplate>
     </>
   );

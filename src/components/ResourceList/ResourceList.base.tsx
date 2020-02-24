@@ -5,7 +5,7 @@ import { DetailsList, IColumn } from 'office-ui-fabric-react'
 import { IDocument } from './Document.types';
 
 export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
-  const { styles } = props;
+  const { styles, documentNames } = props;
   const classNames = getClassNames(styles);
   
   const icons: { name: string }[] = [
@@ -25,6 +25,8 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
     { name: 'xlsx' },
     { name: 'xsn' }
   ];
+
+  const users = ['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan'];
 
   const columns: IColumn[] = [
     {
@@ -88,14 +90,6 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
   
   const items: IDocument[] = generateDocuments();
   
-  function randomDate(start: Date, end: Date): { value: number; dateFormatted: string } {
-    const date: Date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-    return {
-      value: date.valueOf(),
-      dateFormatted: date.toLocaleDateString()
-    };
-  }
-  
   function randomFileIcon(): { docType: string; url: string } {
     const docType: string = icons[Math.floor(Math.random() * icons.length)].name;
     return {
@@ -103,14 +97,32 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
       url: `https://static2.sharepointonline.com/files/fabric/assets/brand-icons/document/svg/${docType}_16x1.svg`
     };
   }
+
+  function randomUser() {
+    let user = users[Math.floor(Math.random() * users.length)];
+    return user;
+  }
+
+  function randomDate(start: Date, end: Date): { value: number; dateFormatted: string } {
+    const date: Date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+    return {
+      value: date.valueOf(),
+      dateFormatted: date.toLocaleDateString()
+    };
+  }
+
+  function randomName() {
+    let name = documentNames[Math.floor(Math.random() * documentNames.length)];
+    return name;
+  }
   
   function generateDocuments() {
     const generatedItems: IDocument[] = [];
     for (let i = 1; i < 101; i++) {
       const date = randomDate(new Date(2019, 0, 1), new Date());
       const fileType = randomFileIcon();
-      let fileName = `Item ${i}`;
-      let userName = `User ${i}`;
+      let fileName = randomName();
+      let userName = randomUser();
       generatedItems.push({
         key: i.toString(),
         name: fileName,

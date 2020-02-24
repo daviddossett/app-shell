@@ -45,11 +45,13 @@ const farCommands = [
   }
 ];
 
+const segmentNames = ['Segment foo', 'Segment bar', 'Segment baz'];
+
 export const SegmentsBase: React.FC<ISegmentsProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Segments'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-        <ResourceList />
+        <ResourceList documentNames={segmentNames} />
       </PageTemplate>
     </>
   );

@@ -45,11 +45,13 @@ const farCommands = [
   }
 ];
 
+const metricNames = ['Metric foo', 'Metric bar', 'Metric baz'];
+
 export const MetricsBase: React.FC<IMetricsProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Metrics'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-        <ResourceList />
+        <ResourceList documentNames={metricNames} />
       </PageTemplate>
     </>
   );
