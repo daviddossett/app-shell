@@ -20,11 +20,9 @@ export const PageBase: React.FC<IPageProps> = (props) => {
   const classNames = getClassNames(styles, { theme });
 
   const [isNavOverlay, setNavAsOverlay] = useState(false)
-  console.log(isNavOverlay)
 
   function toggleNav() {
     setNavAsOverlay(!isNavOverlay)
-    console.log('Toggle function fired')
   }
 
   return (

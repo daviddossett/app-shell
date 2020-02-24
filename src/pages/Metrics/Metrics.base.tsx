@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { IMetricsProps } from './Metrics.types';
-import { Card } from '../../components/Card/Card';
+import { ResourceList } from '../../components/ResourceList/ResourceList';
 
 const commands = [
   {
@@ -45,16 +45,11 @@ const farCommands = [
   }
 ];
 
-const settingsSections = ['Metrics content']
-const cards = settingsSections.map(section => {
-  return <Card text={section} key={section} />
-})
-
 export const MetricsBase: React.FC<IMetricsProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Metrics'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-        {cards}
+        <ResourceList />
       </PageTemplate>
     </>
   );

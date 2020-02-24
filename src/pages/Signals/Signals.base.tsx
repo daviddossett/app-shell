@@ -1,7 +1,6 @@
 import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { ISignalsProps } from './Signals.types';
-import { Card } from '../../components/Card/Card';
 import { ResourceList } from '../../components/ResourceList/ResourceList';
 
 const commands = [
@@ -45,11 +44,6 @@ const farCommands = [
     onClick: () => console.log('Opened full screen')
   }
 ];
-
-const settingsSections = ['Signals list']
-// const cards = settingsSections.map(section => {
-//   return <Card text={section} key={1} />
-// })
 
 export const SignalsBase: React.FC<ISignalsProps> = () => {  
   return (

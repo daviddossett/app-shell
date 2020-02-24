@@ -44,16 +44,16 @@ export const NavBase: React.FC<INavProps> = (props) => {
       onClick: handleClick
     },
     {
-      key: 'queries',
-      name: 'Queries',
-      iconProps: { iconName: 'LineChart' },
+      key: 'reports',
+      name: 'Reports',
+      iconProps: { iconName: 'ViewAll' },
       active: false,
       onClick: handleClick
     },
     {
-      key: 'reports',
-      name: 'Reports',
-      iconProps: { iconName: 'ViewDashboard' },
+      key: 'workspace',
+      name: 'Workspace',
+      iconProps: { iconName: 'Toolbox' },
       active: false,
       onClick: handleClick
     },

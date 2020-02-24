@@ -106,8 +106,8 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
   
   function generateDocuments() {
     const generatedItems: IDocument[] = [];
-    for (let i = 0; i < 200; i++) {
-      const date = randomDate(new Date(2012, 0, 1), new Date());
+    for (let i = 1; i < 101; i++) {
+      const date = randomDate(new Date(2019, 0, 1), new Date());
       const fileType = randomFileIcon();
       let fileName = `Item ${i}`;
       let userName = `User ${i}`;
