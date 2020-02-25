@@ -45,7 +45,7 @@ const farCommands = [
   }
 ];
 
-const sourcesNames = ['Sources foo', 'Sources bar', 'Sources baz'];
+const sourcesNames = ['Source foo', 'Source bar', 'Source baz'];
 
 export const SourcesBase: React.FC<ISourcesProps> = () => {  
   return (
