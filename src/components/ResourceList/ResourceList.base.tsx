@@ -7,26 +7,6 @@ import { IDocument } from './Document.types';
 export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
   const { styles, documentNames } = props;
   const classNames = getClassNames(styles);
-  
-  const icons: { name: string }[] = [
-    { name: 'accdb' },
-    { name: 'csv' },
-    { name: 'docx' },
-    { name: 'dotx' },
-    { name: 'mpt' },
-    { name: 'odt' },
-    { name: 'one' },
-    { name: 'onepkg' },
-    { name: 'onetoc' },
-    { name: 'pptx' },
-    { name: 'pub' },
-    { name: 'vsdx' },
-    { name: 'xls' },
-    { name: 'xlsx' },
-    { name: 'xsn' }
-  ];
-
-  const users = ['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan'];
 
   const columns: IColumn[] = [
     {
@@ -88,9 +68,25 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
     }
   ];
   
-  const items: IDocument[] = generateDocuments();
-  
   function randomFileIcon(): { docType: string; url: string } {
+    const icons: { name: string }[] = [
+      { name: 'accdb' },
+      { name: 'csv' },
+      { name: 'docx' },
+      { name: 'dotx' },
+      { name: 'mpt' },
+      { name: 'odt' },
+      { name: 'one' },
+      { name: 'onepkg' },
+      { name: 'onetoc' },
+      { name: 'pptx' },
+      { name: 'pub' },
+      { name: 'vsdx' },
+      { name: 'xls' },
+      { name: 'xlsx' },
+      { name: 'xsn' }
+    ];
+
     const docType: string = icons[Math.floor(Math.random() * icons.length)].name;
     return {
       docType,
@@ -99,6 +95,7 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
   }
 
   function randomUser() {
+    const users = ['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan'];
     let user = users[Math.floor(Math.random() * users.length)];
     return user;
   }
@@ -111,22 +108,22 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
     };
   }
 
-  function randomName() {
+  function randomResourceName() {
     let name = documentNames[Math.floor(Math.random() * documentNames.length)];
     return name;
   }
-  
+
   function generateDocuments() {
     const generatedItems: IDocument[] = [];
     for (let i = 1; i < 101; i++) {
       const date = randomDate(new Date(2019, 0, 1), new Date());
       const fileType = randomFileIcon();
-      let fileName = randomName();
+      let resourceName = randomResourceName();
       let userName = randomUser();
       generatedItems.push({
         key: i.toString(),
-        name: fileName,
-        value: fileName,
+        name: resourceName,
+        value: resourceName,
         iconName: fileType.url,
         fileType: fileType.docType,
         modifiedBy: userName,
@@ -136,6 +133,8 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
     }
     return generatedItems;
   }
+
+  const items: IDocument[] = generateDocuments();
 
   return (
     <DetailsList 
