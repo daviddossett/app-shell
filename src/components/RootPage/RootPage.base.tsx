@@ -17,6 +17,7 @@ import { SegmentPage } from '../../pages/SegmentPage/SegmentPage';
 import { BasicSettings } from '../../pages/BasicSettings/BasicSettings';
 import { Billing } from '../../pages/Billing/Billing';
 import { ProjectMembers } from '../../pages/ProjectMembers/ProjectMembers';
+import { SourcePage } from '../../pages/SourcePage/SourcePage';
 
 export const RootPageBase: React.FC<IPageProps> = (props) => {
   const { styles, theme } = props;
