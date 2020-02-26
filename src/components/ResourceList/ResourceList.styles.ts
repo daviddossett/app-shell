@@ -1,7 +1,9 @@
-import { classNamesFunction, AnimationStyles } from 'office-ui-fabric-react';
+import { classNamesFunction, AnimationStyles, getTheme } from 'office-ui-fabric-react';
 import { IResourceListStyleProps, IResourceListStyles } from './ResourceList.types';
 
 export const getStyles = (props: IResourceListStyleProps): IResourceListStyles => {
+  const theme = getTheme();
+
   return {
     root: {
       ...AnimationStyles.slideUpIn10,
@@ -29,6 +31,23 @@ export const getStyles = (props: IResourceListStyleProps): IResourceListStyles =
       verticalAlign: 'middle',
       maxHeight: '16px',
       maxWidth: '16px'
+    },
+    link: {
+      textDecoration: 'none',
+      selectors: {
+        '&:hover': {
+          textDecoration: 'underline'
+        },
+        '&:link': {
+          color: theme.semanticColors.bodyText
+        },
+        '&:visited': {
+          color: theme.semanticColors.bodyText
+        },
+        '&:focus': {
+          outline: 'none'
+        }
+      }
     }
   }
 }

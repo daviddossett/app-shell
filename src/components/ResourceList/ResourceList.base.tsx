@@ -1,8 +1,9 @@
 import React from 'react';
 import { getClassNames } from './ResourceList.styles';
 import { IResourceListProps } from './ResourceList.types';
-import { DetailsList, IColumn } from 'office-ui-fabric-react'
 import { IDocument } from './Document.types';
+import { DetailsList, IColumn } from 'office-ui-fabric-react'
+import { Link } from 'react-router-dom';
 
 export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
   const { styles, documentNames } = props;
@@ -37,7 +38,10 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
       sortAscendingAriaLabel: 'Sorted A to Z',
       sortDescendingAriaLabel: 'Sorted Z to A',
       data: 'string',
-      isPadded: true
+      isPadded: true,
+      onRender: (item: IDocument) => {
+      return <Link to={'/page-coming-soon'}  className={classNames.link}>{item.name}</Link>;
+      }
     },
     {
       key: 'column3',

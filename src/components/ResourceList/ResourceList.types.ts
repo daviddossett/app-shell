@@ -10,6 +10,7 @@ export type IResourceListStyleProps = Pick<IResourceListProps, 'styles' | 'class
 
 export interface IResourceListStyles {
   root: IStyle;
+  link: IStyle;
   fileIconHeaderIcon: IStyle;
   fileIconCell: IStyle;
   fileIconImg: IStyle;
