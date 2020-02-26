@@ -1,14 +1,13 @@
 import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { IReportPageProps } from './ReportPage.types';
-import { ResourceList } from '../../components/ResourceList/ResourceList';
 
 const commands = [
   {
-    key: 'new-segment',
-    name: 'New segment',
-    iconProps: { iconName: 'Add' },
-    ariaLabel: 'New',
+    key: 'advanced-settings',
+    name: 'Settings',
+    iconProps: { iconName: 'Settings' },
+    ariaLabel: 'Settings',
   }
 ];
 
