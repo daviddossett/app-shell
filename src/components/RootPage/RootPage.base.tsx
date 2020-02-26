@@ -3,21 +3,23 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { IPageProps } from './RootPage.types';
 import { getClassNames } from './RootPage.styles';
 import { getProjectBasedResourcePath, DocumentTypes } from '../../utils/helpers/routeHelper';
+
 import { SuiteHeader } from '../SuiteHeader/SuiteHeader';
 import { Nav } from '../Nav/Nav';
+
 import { Home } from '../../pages/Home/Home';
 import { ReportPage } from '../../pages/ReportPage/ReportPage';
 import { Signals } from '../../pages/Signals/Signals';
-import { SignalPage } from '../../pages/SignalPage/SignalPage';
 import { Sources } from '../../pages/Sources/Sources';
 import { Metrics } from '../../pages/Metrics/Metrics';
-import { MetricPage } from '../../pages/MetricPage/MetricPage';
 import { Segments } from '../../pages/Segments/Segments';
+import { SignalPage } from '../../pages/SignalPage/SignalPage';
+import { SourcePage } from '../../pages/SourcePage/SourcePage';
+import { MetricPage } from '../../pages/MetricPage/MetricPage';
 import { SegmentPage } from '../../pages/SegmentPage/SegmentPage';
 import { BasicSettings } from '../../pages/BasicSettings/BasicSettings';
 import { Billing } from '../../pages/Billing/Billing';
 import { ProjectMembers } from '../../pages/ProjectMembers/ProjectMembers';
-import { SourcePage } from '../../pages/SourcePage/SourcePage';
 
 export const RootPageBase: React.FC<IPageProps> = (props) => {
   const { styles, theme } = props;
