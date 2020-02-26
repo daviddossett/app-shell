@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { IPageProps } from './Page.types';
-import { getClassNames } from './Page.styles';
+import { IPageProps } from './RootPage.types';
+import { getClassNames } from './RootPage.styles';
 import { SuiteHeader } from '../SuiteHeader/SuiteHeader';
 import { Nav } from '../Nav/Nav';
 import { Home } from '../../pages/Home/Home';
@@ -13,8 +13,12 @@ import { BasicSettings } from '../../pages/BasicSettings/BasicSettings';
 import { Billing } from '../../pages/Billing/Billing';
 import { ProjectMembers } from '../../pages/ProjectMembers/ProjectMembers';
 import { getProjectBasedResourcePath, DocumentTypes } from '../../utils/helpers/routeHelper';
+import { ReportPage } from '../../pages/ReportPage/ReportPage';
+import { SignalPage } from '../../pages/SignalPage/SignalPage';
+import { SegmentPage } from '../../pages/SegmentPage/SegmentPage';
+import { MetricPage } from '../../pages/MetricPage/MetricPage';
 
-export const PageBase: React.FC<IPageProps> = (props) => {
+export const RootPageBase: React.FC<IPageProps> = (props) => {
   const { styles, theme } = props;
   const classNames = getClassNames(styles, { theme });
 

@@ -1,4 +1,4 @@
-import { IPageStyleProps, IPageStyles } from "./Page.types"
+import { IPageStyleProps, IPageStyles } from "./RootPage.types"
 import { classNamesFunction, getTheme } from "office-ui-fabric-react";
 import { breakpoint } from "../../constants/breakpoints";
 
