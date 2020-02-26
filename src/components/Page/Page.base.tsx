@@ -65,23 +65,23 @@ export const PageBase: React.FC<IPageProps> = (props) => {
           <Redirect strict from="/home" to="/" exact />
 
           <Redirect strict from={`${reportPath}/`} to={reportPath} />
-          <Route exact path={reportPath} component={reportPage} />
+          <Route exact path={reportPath} component={ReportPage} />
 
           <Route exact path='/data/signals' component={Signals} />
           <Redirect strict from={`${signalPath}/`} to={signalPath} />
-          <Route exact path={signalPath} component={signalPage} />
+          <Route exact path={signalPath} component={SignalPage} />
 
           <Route exact path='/data/sources' component={Sources} />
           <Redirect strict from={`${signalPath}/`} to={sourcePath} />
-          <Route exact path={signalPath} component={sourcePage} />
+          <Route exact path={signalPath} component={SourcePage} />
 
           <Route exact path='/data/segments' component={Segments} />
           <Redirect strict from={`${segmentPath}/`} to={segmentPath} />
-          <Route exact path={segmentPath} component={segmentPage} />
+          <Route exact path={segmentPath} component={SegmentPage} />
 
           <Route exact path='/data/metrics' component={Metrics} />
           <Redirect strict from={`${metricPath}/`} to={metricPath} />
-          <Route exact path={metricPath} component={metricPage} />
+          <Route exact path={metricPath} component={MetricPage} />
 
           <Route exact path='/settings/basics' component={BasicSettings} />
           <Route exact path='/settings/billing' component={Billing} />
