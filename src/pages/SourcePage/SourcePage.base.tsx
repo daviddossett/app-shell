@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
-import { ISegmentPageProps } from './SegmentPage.types';
+import { ISourcePageProps } from './SourcePage.types';
 
 const commands = [
   {
@@ -44,10 +44,10 @@ const farCommands = [
   }
 ];
 
-export const SegmentPageBase: React.FC<ISegmentPageProps> = () => {  
+export const SourcePageBase: React.FC<ISourcePageProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'SegmentPage'} commands={commands} farCommands={farCommands} commandBarIsVisible={true} />
+      <PageTemplate pageTitle={'SourcePage'} commands={commands} farCommands={farCommands} commandBarIsVisible={true} />
     </>
   );
 }

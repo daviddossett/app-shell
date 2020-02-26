@@ -1,7 +1,6 @@
 import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { ISignalPageProps } from './SignalPage.types';
-import { ResourceList } from '../../components/ResourceList/ResourceList';
 
 const commands = [
   {
