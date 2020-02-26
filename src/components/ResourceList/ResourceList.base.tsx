@@ -20,7 +20,6 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
       fieldName: 'name',
       minWidth: 16,
       maxWidth: 16,
-  
       onRender: (item: IDocument) => {
         return <img src={item.iconName} className={classNames.fileIconImg} alt={item.fileType + ' file icon'} />;
       }
@@ -40,7 +39,7 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
       data: 'string',
       isPadded: true,
       onRender: (item: IDocument) => {
-      return <Link to={'/page-coming-soon'}  className={classNames.link}>{item.name}</Link>;
+      return <Link to={'/404'}  className={classNames.link}>{item.name}</Link>;
       }
     },
     {
