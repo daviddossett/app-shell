@@ -1,6 +1,6 @@
 import { Path } from 'history';
 
-enum DocumentTypes {
+export enum DocumentTypes {
   Project = 'project',
   Report = 'report',
   Signal = 'signal',
