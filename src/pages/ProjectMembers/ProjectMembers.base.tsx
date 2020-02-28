@@ -47,13 +47,13 @@ const farCommands = [
   }
 ];
 
-const items = generateResources(['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan']); 
+const items = generateResources(['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan'], DocumentTypes.Member); 
 
 export const ProjectMembersBase: React.FC<IProjectMembersProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Members'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-        <ResourceList items={items} resourceType={DocumentTypes.Signal} />
+        <ResourceList items={items} />
       </PageTemplate>
     </>
   );

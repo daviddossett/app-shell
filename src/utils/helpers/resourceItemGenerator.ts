@@ -1,7 +1,7 @@
 import { IDocument } from '../../components/ResourceList/Document.types';
 import { DocumentTypes } from './routeHelper';
 
-export function generateResources(resourceNames: string[]) {
+export function generateResources(resourceNames: string[], resourceType: DocumentTypes) {
   const generatedItems: IDocument[] = [];
 
   for (let i = 0; i < resourceNames.length; i++) {
@@ -16,7 +16,7 @@ export function generateResources(resourceNames: string[]) {
       key: i.toString(),
       name: resourceName,
       value: resourceName,
-      resourceType: DocumentTypes.Metric,
+      resourceType: resourceType,
       projectId: projectId,
       resourceId: resourceId,
       iconName: fileType.url,

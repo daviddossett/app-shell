@@ -6,10 +6,8 @@ import { DetailsList, IColumn } from 'office-ui-fabric-react'
 import { Link } from 'react-router-dom';
 
 export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
-  const { styles, items, resourceType } = props;
+  const { styles, items } = props;
   const classNames = getClassNames(styles);
-
-  let resourceRoute = `${resourceType}s`
 
   const columns: IColumn[] = [
     {
@@ -41,7 +39,7 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
       data: 'string',
       isPadded: true,
       onRender: (item: IDocument) => {
-        return <Link to={`/projects/${item.projectId}/${resourceRoute}/${item.resourceId}`} className={classNames.link}>{item.name}</Link>;
+        return <Link to={`/projects/${item.projectId}/${item.resourceType}s/${item.resourceId}`} className={classNames.link}>{item.name}</Link>;
       }
     },
     {

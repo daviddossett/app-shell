@@ -47,13 +47,13 @@ const farCommands = [
   }
 ];
 
-const items = generateResources(['loginButtonClick', 'logoutButtonClick', 'signUpButtonClick', 'tryDemoButtonClick']);
+const items = generateResources(['loginButtonClick', 'logoutButtonClick', 'signUpButtonClick', 'tryDemoButtonClick'], DocumentTypes.Signal);
 
 export const SignalsBase: React.FC<ISignalsProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Signals'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-          <ResourceList items={items} resourceType={DocumentTypes.Signal} />
+          <ResourceList items={items} />
       </PageTemplate>
     </>
   );

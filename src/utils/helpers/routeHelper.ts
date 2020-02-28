@@ -6,7 +6,8 @@ export enum DocumentTypes {
   Signal = 'signal',
   Source = 'source',
   Segment = 'segment',
-  Metric = 'metric'
+  Metric = 'metric',
+  Member = 'member'
 }
 
 export function getProjectBasedResourcePath(
@@ -27,6 +28,8 @@ export function getProjectBasedResourcePath(
       return `${basePath}/segments/${resourceId}`;
     case DocumentTypes.Metric:
       return `${basePath}/metrics/${resourceId}`;
+    case DocumentTypes.Member:
+        return `${basePath}/members/${resourceId}`;
     default:
       throw new Error(`Unknown resource type ${resourceType}`);
   }

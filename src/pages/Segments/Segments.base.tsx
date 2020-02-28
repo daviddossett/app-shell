@@ -47,13 +47,13 @@ const farCommands = [
   }
 ];
 
-const items = generateResources(['Segment A', 'Segment B', 'Segment C']);
+const items = generateResources(['Segment A', 'Segment B', 'Segment C'], DocumentTypes.Segment);
 
 export const SegmentsBase: React.FC<ISegmentsProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Segments'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-        <ResourceList items={items} resourceType={DocumentTypes.Segment} />
+        <ResourceList items={items} />
       </PageTemplate>
     </>
   );

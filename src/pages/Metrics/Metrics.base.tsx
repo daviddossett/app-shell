@@ -47,13 +47,13 @@ const farCommands = [
   }
 ];
 
-const items = generateResources(['Metric foo', 'Metric bar', 'Metric baz']);
+const items = generateResources(['Metric foo', 'Metric bar', 'Metric baz'], DocumentTypes.Metric);
 
 export const MetricsBase: React.FC<IMetricsProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Metrics'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-        <ResourceList items={items} resourceType={DocumentTypes.Metric} />
+        <ResourceList items={items} />
       </PageTemplate>
     </>
   );
