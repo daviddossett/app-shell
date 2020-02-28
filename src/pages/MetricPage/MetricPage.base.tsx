@@ -47,7 +47,13 @@ const farCommands = [
 export const MetricPageBase: React.FC<IMetricPageProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'MetricPage'} commands={commands} farCommands={farCommands} commandBarIsVisible={true} />
+      <PageTemplate 
+        pageTitle={'MetricPage'} 
+        hasBackButton={true}
+        commands={commands} 
+        farCommands={farCommands} 
+        commandBarIsVisible={true}>
+      </PageTemplate>
     </>
   );
 }

@@ -47,7 +47,12 @@ const farCommands = [
 export const ReportPageBase: React.FC<IReportPageProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'ReportPage'} commands={commands} farCommands={farCommands} commandBarIsVisible={true} />
+      <PageTemplate 
+        pageTitle={'Report page'} 
+        hasBackButton={false}
+        commands={commands} 
+        farCommands={farCommands} 
+        commandBarIsVisible={true} />
     </>
   );
 }

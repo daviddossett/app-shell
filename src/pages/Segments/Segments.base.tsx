@@ -52,7 +52,12 @@ const items = generateResources(['Segment A', 'Segment B', 'Segment C'], Documen
 export const SegmentsBase: React.FC<ISegmentsProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'Segments'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
+      <PageTemplate 
+        pageTitle={'Segments'} 
+        hasBackButton={false}
+        commands={commands} 
+        farCommands={farCommands} 
+        commandBarIsVisible={true}>
         <ResourceList items={items} />
       </PageTemplate>
     </>

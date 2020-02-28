@@ -47,7 +47,13 @@ const farCommands = [
 export const SegmentPageBase: React.FC<ISegmentPageProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'SegmentPage'} commands={commands} farCommands={farCommands} commandBarIsVisible={true} />
+      <PageTemplate 
+        pageTitle={'SegmentPage'} 
+        hasBackButton={true}
+        commands={commands} 
+        farCommands={farCommands} 
+        commandBarIsVisible={true}>
+      </PageTemplate>
     </>
   );
 }

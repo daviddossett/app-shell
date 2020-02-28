@@ -80,7 +80,12 @@ const cards = billingSections.map(section => {
 export const BillingBase: React.FC<IBillingProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'Billing'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
+      <PageTemplate 
+        pageTitle={'Billing'} 
+        hasBackButton={false}
+        commands={commands} 
+        farCommands={farCommands} 
+        commandBarIsVisible={true}>
         {cards}
       </PageTemplate>
     </>

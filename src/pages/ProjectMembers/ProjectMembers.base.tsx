@@ -52,7 +52,12 @@ const items = generateResources(['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lem
 export const ProjectMembersBase: React.FC<IProjectMembersProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'Members'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
+      <PageTemplate 
+        pageTitle={'Members'} 
+        hasBackButton={false}
+        commands={commands} 
+        farCommands={farCommands} 
+        commandBarIsVisible={true}>
         <ResourceList items={items} />
       </PageTemplate>
     </>

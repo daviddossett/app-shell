@@ -1,7 +1,8 @@
 import { IStyle, IStyleFunctionOrObject, ITheme } from 'office-ui-fabric-react';
 
 export interface IPageHeaderProps {
-  text: string;
+  title: string;
+  hasBackButton: boolean;
   styles?: IStyleFunctionOrObject<IPageHeaderStyleProps, IPageHeaderStyles>;
   className?: string;
   theme?: ITheme;
@@ -11,5 +12,6 @@ export type IPageHeaderStyleProps = Pick<IPageHeaderProps, 'styles' | 'className
 
 
 export interface IPageHeaderStyles {
-  text: IStyle;
+  root: IStyle;
+  title: IStyle;
 }

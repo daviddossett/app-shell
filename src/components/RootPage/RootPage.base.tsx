@@ -80,7 +80,7 @@ export const RootPageBase: React.FC<IPageProps> = (props) => {
 
           <Route exact path='/data/sources' component={Sources} />
           <Redirect strict from={`${signalPath}/`} to={sourcePath} />
-          <Route exact path={signalPath} component={SourcePage} />
+          <Route exact path={sourcePath} component={SourcePage} />
 
           <Route exact path='/data/segments' component={Segments} />
           <Redirect strict from={`${segmentPath}/`} to={segmentPath} />

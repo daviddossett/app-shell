@@ -17,11 +17,8 @@ const lgPadding: any = {
 export const getStyles = (props: IPageHeaderStyleProps): IPageHeaderStyles => {
   const theme = getTheme();
   
-  return {
-    text: {
-      color: theme.semanticColors.bodyText,
-      fontSize: FontSizes.xLarge,
-      fontWeight: FontWeights.semibold,
+  return {    
+    root: {
       width: '100%',
       margin: '0',
       padding: '24px 16px',
@@ -29,6 +26,11 @@ export const getStyles = (props: IPageHeaderStyleProps): IPageHeaderStyles => {
         ...mdPadding,
         ...lgPadding
       }
+    },
+    title: {
+      color: theme.semanticColors.bodyText,
+      fontSize: FontSizes.xLarge,
+      fontWeight: FontWeights.semibold,
     }
   }
 }

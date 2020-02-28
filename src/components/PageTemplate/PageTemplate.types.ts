@@ -3,6 +3,7 @@ import { ReactFragment } from 'react';
 
 export interface IPageTemplateProps {
   pageTitle: string;
+  hasBackButton: boolean;
   commandBarIsVisible: boolean;
   commands: ICommandBarItemProps[];
   farCommands: ICommandBarItemProps[];

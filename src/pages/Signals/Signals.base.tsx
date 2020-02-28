@@ -52,7 +52,12 @@ const items = generateResources(['loginButtonClick', 'logoutButtonClick', 'signU
 export const SignalsBase: React.FC<ISignalsProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'Signals'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
+      <PageTemplate 
+        pageTitle={'Signals'} 
+        hasBackButton={false}
+        commands={commands} 
+        farCommands={farCommands} 
+        commandBarIsVisible={true}>
           <ResourceList items={items} />
       </PageTemplate>
     </>

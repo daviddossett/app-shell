@@ -52,7 +52,12 @@ const items = generateResources(['foo', 'bar', 'baz'], DocumentTypes.Source);
 export const SourcesBase: React.FC<ISourcesProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'Sources'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
+      <PageTemplate 
+        pageTitle={'Sources'} 
+        hasBackButton={false}
+        commands={commands} 
+        farCommands={farCommands} 
+        commandBarIsVisible={true}>
         <ResourceList items={items} />
       </PageTemplate>
     </>

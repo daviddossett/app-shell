@@ -47,7 +47,12 @@ const farCommands = [
 export const SourcePageBase: React.FC<ISourcePageProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'SourcePage'} commands={commands} farCommands={farCommands} commandBarIsVisible={true} />
+      <PageTemplate 
+        pageTitle={'SourcePage'} 
+        hasBackButton={true}
+        commands={commands} 
+        farCommands={farCommands} 
+        commandBarIsVisible={true} />
     </>
   );
 }

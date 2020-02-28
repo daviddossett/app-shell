@@ -107,7 +107,12 @@ const cards = settingsSections.map(section => {
 export const BasicSettingsBase: React.FC<IBasicSettingsProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'Basics'} commands={commands} farCommands={farCommands} commandBarIsVisible={false}>
+      <PageTemplate 
+        pageTitle={'Basics'} 
+        hasBackButton={false}
+        commands={commands} 
+        farCommands={farCommands} 
+        commandBarIsVisible={false}>
         {cards}
       </PageTemplate>
     </>

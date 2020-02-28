@@ -52,7 +52,12 @@ const items = generateResources(['Metric foo', 'Metric bar', 'Metric baz'], Docu
 export const MetricsBase: React.FC<IMetricsProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'Metrics'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
+      <PageTemplate 
+        pageTitle={'Metrics'} 
+        hasBackButton={false}
+        commands={commands} 
+        farCommands={farCommands} 
+        commandBarIsVisible={true}>
         <ResourceList items={items} />
       </PageTemplate>
     </>

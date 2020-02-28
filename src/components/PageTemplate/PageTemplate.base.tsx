@@ -5,7 +5,7 @@ import { PageHeader } from '../PageHeader/PageHeader';
 import { CommandBar } from 'office-ui-fabric-react';
 
 export const PageTemplateBase: React.FC<IPageTemplateProps> = (props) => {
-  const { styles, pageTitle, commands, farCommands, commandBarIsVisible, children } = props;
+  const { styles, pageTitle, hasBackButton, commands, farCommands, commandBarIsVisible, children } = props;
   const classNames = getClassNames(styles);
 
   return (
@@ -16,7 +16,7 @@ export const PageTemplateBase: React.FC<IPageTemplateProps> = (props) => {
         ariaLabel={'Use left and right arrow keys to navigate between commands'}
         className={commandBarIsVisible ? classNames.commandBar: classNames.commandBarHidden}
       />
-      <PageHeader text={pageTitle} />
+      <PageHeader title={pageTitle} hasBackButton={hasBackButton} />
       <div className={classNames.contentArea}>
         {children}
       </div>

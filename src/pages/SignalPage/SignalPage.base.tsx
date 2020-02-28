@@ -47,7 +47,12 @@ const farCommands = [
 export const SignalPageBase: React.FC<ISignalPageProps> = () => {  
   return (
     <>
-      <PageTemplate pageTitle={'SignalPage'} commands={commands} farCommands={farCommands} commandBarIsVisible={true} />
+      <PageTemplate 
+        pageTitle={'Signal page'} 
+        hasBackButton={true}
+        commands={commands} 
+        farCommands={farCommands} 
+        commandBarIsVisible={true} />
     </>
   );
 }
