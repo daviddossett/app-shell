@@ -6,8 +6,10 @@ import { DetailsList, IColumn } from 'office-ui-fabric-react'
 import { Link } from 'react-router-dom';
 
 export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
-  const { styles, documentNames } = props;
+  const { styles, items, resourceType } = props;
   const classNames = getClassNames(styles);
+
+  let resourceRoute = `${resourceType}s`
 
   const columns: IColumn[] = [
     {
@@ -39,7 +41,7 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
       data: 'string',
       isPadded: true,
       onRender: (item: IDocument) => {
-      return <Link to={'/404'}  className={classNames.link}>{item.name}</Link>;
+        return <Link to={`/projects/${item.projectId}/${resourceRoute}/${item.resourceId}`} className={classNames.link}>{item.name}</Link>;
       }
     },
     {
@@ -70,74 +72,6 @@ export const ResourceListBase: React.FC<IResourceListProps> = (props) => {
       isPadded: true
     }
   ];
-  
-  function randomFileIcon(): { docType: string; url: string } {
-    const icons: { name: string }[] = [
-      { name: 'accdb' },
-      { name: 'csv' },
-      { name: 'docx' },
-      { name: 'dotx' },
-      { name: 'mpt' },
-      { name: 'odt' },
-      { name: 'one' },
-      { name: 'onepkg' },
-      { name: 'onetoc' },
-      { name: 'pptx' },
-      { name: 'pub' },
-      { name: 'vsdx' },
-      { name: 'xls' },
-      { name: 'xlsx' },
-      { name: 'xsn' }
-    ];
-
-    const docType: string = icons[Math.floor(Math.random() * icons.length)].name;
-    return {
-      docType,
-      url: `https://static2.sharepointonline.com/files/fabric/assets/brand-icons/document/svg/${docType}_16x1.svg`
-    };
-  }
-
-  function randomUser() {
-    const users = ['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan'];
-    let user = users[Math.floor(Math.random() * users.length)];
-    return user;
-  }
-
-  function randomDate(start: Date, end: Date): { value: number; dateFormatted: string } {
-    const date: Date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-    return {
-      value: date.valueOf(),
-      dateFormatted: date.toLocaleDateString()
-    };
-  }
-
-  function randomResourceName() {
-    let name = documentNames[Math.floor(Math.random() * documentNames.length)];
-    return name;
-  }
-
-  function generateDocuments() {
-    const generatedItems: IDocument[] = [];
-    for (let i = 1; i < 101; i++) {
-      const date = randomDate(new Date(2019, 0, 1), new Date());
-      const fileType = randomFileIcon();
-      let resourceName = randomResourceName();
-      let userName = randomUser();
-      generatedItems.push({
-        key: i.toString(),
-        name: resourceName,
-        value: resourceName,
-        iconName: fileType.url,
-        fileType: fileType.docType,
-        modifiedBy: userName,
-        dateModified: date.dateFormatted,
-        dateModifiedValue: date.value
-      });
-    }
-    return generatedItems;
-  }
-
-  const items: IDocument[] = generateDocuments();
 
   return (
     <DetailsList 

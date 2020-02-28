@@ -2,6 +2,8 @@ import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { ISignalsProps } from './Signals.types';
 import { ResourceList } from '../../components/ResourceList/ResourceList';
+import { generateResources } from '../../utils/helpers/resourceItemGenerator';
+import { DocumentTypes } from '../../utils/helpers/routeHelper';
 
 const commands = [
   {
@@ -45,13 +47,13 @@ const farCommands = [
   }
 ];
 
-const signalNames = ['Signal foo', 'Signal bar', 'Signal baz'];
+const items = generateResources(['loginButtonClick', 'logoutButtonClick', 'signUpButtonClick', 'tryDemoButtonClick']);
 
 export const SignalsBase: React.FC<ISignalsProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Signals'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-          <ResourceList documentNames={signalNames} />
+          <ResourceList items={items} resourceType={DocumentTypes.Signal} />
       </PageTemplate>
     </>
   );

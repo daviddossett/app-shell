@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Sidebar, ISidebarItemProps } from '@business-app/fabric/lib';
+import { Sidebar, ISidebarItemProps, } from '@business-app/fabric/lib';
 import { INavProps } from './Nav.types';
 import { getTheme, Overlay, Layer } from 'office-ui-fabric-react';
 import { getClassNames } from './Nav.styles';

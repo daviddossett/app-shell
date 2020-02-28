@@ -2,6 +2,8 @@ import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { IProjectMembersProps } from './ProjectMembers.types';
 import { ResourceList } from '../../components/ResourceList/ResourceList';
+import { generateResources } from '../../utils/helpers/resourceItemGenerator';
+import { DocumentTypes } from '../../utils/helpers/routeHelper';
 
 const commands = [
   {
@@ -45,13 +47,13 @@ const farCommands = [
   }
 ];
 
-const memberNames = ['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan'];
+const items = generateResources(['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan']); 
 
 export const ProjectMembersBase: React.FC<IProjectMembersProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Members'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-        <ResourceList documentNames={memberNames}/>
+        <ResourceList items={items} resourceType={DocumentTypes.Signal} />
       </PageTemplate>
     </>
   );

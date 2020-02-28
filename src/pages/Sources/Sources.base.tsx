@@ -2,6 +2,8 @@ import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { ISourcesProps } from './Sources.types';
 import { ResourceList } from '../../components/ResourceList/ResourceList';
+import { generateResources } from '../../utils/helpers/resourceItemGenerator';
+import { DocumentTypes } from '../../utils/helpers/routeHelper';
 
 const commands = [
   {
@@ -45,13 +47,13 @@ const farCommands = [
   }
 ];
 
-const sourcesNames = ['Source foo', 'Source bar', 'Source baz'];
+const items = generateResources(['foo', 'bar', 'baz']);
 
 export const SourcesBase: React.FC<ISourcesProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Sources'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-        <ResourceList documentNames={sourcesNames} />
+        <ResourceList items={items} resourceType={DocumentTypes.Source} />
       </PageTemplate>
     </>
   );

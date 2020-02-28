@@ -2,6 +2,8 @@ import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { ISegmentsProps } from './Segments.types';
 import { ResourceList } from '../../components/ResourceList/ResourceList';
+import { generateResources } from '../../utils/helpers/resourceItemGenerator';
+import { DocumentTypes } from '../../utils/helpers/routeHelper';
 
 const commands = [
   {
@@ -45,13 +47,13 @@ const farCommands = [
   }
 ];
 
-const segmentNames = ['Segment foo', 'Segment bar', 'Segment baz'];
+const items = generateResources(['Segment A', 'Segment B', 'Segment C']);
 
 export const SegmentsBase: React.FC<ISegmentsProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Segments'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-        <ResourceList documentNames={segmentNames} />
+        <ResourceList items={items} resourceType={DocumentTypes.Segment} />
       </PageTemplate>
     </>
   );

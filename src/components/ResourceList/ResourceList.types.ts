@@ -1,6 +1,8 @@
 import { IStyle, IStyleFunctionOrObject, ITheme } from 'office-ui-fabric-react';
+import { DocumentTypes } from '../../utils/helpers/routeHelper';
 export interface IResourceListProps {
-  documentNames: string[];
+  items: Object[];
+  resourceType: DocumentTypes;
   styles?: IStyleFunctionOrObject<IResourceListStyleProps, IResourceListStyles>;
   className?: string;
   theme?: ITheme;
@@ -10,8 +12,8 @@ export type IResourceListStyleProps = Pick<IResourceListProps, 'styles' | 'class
 
 export interface IResourceListStyles {
   root: IStyle;
-  link: IStyle;
   fileIconHeaderIcon: IStyle;
   fileIconCell: IStyle;
   fileIconImg: IStyle;
+  link: IStyle;
 }

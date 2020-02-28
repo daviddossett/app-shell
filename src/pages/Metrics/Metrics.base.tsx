@@ -2,6 +2,8 @@ import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { IMetricsProps } from './Metrics.types';
 import { ResourceList } from '../../components/ResourceList/ResourceList';
+import { generateResources } from '../../utils/helpers/resourceItemGenerator';
+import { DocumentTypes } from '../../utils/helpers/routeHelper';
 
 const commands = [
   {
@@ -45,13 +47,13 @@ const farCommands = [
   }
 ];
 
-const metricNames = ['Metric foo', 'Metric bar', 'Metric baz'];
+const items = generateResources(['Metric foo', 'Metric bar', 'Metric baz']);
 
 export const MetricsBase: React.FC<IMetricsProps> = () => {  
   return (
     <>
       <PageTemplate pageTitle={'Metrics'} commands={commands} farCommands={farCommands} commandBarIsVisible={true}>
-        <ResourceList documentNames={metricNames} />
+        <ResourceList items={items} resourceType={DocumentTypes.Metric} />
       </PageTemplate>
     </>
   );
