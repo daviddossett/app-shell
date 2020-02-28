@@ -13,5 +13,6 @@ export type IPageHeaderStyleProps = Pick<IPageHeaderProps, 'styles' | 'className
 
 export interface IPageHeaderStyles {
   root: IStyle;
+  backButton: IStyle;
   title: IStyle;
 }

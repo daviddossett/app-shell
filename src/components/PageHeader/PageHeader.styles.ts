@@ -1,16 +1,16 @@
-import { classNamesFunction, getTheme, FontSizes, FontWeights } from 'office-ui-fabric-react';
+import { classNamesFunction, getTheme, FontSizes, FontWeights, AnimationStyles } from 'office-ui-fabric-react';
 import { IPageHeaderStyleProps, IPageHeaderStyles } from './PageHeader.types';
 import { breakpoint } from '../../constants/breakpoints';
 
 const mdPadding: any = {
   [`@media (min-width: ${breakpoint.md})`]: {
-    padding: '24px'
+    padding: '16px 24px 24px 24px'
   },
 };
 
 const lgPadding: any = {
   [`@media (min-width: ${breakpoint.lg})`]: {
-    padding: '32px'
+    padding: '16px 32px 32px 32px'
   },
 };
 
@@ -21,16 +21,19 @@ export const getStyles = (props: IPageHeaderStyleProps): IPageHeaderStyles => {
     root: {
       width: '100%',
       margin: '0',
-      padding: '24px 16px',
+      padding: '16px 24px 16px 16px',
       selectors: {
         ...mdPadding,
         ...lgPadding
       }
     },
+    backButton: {
+      ...AnimationStyles.slideRightIn10
+    },
     title: {
       color: theme.semanticColors.bodyText,
       fontSize: FontSizes.xLarge,
-      fontWeight: FontWeights.semibold,
+      fontWeight: FontWeights.semibold
     }
   }
 }
