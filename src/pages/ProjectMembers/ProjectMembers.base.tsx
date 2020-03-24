@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { IProjectMembersProps } from './ProjectMembers.types';
-import { ResourceList } from '../../components/ResourceList/ResourceList';
+import { Members } from '../../components/Members/Members';
 import { generateResources } from '../../utils/helpers/resourceItemGenerator';
 import { DocumentTypes } from '../../utils/helpers/routeHelper';
 
@@ -47,18 +47,18 @@ const farCommands = [
   }
 ];
 
-const items = generateResources(['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan'], DocumentTypes.Member); 
+const items = generateResources(['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan'], DocumentTypes.Member);
 
-export const ProjectMembersBase: React.FC<IProjectMembersProps> = () => {  
+export const ProjectMembersBase: React.FC<IProjectMembersProps> = () => {
   return (
     <>
-      <PageTemplate 
-        pageTitle={'Members'} 
+      <PageTemplate
+        pageTitle={'Members'}
         hasBackButton={false}
-        commands={commands} 
-        farCommands={farCommands} 
+        commands={commands}
+        farCommands={farCommands}
         commandBarIsVisible={true}>
-        <ResourceList items={items} />
+        <Members items={items} />
       </PageTemplate>
     </>
   );

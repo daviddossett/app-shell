@@ -11,7 +11,7 @@ const lgGridLayout = `
 'nav content'
 `
 
-const showLargeLayout: any = {
+const lgLayout: any = {
   [`@media (min-width: ${breakpoint.lg})`]: {
     gridTemplateAreas: lgGridLayout,
     gridTemplateColumns: 'auto 1fr'
@@ -27,11 +27,10 @@ export const styles = (props: IPageStyleProps): IPageStyles => {
       display: 'grid',
       overflow: 'hidden',
       gridTemplateAreas: gridLayout,
-      gridTemplateColumns: 'auto',
       gridTemplateRows: 'auto 1fr',
       background: theme.palette.neutralLighterAlt,
       selectors: {
-        ...showLargeLayout
+        ...lgLayout
       }
     },
     header: {

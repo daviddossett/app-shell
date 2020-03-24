@@ -1,6 +1,8 @@
 import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { ISignalPageProps } from './SignalPage.types';
+import { Card } from '../../components/Card/Card';
+import { getClassNames } from './SignalPage.styles';
 
 const commands = [
   {
@@ -44,15 +46,30 @@ const farCommands = [
   }
 ];
 
-export const SignalPageBase: React.FC<ISignalPageProps> = () => {  
+export const SignalPageBase: React.FC<ISignalPageProps> = (props) => {
+  const { styles } = props;
+  const classNames = getClassNames(styles);
+
   return (
     <>
-      <PageTemplate 
-        pageTitle={'Signal page'} 
+      <PageTemplate
+        pageTitle={'loginButtonClick'}
         hasBackButton={true}
-        commands={commands} 
-        farCommands={farCommands} 
-        commandBarIsVisible={true} />
+        commands={commands}
+        farCommands={farCommands}
+        commandBarIsVisible={true}>
+        <div className={classNames.children}>
+          <div className={classNames.heroCard}>
+            <Card text={'Hero'}  />
+          </div>
+          <div className={classNames.detailsCard}>
+            <Card text={'Details'}  />
+          </div>
+          <div className={classNames.activityCard}>
+            <Card text={'Activity'}  />
+          </div>
+        </div>
+        </PageTemplate>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
-import { IPageTemplateStyleProps, IPageTemplateStyles } from './PageTemplate.types';
+import { IMembersStyleProps, IMembersStyles } from './Members.types';
 import { breakpoint } from '../../constants/breakpoints';
 
 const mdPadding: any = {
@@ -14,7 +14,7 @@ const lgPadding: any = {
   },
 };
 
-export const getStyles = (props: IPageTemplateStyleProps): IPageTemplateStyles => {
+export const getStyles = (props: IMembersStyleProps): IMembersStyles => {
   const theme = getTheme();
 
   return {
@@ -35,4 +35,4 @@ export const getStyles = (props: IPageTemplateStyleProps): IPageTemplateStyles =
   }
 }
 
-export const getClassNames = classNamesFunction<IPageTemplateStyleProps, IPageTemplateStyles>();
+export const getClassNames = classNamesFunction<IMembersStyleProps, IMembersStyles>();
