@@ -6,10 +6,7 @@ export const getStyles = (props: IMembersStyleProps): IMembersStyles => {
   return {
     root: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
       gridAutoRows: '200px',
-      gridRowGap: '16px',
-      gridColumnGap: '16px',
     }
   }
 }

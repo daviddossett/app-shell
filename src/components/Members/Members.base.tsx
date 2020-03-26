@@ -7,14 +7,14 @@ export const MembersBase: React.FC<IMembersProps> = (props) => {
   const { styles } = props;
   const classNames = getClassNames(styles);
 
-  const list = [];
-  for (let i = 0; i < 17; i++) {
-    list.push(<Card text={'Content'} />)
+  const cards = [];
+  for (let i = 1; i < 17; i++) {
+    cards.push(<Card text={`Card ${i}`} />)
   }
 
   return (
     <div className={classNames.root}>
-      {list}
+      {cards}
     </div>
   );
 }
