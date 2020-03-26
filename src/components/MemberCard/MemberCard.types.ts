@@ -1,13 +1,13 @@
 import { IStyle, IStyleFunctionOrObject,  ITheme } from 'office-ui-fabric-react';
 
-export interface IMembersProps {
-  styles?: IStyleFunctionOrObject<IMembersStyleProps, IMembersStyles>;
+export interface IMemberCardProps {
+  styles?: IStyleFunctionOrObject<IMemberCardStyleProps, IMemberCardStyles>;
   className?: string;
   theme?: ITheme;
 }
 
-export type IMembersStyleProps = Pick<IMembersProps, 'styles' | 'className' | 'theme'>;
+export type IMemberCardStyleProps = Pick<IMemberCardProps, 'styles' | 'className' | 'theme'>;
 
-export interface IMembersStyles {
+export interface IMemberCardStyles {
   root: IStyle;
 }

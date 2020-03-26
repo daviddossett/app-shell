@@ -8,9 +8,9 @@ export interface ISignalPageProps {
 export type ISignalPageStyleProps = Pick<ISignalPageProps, 'styles' | 'className'>;
 
 export interface ISignalPageStyles {
-  root: IStyle;
-  children: IStyle;
-  heroCard: IStyle;
-  detailsCard: IStyle;
-  activityCard: IStyle;
+  signalPageGrid: IStyle;
+  card1: IStyle;
+  card2: IStyle;
+  card3: IStyle;
+  card4: IStyle;
 }

@@ -2,55 +2,36 @@ import { classNamesFunction } from 'office-ui-fabric-react';
 import { ISignalPageStyleProps, ISignalPageStyles } from './SignalPage.types';
 import { breakpoint } from '../../constants/breakpoints';
 
-const baseGrid = `
-'hero'
-'details'
-'activity'
+const baseGridTemplate = `
+'card1'
+'card2'
+'card3'
+'card4'
 `
 
-const mdGrid = `
-'hero hero'
-'details activity'
-`
 
-const xlGrid = `
-'hero hero details'
-'activity activity activity'
-`
-
-const mdLayout: any = {
-  [`@media (min-width: ${breakpoint.md})`]: {
-    gridTemplateAreas: mdGrid
-  },
-};
-
-const xlLayout: any = {
-  [`@media (min-width: ${breakpoint.xl})`]: {
-    gridTemplateAreas: xlGrid
-  },
-};
 
 export const getStyles = (props: ISignalPageStyleProps): ISignalPageStyles => {
   return {
-    root: {},
-    children: {
+    signalPageGrid: {
       display: 'grid',
+      gridTemplateAreas: baseGridTemplate,
+      gridAutoRows: '200px',
       gridColumnGap: '16px',
-      gridTemplateAreas: baseGrid,
-      selectors: {
-        ...mdLayout,
-        ...xlLayout,
-      }
+      gridRowGap: '16px',
     },
-    heroCard: {
-      gridArea: 'hero'
+    card1: {
+      gridArea: 'card1',
     },
-    detailsCard: {
-      gridArea: 'details'
+    card2: {
+      gridArea: 'card2'
     },
-    activityCard: {
-      gridArea: 'activity'
-    }
+    card3: {
+      gridArea: 'card3'
+    },
+    card4: {
+      gridArea: 'card4'
+    },
   }
 }
 

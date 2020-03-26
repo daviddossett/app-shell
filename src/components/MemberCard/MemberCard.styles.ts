@@ -1,38 +1,19 @@
-import { classNamesFunction, getTheme } from 'office-ui-fabric-react';
-import { IMembersStyleProps, IMembersStyles } from './MemberCard.types';
-import { breakpoint } from '../../constants/breakpoints';
+import { classNamesFunction, getTheme, AnimationStyles } from 'office-ui-fabric-react';
+import { IMemberCardStyleProps, IMemberCardStyles } from './MemberCard.types';
 
-const mdPadding: any = {
-  [`@media (min-width: ${breakpoint.md})`]: {
-    padding: '0 24px 64px',
-  },
-};
-
-const lgPadding: any = {
-  [`@media (min-width: ${breakpoint.lg})`]: {
-    padding: '0 32px 128px',
-  },
-};
-
-export const getStyles = (props: IMembersStyleProps): IMembersStyles => {
+export const getStyles = (props: IMemberCardStyleProps): IMemberCardStyles => {
   const theme = getTheme();
 
   return {
-    root: {},
-    commandBar: {
-      borderBottom: `1px solid ${theme.palette.neutralLight}`
-    },
-    commandBarHidden: {
-      display: 'none'
-    },
-    contentArea: {
-      padding: '0',
-      selectors: {
-        ...mdPadding,
-        ...lgPadding
-      }
+    root: {
+      ...AnimationStyles.slideUpIn10,
+      height: '200px',
+      padding: '16px',
+      boxShadow: '0 1.6px 3.6px 0 rgba(0,0,0,.132), 0 0.3px 0.9px 0 rgba(0,0,0,.108)',
+      borderRadius: '2px',
+      backgroundColor: theme.palette.white,
     }
   }
 }
 
-export const getClassNames = classNamesFunction<IMembersStyleProps, IMembersStyles>();
+export const getClassNames = classNamesFunction<IMemberCardStyleProps, IMemberCardStyles>();

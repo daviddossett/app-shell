@@ -2,8 +2,6 @@ import React from 'react';
 import { PageTemplate } from '../../components/PageTemplate/PageTemplate';
 import { IProjectMembersProps } from './ProjectMembers.types';
 import { Members } from '../../components/Members/Members';
-import { generateResources } from '../../utils/helpers/resourceItemGenerator';
-import { DocumentTypes } from '../../utils/helpers/routeHelper';
 
 const commands = [
   {
@@ -47,7 +45,7 @@ const farCommands = [
   }
 ];
 
-const items = generateResources(['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan'], DocumentTypes.Member);
+// const items = generateResources(['Amanda Brady', 'Scott Dixon', 'Jean-Michel Lemiuex', 'Kaitlyn Vincie', 'Dieter Bahn' , 'Brianne Kimmel', 'Saurabh Sharan'], DocumentTypes.Member);
 
 export const ProjectMembersBase: React.FC<IProjectMembersProps> = () => {
   return (
@@ -58,7 +56,7 @@ export const ProjectMembersBase: React.FC<IProjectMembersProps> = () => {
         commands={commands}
         farCommands={farCommands}
         commandBarIsVisible={true}>
-        <Members items={items} />
+        <Members />
       </PageTemplate>
     </>
   );

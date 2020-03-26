@@ -58,16 +58,11 @@ export const SignalPageBase: React.FC<ISignalPageProps> = (props) => {
         commands={commands}
         farCommands={farCommands}
         commandBarIsVisible={true}>
-        <div className={classNames.children}>
-          <div className={classNames.heroCard}>
-            <Card text={'Hero'}  />
-          </div>
-          <div className={classNames.detailsCard}>
-            <Card text={'Details'}  />
-          </div>
-          <div className={classNames.activityCard}>
-            <Card text={'Activity'}  />
-          </div>
+        <div className={classNames.signalPageGrid}>
+          <Card text={'Card1'} className={classNames.card1} />
+          <Card text={'Card2'} className={classNames.card2} />
+          <Card text={'Card3'} className={classNames.card3} />
+          <Card text={'Card4'} className={classNames.card4} />
         </div>
         </PageTemplate>
     </>

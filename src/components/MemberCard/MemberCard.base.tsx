@@ -1,13 +1,12 @@
 import React from 'react';
 import { getClassNames } from './MemberCard.styles';
-import { IMembersProps } from './MemberCard.types';
+import { IMemberCardProps } from './MemberCard.types';
 
-export const MembersBase: React.FC<IMembersProps> = (props) => {
+export const MemberCardBase: React.FC<IMemberCardProps> = (props) => {
   const { styles } = props;
   const classNames = getClassNames(styles);
 
   return (
-    <>
-    </>
+    <div className={classNames.root}></div>
   );
 }

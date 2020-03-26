@@ -10,14 +10,14 @@ const mdPadding: any = {
 
 const lgPadding: any = {
   [`@media (min-width: ${breakpoint.lg})`]: {
-    padding: '16px 32px 32px 32px'
+    padding: '16px 32px'
   },
 };
 
 export const getStyles = (props: IPageHeaderStyleProps): IPageHeaderStyles => {
   const theme = getTheme();
-  
-  return {    
+
+  return {
     root: {
       width: '100%',
       margin: '0',

@@ -9,7 +9,7 @@ import { SuiteHeaderSearch } from '../SuiteHeaderSearch/SuiteHeaderSearch';
 export const SuiteHeaderBase: React.FC<ISuiteHeaderProps> = (props) => {
   const { styles, toggleNav } = props;
   const classNames = getClassNames(styles);
-  
+
   return (
     <div className={`${classNames.root} ${props.className}`}>
       <div className={classNames.waffleWithTitle}>
