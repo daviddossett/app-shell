@@ -9,7 +9,7 @@ export const PageHeaderBase: React.FC<IPageHeaderProps> = (props) => {
   const classNames = getClassNames(styles);
   const history = useHistory();
 
-  const backButtonText = 'Back to signals'
+  const backButtonText = 'Back'
 
   function handleClick() {
     history.goBack();
